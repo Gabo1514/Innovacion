@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UTV en Huacachina — Tour privado en las dunas | Buganvilla Tours</title>
+  <meta name="description" content="Tour privado en UTV por las dunas de Huacachina con mirador de la laguna y sandboarding. Revisa turnos disponibles, paga en línea y recibe tu voucher al instante." />
+  <meta property="og:title" content="UTV en Huacachina — Buganvilla Tours" />
+  <meta property="og:image" content="https://buganvillatours.com/wp-content/uploads/2025/06/Tour-Paseo-Premium-en-UTV-Huacachina3.jpg" />
+  <meta name="theme-color" content="#0e0c0b" />
+  <meta name="referrer" content="no-referrer" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=DM+Sans:opsz,wght@9..40,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/tour.css" />
+  <link rel="stylesheet" href="css/premium-bridge.css" />
+  <link rel="stylesheet" href="css/experiencia-paginas.css" />
+  <link rel="stylesheet" href="css/selector.css" />
+</head>
+<body class="tour-page">
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="tour-hero" aria-labelledby="tour-title">
+      <div class="tour-hero-bg"><img src="https://buganvillatours.com/wp-content/uploads/2025/06/Tour-Paseo-Premium-en-UTV-Huacachina3.jpg" alt="UTV de Buganvilla Tours recorriendo las dunas de Huacachina" fetchpriority="high" /></div>
+      <canvas class="page-sand" id="page-sand" aria-hidden="true"></canvas>
+      <div class="page-grain" aria-hidden="true"></div>
+      <div class="container tour-hero-inner">
+        <nav class="breadcrumb" aria-label="Ruta"><a href="index.html">Inicio</a> / <a href="index.html#experiencias">Experiencias</a> / UTV en Huacachina</nav>
+        <div class="meta">
+          <span class="badge badge-sand"><span class="pulse-dot" aria-hidden="true"></span>Reserva en línea</span>
+          <span class="badge">Huacachina, Ica</span>
+          <span class="badge">14°05′S · 75°46′O</span>
+        </div>
+        <h1 id="tour-title"><span class="hero-kicker">UTV privado</span><span class="hero-giant">Huacachina</span><span class="text-gradient">entre dunas, oasis y sandboard.</span></h1>
+        <div class="tour-hero-bottom">
+          <p class="tour-hero-lede">Una hora en un vehículo solo para tu grupo: dunas, mirador de la laguna y sandboarding con equipo incluido.</p>
+          <div class="tour-hero-actions">
+            <a href="#reservar" class="btn btn-primary btn-lg magnetic">Elegir fecha y turno <span data-icon="arrow"></span></a>
+            <a href="#itinerario" class="btn btn-glass btn-lg magnetic">Ver el recorrido</a>
+          </div>
+        </div>
+        <dl class="tour-facts">
+          <div><dt>Desde</dt><dd id="hero-price">S/ 120</dd></div>
+          <div><dt>Duración</dt><dd>60 min</dd></div>
+          <div><dt>Por UTV</dt><dd>Hasta 3</dd></div>
+          <div><dt>Salidas</dt><dd>10:00 · 14:00 · 16:30</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <div class="container tour-layout">
+      <!-- ===== CONTENIDO ===== -->
+      <div class="tour-content">
+        <section id="experiencia" class="reveal">
+          <span class="eyebrow">La experiencia</span>
+          <h2>Dunas, laguna y adrenalina.</h2>
+          <p class="desc" id="tour-desc"></p>
+          <div class="feature-row" id="feature-row"></div>
+        </section>
+
+        <section class="gallery reveal" aria-label="Galería">
+          <button type="button" aria-label="Ampliar fotografía del UTV"><img src="https://buganvillatours.com/wp-content/uploads/2025/06/Tour-Paseo-Premium-en-UTV-Huacachina3.jpg" alt="UTV de Buganvilla Tours en las dunas de Huacachina" loading="lazy" /></button>
+          <button type="button" aria-label="Ampliar foto de sandboarding"><img src="https://buganvillatours.com/wp-content/uploads/2025/06/Tour-Paseo-Premium-en-UTV-Huacachina.jpg" alt="Viajero con casco rojo haciendo sandboarding en Huacachina" loading="lazy" /></button>
+          <button type="button" aria-label="Ampliar fotografía del grupo junto al oasis"><img src="https://buganvillatours.com/wp-content/uploads/2025/06/Tour-Paseo-Premium-en-UTV-Huacachina2.jpg" alt="Grupo de viajeros junto a los UTV, con la laguna de Huacachina al fondo" loading="lazy" /></button>
+        </section>
+
+        <section id="itinerario" class="reveal">
+          <span class="eyebrow">Paso a paso</span>
+          <h2>Itinerario</h2>
+          <div class="timeline" id="timeline"></div>
+        </section>
+
+        <section id="incluye" class="reveal">
+          <span class="eyebrow">Sin sorpresas</span>
+          <h2>Qué incluye</h2>
+          <div class="faq inclusions">
+            <details open><summary>Incluido en tu experiencia</summary><ul class="detail-list" id="list-inc"></ul></details>
+            <details><summary>Gastos no incluidos</summary><ul class="detail-list" id="list-exc"></ul></details>
+            <details><summary>Cómo prepararte</summary><ul class="detail-list" id="list-rec"></ul></details>
+          </div>
+        </section>
+
+        <section id="encuentro" class="reveal">
+          <span class="eyebrow">Dónde empieza</span>
+          <h2>Punto de encuentro</h2>
+          <div class="map-card glass">
+            <iframe id="map-frame" title="Mapa del punto de encuentro" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-foot">
+              <div><strong id="meeting-name"></strong><br /><small class="muted">Mapa orientativo de Huacachina. Confirma la oficina exacta antes de viajar.</small></div>
+              <a id="maps-link" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Abrir en Google Maps </a>
+              <a href="https://waze.com/ul?q=Huacachina%20Ica%20Peru&navigate=yes" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Cómo llegar con Waze</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="faq reveal" id="preguntas">
+          <span class="eyebrow">Antes de reservar</span>
+          <h2>Preguntas frecuentes</h2>
+          <details><summary>¿El UTV es privado?</summary><p>Sí. Cada reserva recibe su propio vehículo (hasta 3 pasajeros por unidad). Si son más de 3 personas, se asignan las unidades necesarias.</p></details>
+          <details><summary>¿Puedo cancelar mi reserva?</summary><p id="faq-cancel"></p></details>
+          <details><summary>¿Cómo funciona Yape / Plin?</summary><p>En esta demostración adjuntas un comprobante de prueba. La reserva conserva el cupo y el operador revisa el archivo antes de confirmarla. El QR de demostración no permite transferir dinero.</p></details>
+          <details><summary>¿Necesito experiencia previa en sandboarding?</summary><p>No. El sandboarding es apto para principiantes y cuentas con guía y equipo adecuado.</p></details>
+        </section>
+        <section class="faq reveal" id="condiciones">
+          <span class="eyebrow">Letra clara</span>
+          <h2>Condiciones de la reserva</h2>
+          <details open><summary>Reserva, cancelación y comprobantes</summary><p>Tarifas, turnos y política de cancelación de demostración. La reserva es privada, con un mínimo de dos pasajeros y hasta tres por UTV. El checkout conserva las unidades durante diez minutos; al vencer el plazo las libera. Los pagos con tarjeta son simulados y los comprobantes Yape / Plin requieren revisión manual. La cancelación libera el cupo; el reembolso se registra por separado en el panel y no ejecuta una devolución bancaria.</p></details>
+          <details><summary>Datos de los pasajeros</summary><p>El titular y sus acompañantes se registran para la operación del tour. Usa datos ficticios al probar esta versión. El voucher contiene un enlace privado: compártelo únicamente con quienes viajan contigo. Los correos y mensajes se coordinan manualmente; esta versión no envía notificaciones automáticas.</p></details>
+          <details><summary>Seguridad y operación</summary><p>Presentarse quince minutos antes de la salida. Casco, lentes y equipo de sandboarding incluidos. Las recomendaciones y restricciones de edad deben ser validadas por la agencia antes de habilitar reservas comerciales. La operación puede cerrarse por mantenimiento o condiciones del clima.</p></details>
+        </section>
+      </div>
+
+      <!-- ===== WIDGET DE RESERVA ===== -->
+      <aside class="booking glass" id="reservar" aria-label="Reservar este tour">
+        <div class="booking-head">
+          <div><small>Desde</small><strong id="bk-from">—</strong><small>por persona</small></div>
+          <span class="badge badge-pink">Tour privado</span>
+        </div>
+        <div class="bk-progress" aria-hidden="true"><span class="bk-progress-bar"><i id="bk-progress-fill"></i></span><span class="bk-progress-label" id="bk-progress-label">Paso 1 de 4 · Elige la fecha</span></div>
+
+        <div class="bk-step" data-bk-step="1">
+          <div class="bk-label"><b>1</b> Elige la fecha</div>
+          <div class="cal" id="calendar"></div>
+        </div>
+
+        <div class="bk-step" data-bk-step="2">
+          <div class="bk-label"><b>2</b> Elige el turno <span class="hint" id="slot-date-hint"></span></div>
+          <div class="slots" id="slots"></div>
+        </div>
+
+        <div class="bk-step" data-bk-step="3">
+          <div class="bk-label"><b>3</b> Pasajeros <span class="hint">Mín. 2 personas</span></div>
+          <div class="pax-row">
+            <div><strong>Adultos</strong><small>12 años a más</small></div>
+            <div class="stepper"><button type="button" id="adult-minus" aria-label="Quitar adulto">−</button><output id="adult-count">2</output><button type="button" id="adult-plus" aria-label="Agregar adulto">+</button></div>
+          </div>
+          <div class="pax-row">
+            <div><strong id="child-label">Niños</strong><small id="child-price"></small></div>
+            <div class="stepper"><button type="button" id="child-minus" aria-label="Quitar niño">−</button><output id="child-count">0</output><button type="button" id="child-plus" aria-label="Agregar niño">+</button></div>
+          </div>
+          <p class="vehicle-note" id="vehicle-note"></p>
+        </div>
+
+        <div class="bk-step" data-bk-step="4">
+          <div class="bk-label"><b>4</b> Mejora tu experiencia <span class="hint">Opcional</span></div>
+          <div id="extras"></div>
+        </div>
+
+        <div class="summary" id="summary"></div>
+        <p id="booking-error" class="booking-error" role="alert" hidden></p>
+        <button class="btn btn-primary btn-block" id="bk-continue" disabled>Elige fecha y turno</button>
+        <p class="policy-note" id="policy-note"></p>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Barra fija móvil -->
+  <div class="mobile-bar no-print" id="mobile-bar">
+    <div><small id="mb-label">Desde</small><strong id="mb-total">—</strong></div>
+    <a href="#reservar" class="btn btn-primary btn-sm" id="mb-cta">Reservar</a>
+  </div>
+
+  <!-- ===== MODAL DE CHECKOUT ===== -->
+  <div class="modal" id="checkout" role="dialog" aria-modal="true" aria-labelledby="co-title">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel">
+      <div class="processing" id="processing">
+        <div class="spinner" aria-hidden="true"><svg viewBox="0 0 120 60"><path class="spinner-dune" d="M0 50C20 30 40 26 60 38s40 10 60-8V60H0Z"/><circle class="spinner-sun" cx="60" cy="30" r="12"/></svg></div>
+        <strong id="processing-text">Procesando pago seguro…</strong>
+        <small class="muted">No cierres esta ventana</small>
+      </div>
+
+      <div class="modal-top">
+        <div class="stepper-bar" id="stepper-bar">
+          <div class="sb-step" data-step="1"><b>1</b><span>Tus datos</span></div>
+          <div class="sb-sep"></div>
+          <div class="sb-step" data-step="2"><b>2</b><span>Pago</span></div>
+          <div class="sb-sep"></div>
+          <div class="sb-step" data-step="3"><b>3</b><span>Confirmación</span></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:1rem">
+          <span class="hold-timer" id="hold-timer"> Cupo reservado <span id="hold-time">10:00</span></span>
+          <button class="modal-close" data-close aria-label="Cerrar" id="co-close"><span data-icon="close"></span></button>
+        </div>
+      </div>
+
+      <!-- Paso 1: datos -->
+      <div class="checkout-body" data-pane="1">
+        <form class="checkout-main" id="form-data" novalidate>
+          <h2 id="co-title">Datos del titular</h2>
+          <p class="muted">Usaremos estos datos para tu voucher y el seguro del tour.</p>
+          <div class="form-grid">
+            <div class="field"><label for="f-name">Nombres</label><input class="input" id="f-name" name="name" autocomplete="given-name" required /><span class="field-error"></span></div>
+            <div class="field"><label for="f-last">Apellidos</label><input class="input" id="f-last" name="last" autocomplete="family-name" required /><span class="field-error"></span></div>
+            <div class="field"><label for="f-doctype">Tipo de documento</label>
+              <select class="select" id="f-doctype" name="doctype"><option value="DNI">DNI</option><option value="PAS">Pasaporte</option><option value="CE">Carné de extranjería</option></select><span class="field-error"></span></div>
+            <div class="field"><label for="f-doc">Número de documento</label><input class="input" id="f-doc" name="doc" required /><span class="field-error"></span></div>
+            <div class="field"><label for="f-email">Correo electrónico</label><input class="input" id="f-email" name="email" type="email" autocomplete="email" required /><span class="field-error"></span></div>
+            <div class="field"><label for="f-phone">WhatsApp</label>
+              <div class="phone-group">
+                <select class="select" id="f-cc" name="cc"><option value="+51"> +51</option><option value="+1"> +1</option><option value="+56"> +56</option><option value="+57"> +57</option><option value="+54"> +54</option><option value="+52"> +52</option><option value="+34"> +34</option><option value="+55"> +55</option></select>
+                <input class="input" id="f-phone" name="phone" type="tel" autocomplete="tel-national" required />
+              </div><span class="field-error"></span></div>
+            <div class="field full"><label for="f-notes">Comentarios (opcional)</label><textarea class="textarea" id="f-notes" name="notes" rows="2" placeholder="Hotel, celebración especial, alergias…"></textarea></div>
+            <div class="field full" id="companions"></div>
+            <div class="field full">
+              <label class="checkbox"><input type="checkbox" id="f-terms" /> <span>He leído las <a href="tour-utv.html#condiciones" target="_blank" rel="noopener" id="checkout-terms-link">condiciones de la demostración</a> y la política de cancelación.</span></label>
+              <span class="field-error" id="err-terms"></span>
+            </div>
+          </div>
+          <div class="co-actions">
+            <button type="button" class="btn btn-ghost" data-close>Cancelar</button>
+            <button type="submit" class="btn btn-primary" id="to-payment">Continuar al pago <span data-icon="arrow"></span></button>
+          </div>
+        </form>
+        <aside class="checkout-side" data-side></aside>
+      </div>
+
+      <!-- Paso 2: pago -->
+      <div class="checkout-body" data-pane="2" hidden>
+        <form class="checkout-main" id="form-pay" novalidate>
+          <h2>Método de pago</h2>
+          <p class="muted">Ingresa los datos de tu tarjeta.</p>
+          <p id="payment-error" class="booking-error" role="alert" hidden></p>
+          <div class="pay-tabs">
+            <button type="button" class="pay-tab active" data-method="card" id="pay-card"><span class="ico"></span><span><strong>Tarjeta</strong><small>Visa, Mastercard, Amex</small></span></button>
+            <button type="button" class="pay-tab" data-method="yape" id="pay-yape"><span class="ico"></span><span><strong>Yape / Plin</strong><small>Pago con QR</small></span></button>
+          </div>
+
+          <div data-method-pane="card">
+            <div class="card-preview" aria-hidden="true">
+              <div class="cp-top"><div class="cp-chip"></div><div class="cp-brand" id="cp-brand">CARD</div></div>
+              <div class="cp-number" id="cp-number">•••• •••• •••• ••••</div>
+              <div class="cp-bottom"><div><small>Titular</small><span id="cp-name">NOMBRE APELLIDO</span></div><div><small>Vence</small><span id="cp-exp">MM/AA</span></div></div>
+            </div>
+            <div class="form-grid">
+              <div class="field full"><label for="c-number">Número de tarjeta</label><input class="input" id="c-number" inputmode="numeric" autocomplete="cc-number" placeholder="0000 0000 0000 0000" maxlength="19" /><span class="field-error"></span></div>
+              <div class="field full"><label for="c-name">Nombre en la tarjeta</label><input class="input" id="c-name" autocomplete="cc-name" /><span class="field-error"></span></div>
+              <div class="field"><label for="c-exp">Vencimiento</label><input class="input" id="c-exp" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/AA" maxlength="5" /><span class="field-error"></span></div>
+              <div class="field"><label for="c-cvv">CVV</label><input class="input" id="c-cvv" type="password" inputmode="numeric" autocomplete="off" placeholder="123" maxlength="4" /><span class="field-error"></span></div>
+            </div>
+          </div>
+
+          <div data-method-pane="yape" hidden>
+            <div class="yape-box">
+              <div class="yape-qr" id="yape-qr"></div>
+              <div>
+                <div class="yape-amount" id="yape-amount"></div>
+                <ol>
+                  <li>QR de demostración, sin cobros.</li>
+                  <li>Comprueba el monto de la reserva en soles.</li>
+                  <li>Adjunta un comprobante ficticio para probar la revisión.</li>
+                </ol>
+              </div>
+            </div>
+            <div class="field"><label for="y-op">Número de operación</label><input class="input" id="y-op" inputmode="numeric" placeholder="Ej. 12345678" maxlength="12" /><span class="field-error"></span></div>
+            <div class="field" style="margin-top:1rem"><label for="receipt">Comprobante de prueba</label><input class="input" id="receipt" type="file" accept="image/png,image/jpeg,application/pdf"/><span class="field-error"></span><small class="muted">JPG, PNG o PDF. Máximo 1 MB.</small><p id="receipt-preview" aria-live="polite"></p></div>
+            <p class="muted" style="font-size:.82rem;margin-top:.6rem">Tu cupo queda bloqueado y la reserva pasa a <strong>pendiente de verificación</strong> hasta que validemos el pago.</p>
+          </div>
+
+          <div class="co-actions">
+            <button type="button" class="btn btn-ghost" id="back-to-data">← Volver</button>
+            <button type="submit" class="btn btn-primary" id="pay-submit">Pagar</button>
+          </div>
+        </form>
+        <aside class="checkout-side" data-side></aside>
+      </div>
+
+      <!-- Paso 3: voucher -->
+      <div data-pane="3" hidden>
+        <div class="voucher" id="voucher"></div>
+      </div>
+    </div>
+  </div>
+
+  <dialog class="gallery-dialog" id="gallery-dialog" aria-label="Fotografía de la experiencia"><button type="button" id="gallery-close" aria-label="Cerrar fotografía">Cerrar</button><img id="gallery-large" alt=""/></dialog>
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/experiencia-paginas.js"></script>
+  <script src="js/selector.js"></script>
+</body>
+</html>

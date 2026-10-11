@@ -1,0 +1,877 @@
+:root {
+  --ink: #122c35;
+  --ink-2: #1f3b43;
+  --ivory: #f7f8f4;
+  --sand: #edf0e8;
+  --sand-2: #cbd5c7;
+  --terra: #b21e57;
+  --terra-d: #901b48;
+  --bronze: #d7ec8e;
+  --forest: #31533f;
+  --body: #3c5157;
+  --muted: #617278;
+  --line: rgba(18,44,53,.17);
+  --wrap: 1320px;
+  --r: 4px;
+}
+html { scroll-padding-top: 104px }
+body { background: var(--ivory); font-family: "DM Sans",Inter,system-ui,sans-serif; font-size: 15px; line-height: 1.7; overflow-x: clip }
+h1, h2, h3, h4 { font-family: Manrope,Inter,system-ui,sans-serif; font-weight: 800; letter-spacing: -.045em; line-height: 1.09 }
+em { font-style: normal }
+.wrap { width: min(var(--wrap),calc(100% - 112px)); min-width: 0 }
+main, section, .wrap, .head-inner, .foot-grid, .contact-grid, .field-hero-content, .route-copy { min-width: 0 }
+.btn { font-size: 13px; font-weight: 600; line-height: 1.4; min-height: 46px; border-radius: 3px; letter-spacing: 0; padding: 13px 22px }
+.btn-solid:hover, .btn.solid:hover { box-shadow: none; transform: translateY(-1px) }
+.btn-outline { border-color: var(--line) }
+.btn-primary { color: var(--ink); background: var(--bronze); border-color: var(--bronze) }
+.btn-primary:hover { color: var(--ink); background: #e4f3b5; border-color: #e4f3b5 }
+.text-button { min-height: 44px; font-size: 12px; letter-spacing: 0 }
+.eyebrow { color: var(--terra); font-size: 11px; font-weight: 600; letter-spacing: .07em; margin-bottom: 17px }
+.eyebrow::before { display: none }
+.section { padding-block: 84px }
+.sec-head { margin-bottom: 38px; align-items: flex-end; gap: 36px }
+.sec-head>div { min-width: 0; max-width: 770px }
+.sec-head h2 { font-size: clamp(34px,3.5vw,50px); line-height: 1.12; text-wrap: balance }
+.sec-lede { max-width: 36ch; color: var(--body); font-size: 14px; line-height: 1.85; padding-bottom: 2px }
+.section-note { max-width: 100ch; font-size: 12px; line-height: 1.75; margin-top: 22px }
+.site-head { background: rgba(18,44,53,.6); color: var(--ivory); border-bottom: 1px solid rgba(247,248,244,.17); box-shadow: none; backdrop-filter: blur(12px) }
+.site-head.solid { background: rgba(247,248,244,.97); color: var(--ink); border-bottom-color: var(--line); box-shadow: none }
+.head-inner, .site-head.solid .head-inner { width: min(1440px,calc(100% - 88px)); min-height: 86px; padding-block: 15px; gap: 24px }
+.brand { color: var(--ivory); gap: 10px }
+.brand-mark { stroke: var(--bronze); width: 32px; height: 38px }
+.brand-txt b { font-family: Manrope,Inter,system-ui,sans-serif; font-size: 23px; letter-spacing: -.045em; font-weight: 800 }
+.brand-txt i { font-family: "DM Sans",sans-serif; font-size: 9px; letter-spacing: .2em; font-weight: 500 }
+.nav { gap: 22px }
+.nav a { color: rgba(247,248,244,.9); font-size: 12px; letter-spacing: 0; font-weight: 500 }
+.nav a:hover { color: white }
+.nav a::after { background: var(--bronze) }
+.locale-controls { padding-left: 12px; border-color: rgba(247,248,244,.25) }
+.locale-controls select { font-size: 11px; letter-spacing: 0; padding-inline: 5px; color: var(--ivory) }
+.locale-controls select option { background: var(--ivory); color: var(--ink) }
+.head-tools { gap: 13px }
+.head-plan { min-height: 44px; font-size: 12px; font-weight: 500; color: var(--ivory) }
+.count-badge { min-width: 18px; height: 18px; font-size: 10px; color: var(--ink); background: var(--bronze) }
+.head-tools>.btn { min-height: 43px; padding: 11px 15px; font-size: 12px }
+.menu-btn { color: var(--ivory) }
+.site-head.solid .brand, .site-head.solid .nav a, .site-head.solid .nav a[aria-current="location"], .site-head.solid .locale-controls select, .site-head.solid .head-plan, .site-head.solid .menu-btn { color: var(--ink) }
+.site-head.solid .brand-mark { stroke: var(--terra) }
+.site-head.solid .locale-controls { border-color: var(--line) }
+.site-head.solid .nav a::after { background: var(--terra) }
+.site-head.solid .locale-controls select:hover { background: var(--sand) }
+.field-hero { position: relative; isolation: isolate; min-height: 720px; background: var(--ink); color: var(--ivory); overflow: visible; padding: 0 0 65px }
+.field-hero-media { position: absolute; inset: 0 0 0 31%; z-index: -2; overflow: hidden; background: #53707a }
+.field-hero-media>img, .field-hero-media picture, .field-hero-media picture img { width: 100%; height: 100%; object-fit: cover; object-position: 58% 50%; display: block }
+.field-hero-media>img, .field-hero-media picture img { transform: scale(1.025); transition: transform 1.6s var(--ease) }
+.field-hero-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg,#122c35 0%,rgba(18,44,53,.78) 14%,rgba(18,44,53,.23) 45%,rgba(18,44,53,.09) 76%),linear-gradient(0deg,rgba(18,44,53,.74) 0%,rgba(18,44,53,.04) 45%,rgba(18,44,53,.22) 100%); pointer-events: none }
+.field-hero-media figcaption { position: absolute; right: 30px; top: 108px; z-index: 2; color: rgba(247,248,244,.8); font-size: 11px; line-height: 1.7; background: rgba(18,44,53,.25); padding: 5px 9px; border-radius: 2px }
+.field-hero-content { position: relative; z-index: 2; max-width: 710px; padding-top: 155px; padding-bottom: 49px }
+.field-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 500; line-height: 1.7; letter-spacing: .06em; text-transform: uppercase; color: rgba(247,248,244,.87); margin-bottom: 23px }
+.field-eyebrow::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--bronze); flex: none }
+.field-hero h1 { color: var(--ivory); font-size: clamp(67px,6.3vw,100px); font-weight: 800; line-height: .99; letter-spacing: -.058em; text-transform: uppercase; margin-bottom: 22px; max-width: none; width: fit-content }
+.field-hero h1>span, .field-hero h1 em { color: var(--ivory); display: block }
+.field-hero h1 span:first-child { color: var(--ivory) }
+.field-hero-description { max-width: 47ch; font-size: 14px; line-height: 1.8; color: rgba(247,248,244,.9) }
+.field-hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 25px }
+.field-hero-actions>.btn { min-height: 49px; font-size: 13px; padding-inline: 23px }
+.field-hero-actions>#cover-action { color: var(--ink); background: var(--bronze); border-color: var(--bronze) }
+.field-hero-actions>#cover-action:hover { background: #e4f3b5; border-color: #e4f3b5 }
+.field-hero-actions>.btn-outline, .field-hero-actions>.btn-ghost, .field-hero-actions>.btn-field-secondary { color: var(--ivory); background: transparent; border-color: rgba(247,248,244,.46) }
+.field-hero-actions>.btn-outline:hover, .field-hero-actions>.btn-ghost:hover, .field-hero-actions>.btn-field-secondary:hover { color: var(--ink); background: var(--ivory); border-color: var(--ivory) }
+.field-hero-facts { display: grid; grid-template-columns: auto auto auto; width: fit-content; max-width: 100%; gap: 24px; margin: 31px 0 0; padding: 23px 0 0; border-top: 1px solid rgba(247,248,244,.25) }
+.field-hero-facts>div { padding-right: 22px; min-width: 0 }
+.field-hero-facts>div+div { border-left: 1px solid rgba(247,248,244,.25); padding-left: 23px }
+.field-hero-facts dt { color: rgba(247,248,244,.72); font-size: 11px; line-height: 1.7; font-weight: 400 }
+.field-hero-facts dd { font-family: Manrope,Inter,sans-serif; font-size: 17px; font-weight: 700; line-height: 1.5; margin: 5px 0 0; color: var(--ivory) }
+.field-destination-menu { display: flex; align-items: stretch; flex-wrap: wrap; gap: 10px; justify-content: flex-end; margin-bottom: 22px }
+.field-destination-menu button { display: flex; align-items: center; gap: 11px; min-height: 48px; padding: 9px 14px; border: 1px solid rgba(247,248,244,.44); color: var(--ivory); background: rgba(18,44,53,.35); backdrop-filter: blur(8px); border-radius: 2px; font-size: 12px; line-height: 1.5; text-align: left; transition: background .4s var(--ease),border-color .4s var(--ease) }
+.field-destination-menu button:hover, .field-destination-menu button.selected, .field-destination-menu button[aria-pressed="true"] { background: var(--ivory); color: var(--ink); border-color: var(--ivory) }
+.field-destination-menu button small { font-size: 10px; color: var(--bronze) }
+.field-destination-menu button.selected small, .field-destination-menu button[aria-pressed="true"] small { color: var(--terra) }
+.field-destination-menu button strong { font-size: 12px; font-weight: 600 }
+.field-destination-menu button span { display: block; font-size: 10px; color: inherit }
+.field-booking { position: relative; z-index: 3; display: grid; grid-template-columns: 180px minmax(0,1fr); align-items: center; color: var(--ink); background: var(--ivory); border-radius: 4px; box-shadow: 0 14px 38px rgba(8,24,30,.18); border: 1px solid rgba(247,248,244,.65); min-height: 98px; padding: 15px 20px; margin-top: -45px }
+.field-booking-label { display: flex; flex-direction: column; gap: 4px; padding-right: 20px; font-size: 12px; line-height: 1.6; color: var(--muted) }
+.field-booking-label strong { font-family: Manrope,sans-serif; color: var(--ink); font-size: 17px; line-height: 1.4; font-weight: 800; letter-spacing: -.02em }
+.field-booking-label small, .field-booking-label span { font-size: 11px; line-height: 1.6 }
+.field-booking .book-bar { width: 100%; margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; background: transparent; display: grid; grid-template-columns: 1.25fr 1fr .85fr auto; gap: 0 }
+.field-booking .book-field { min-height: 65px; padding: 5px 20px; border-left: 1px solid var(--line) }
+.field-booking .book-field+.book-field::before { display: none }
+.field-booking .book-field label { font-size: 10px; letter-spacing: .04em; font-weight: 500; color: var(--muted); margin-bottom: 6px }
+.field-booking .book-input { gap: 9px }
+.field-booking .book-input .ico { width: 15px; height: 15px }
+.field-booking .book-input input, .field-booking .book-input select { min-height: 27px; font-size: 13px; font-weight: 500 }
+.field-booking .book-go { min-height: 60px; padding-inline: 25px; font-size: 13px; align-self: center }
+.territory-strip { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; padding-block: 28px }
+.territory-button { min-height: 74px; display: flex; align-items: center; gap: 12px; padding: 9px 0; text-align: left; color: var(--ink); border: 0; border-bottom: 1px solid var(--line); background: transparent; transition: color .4s var(--ease),border-color .4s var(--ease) }
+.territory-button>small { font-size: 11px; color: var(--terra); align-self: flex-start; padding-top: 4px }
+.territory-button>div { min-width: 0; flex: 1 }
+.territory-button strong { display: block; font-family: Manrope,sans-serif; font-size: 18px; letter-spacing: -.025em; line-height: 1.5; font-weight: 800 }
+.territory-button span { display: block; font-size: 12px; color: var(--muted); line-height: 1.5; margin-top: 2px }
+.territory-button>.ico { width: 17px; height: 17px }
+.territory-button:hover, .territory-button.selected, .territory-button[aria-pressed="true"] { color: var(--terra); border-bottom-color: var(--terra) }
+.field-destination-menu .territory-button { min-height: 55px; padding: 9px 15px; border: 1px solid rgba(247,248,244,.42); color: var(--ivory); background: rgba(18,44,53,.5) }
+.field-destination-menu .territory-button strong { font-family: "DM Sans",sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0; line-height: 1.6 }
+.field-destination-menu .territory-button>small { color: var(--bronze); font-size: 10px; padding-top: 3px }
+.field-destination-menu .territory-button span { font-size: 10px; color: rgba(247,248,244,.76) }
+.field-destination-menu .territory-button:hover, .field-destination-menu .territory-button.selected, .field-destination-menu .territory-button[aria-pressed="true"] { background: var(--ivory); color: var(--ink); border-color: var(--ivory) }
+.field-destination-menu .territory-button:hover span, .field-destination-menu .territory-button.selected span, .field-destination-menu .territory-button[aria-pressed="true"] span { color: var(--muted) }
+.field-destination-menu .territory-button:hover>small, .field-destination-menu .territory-button.selected>small, .field-destination-menu .territory-button[aria-pressed="true"]>small { color: var(--terra) }
+.field-destination-menu #cover-next { width: 50px; min-height: 55px; padding: 0; justify-content: center; flex: none }
+.decision-strip { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 32px; padding-block: 33px 30px; border-bottom: 1px solid var(--line) }
+.decision-strip>div { display: flex; align-items: flex-start; gap: 13px; min-width: 0 }
+.decision-strip>div>span { width: 29px; height: 29px; flex: none; display: grid; place-items: center; color: var(--terra); background: #f3e6eb; border-radius: 50%; font-size: 11px; font-weight: 600; line-height: 1 }
+.decision-strip strong { display: block; color: var(--ink); font-size: 13px; font-weight: 600; line-height: 1.7 }
+.decision-strip>div>div>span { display: block; color: var(--muted); font-size: 12px; line-height: 1.75; margin-top: 3px }
+.signature-feature { padding-block: 58px 67px; margin-top: 0; background: #fff; color: var(--ink) }
+.feature-top { display: flex; justify-content: space-between; align-items: center; gap: 20px; font-size: 11px; line-height: 1.6; text-transform: uppercase; letter-spacing: .055em; color: var(--muted); padding-bottom: 23px; border-bottom: 1px solid var(--line); margin-bottom: 34px }
+.feature-top p { color: var(--terra); font-weight: 600 }
+.feature-grid { display: grid; grid-template-columns: minmax(0,1.08fr) minmax(0,.92fr); align-items: center; gap: clamp(36px,5.5vw,80px) }
+.feature-image { position: relative; min-width: 0; overflow: hidden; background: var(--sand); border-radius: 4px }
+.feature-image>picture { display: block; width: 100% }
+.feature-image>img, .feature-image>picture>img { display: block; width: 100%; height: 495px; object-fit: cover; object-position: 50% 50%; transition: transform 1.2s var(--ease) }
+.feature-image:hover>img, .feature-image:hover>picture>img { transform: scale(1.05) }
+.feature-image figcaption { position: relative; z-index: 2; padding: 11px 15px; background: #fff; color: var(--muted); font-size: 11px; line-height: 1.75 }
+.feature-image-label { position: absolute; left: 17px; top: 18px; padding: 6px 9px; border-radius: 2px; color: var(--ivory); background: var(--ink); font-size: 11px; font-weight: 600; letter-spacing: .035em }
+.feature-copy { min-width: 0 }
+.feature-copy h2 { font-size: clamp(35px,3.8vw,53px); line-height: 1.12; margin-bottom: 19px; color: var(--ink); font-weight: 800 }
+.feature-copy h2 em { color: var(--terra) }
+.feature-copy>p { max-width: 51ch; font-size: 14px; line-height: 1.85; color: var(--body) }
+.feature-copy>.eyebrow { color: var(--terra); font-size: 11px; line-height: 1.5; margin-bottom: 16px }
+.feature-specs { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; margin: 25px 0; padding: 21px 0; border-block: 1px solid var(--line) }
+.feature-specs dt { font-size: 11px; line-height: 1.5; color: var(--muted) }
+.feature-specs dd { margin: 7px 0 0; color: var(--ink); font-size: 14px; font-weight: 600; line-height: 1.7 }
+.feature-route { list-style: none; padding: 0; margin: 0 0 26px; display: grid; grid-template-columns: 1fr 1fr; gap: 19px 24px }
+.feature-route li { display: flex; align-items: flex-start; gap: 10px; padding: 13px 10px 0 0; position: relative; font-size: 12px; line-height: 1.7; color: var(--body); border-top: 1px solid #acbdba }
+.feature-route li::before { content: ""; width: 7px; height: 7px; position: absolute; left: 0; top: -4px; border-radius: 50%; background: var(--terra) }
+.feature-route li>span { display: block; color: var(--terra); font-size: 10px; line-height: 1.7; padding-top: 2px }
+.feature-route li strong { display: block; color: var(--ink); font-size: 12px; font-weight: 600; line-height: 1.6 }
+.feature-route li small { display: block; font-size: 11px; color: var(--muted); line-height: 1.7; margin-top: 3px }
+.feature-actions { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap }
+.feature-price { display: flex; flex-direction: column; gap: 2px; color: var(--muted); line-height: 1.6 }
+.feature-price small { font-size: 11px }
+.feature-price strong { color: var(--ink); font-family: Manrope,sans-serif; font-size: 33px; font-weight: 800; letter-spacing: -.04em; line-height: 1.15 }
+.feature-actions .btn { font-size: 13px; min-height: 48px }
+.atlas-text-link { display: inline-flex; align-items: center; gap: 9px; border: 0; border-bottom: 1px solid var(--line); padding: 9px 0; min-height: 44px; margin-top: 14px; background: transparent; color: var(--ink); font-size: 12px; font-weight: 500; line-height: 1.6; text-align: left; transition: color .4s var(--ease),border-color .4s var(--ease) }
+.atlas-text-link:hover { color: var(--terra); border-color: var(--terra) }
+.collection-controls { gap: 20px; flex-wrap: wrap; margin-bottom: 23px }
+.filter-tab { font-size: 12px; min-height: 43px; padding: 9px 17px; border-radius: 3px; letter-spacing: 0 }
+.filter-tab.active, .filter-tab[aria-pressed="true"] { background: var(--ink); color: var(--ivory); border-color: var(--ink) }
+.search-refine { min-height: 43px }
+.search-refine input { width: 205px; font-size: 13px; padding-block: 10px }
+.catalog-options .search-refine select { font-size: 12px; width: 170px }
+.catalog-options .check-row { font-size: 12px; min-height: 44px }
+.results-status { font-size: 12px; line-height: 1.8; min-height: 20px }
+.dest-grid, .dest-grid:has(.dest:only-child), .dest-grid:has(.dest:nth-child(2):last-child) { display: grid; grid-template-columns: minmax(0,1fr); gap: 0 }
+.dest-grid .route-row.dest { position: relative; display: grid; grid-template-columns: minmax(245px,325px) minmax(0,1fr) 200px; gap: clamp(23px,3vw,43px); align-items: center; min-height: 0; padding: 31px 0; margin: 0; grid-column: 1/-1; max-width: none; width: 100%; background: transparent; color: var(--ink); border: 0; border-bottom: 1px solid var(--line); border-radius: 0; box-shadow: none; overflow: visible; isolation: auto; transition: none }
+.route-row.dest:hover { box-shadow: none; transform: none }
+.route-row.dest::before, .route-row.dest::after { display: none }
+.route-index { position: absolute; z-index: 3; top: 46px; left: 14px; padding: 3px 8px; color: var(--ivory); background: var(--ink); border-radius: 2px; font-family: Manrope,sans-serif; font-size: 13px; font-weight: 700; line-height: 1.6 }
+.route-row.dest .route-media { position: relative; inset: auto; width: 100%; height: 260px; z-index: auto; min-height: 0; border-radius: 4px; overflow: hidden }
+.route-row.dest .route-media::before, .route-row.dest .route-media::after { display: none }
+.route-image-button { display: block; width: 100%; height: 100%; padding: 0; border: 0; background: var(--sand); overflow: hidden }
+.route-row.dest .route-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ease) }
+.route-row.dest:hover .route-media img { transform: none }
+.route-row.dest .route-image-button:hover img { transform: scale(1.05) }
+.route-row.dest .save-btn { top: 14px; right: 14px; width: 40px; height: 40px; background: var(--ivory); color: var(--ink); border: 0; border-radius: 3px; backdrop-filter: none }
+.route-row.dest .save-btn:hover, .route-row.dest .save-btn[aria-pressed="true"] { color: white; background: var(--terra); transform: none }
+.route-row.dest .save-btn .ico { width: 19px; height: 19px }
+.route-row.dest .save-btn[aria-pressed="true"] .ico { fill: rgba(247,248,244,.3) }
+.route-row.dest .route-copy { position: static; display: block; min-height: 0; z-index: auto; margin: 0; padding: 0; pointer-events: auto }
+.route-location { display: flex; align-items: center; flex-wrap: wrap; gap: 9px; color: var(--terra); font-size: 11px; font-weight: 500; line-height: 1.7; margin-bottom: 12px }
+.route-category { color: var(--muted); padding-left: 10px; border-left: 1px solid var(--line); font-size: 11px }
+.route-row.dest h3 { font-family: Manrope,sans-serif; font-size: clamp(25px,2.35vw,34px); font-weight: 800; line-height: 1.16; letter-spacing: -.035em; color: var(--ink); margin: 0 0 13px }
+.route-row.dest .card-title-button { color: var(--ink); text-align: left }
+.route-row.dest .card-title-button:hover { color: var(--terra) }
+.route-row.dest .route-copy>p { color: var(--body); font-size: 13px; line-height: 1.8; max-width: 55ch }
+.route-specs { display: grid; grid-template-columns: auto 1fr; gap: 27px; margin: 21px 0 0 }
+.route-specs dt { color: var(--muted); font-size: 11px; font-weight: 400; line-height: 1.6; margin-bottom: 4px }
+.route-specs dd { color: var(--ink); font-size: 12px; font-weight: 500; line-height: 1.6; margin: 0 }
+.route-booking { display: flex; flex-direction: column; justify-content: center; align-self: stretch; gap: 0; padding-left: 24px; border-left: 1px solid var(--line); min-width: 0 }
+.route-access { color: var(--muted); font-size: 11px; line-height: 1.6; margin-bottom: 16px }
+.route-access-online { color: var(--terra); font-weight: 500 }
+.route-price.card-price { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; margin-bottom: 16px; color: var(--ink) }
+.route-price.card-price>span { color: var(--muted); font-size: 11px }
+.route-price.card-price>strong { color: var(--ink); font-family: Manrope,sans-serif; font-weight: 800; font-size: 32px; line-height: 1.1; letter-spacing: -.04em }
+.route-price.card-price>small { color: var(--muted); font-size: 11px; line-height: 1.5; margin: 0 }
+.route-booking>.btn { width: 100%; justify-content: space-between; min-height: 44px; font-size: 12px; padding: 12px 13px }
+.route-booking>.route-itinerary { color: var(--ink); font-size: 12px; margin-top: 8px; justify-content: space-between; border-bottom: 1px solid var(--line); min-height: 35px }
+.route-actions { display: flex; flex-wrap: wrap; flex-direction: column; align-items: flex-start; gap: 0; border-top: 1px solid var(--line); padding-top: 8px; margin-top: 12px }
+.route-actions .compare-toggle { min-height: 34px; font-size: 11px; line-height: 1.6; color: var(--muted) }
+.route-actions .compare-toggle input { width: 13px; height: 13px; accent-color: var(--terra) }
+.route-actions .text-button { border: 0; padding-block: 4px; min-height: 34px; font-size: 11px; color: var(--body); gap: 5px; line-height: 1.5 }
+.route-actions .text-button:hover, .route-actions .text-button[aria-pressed="true"] { color: var(--terra) }
+.route-actions .text-button .ico { width: 14px; height: 14px }
+.local-note { display: block; padding-block: 65px; background: var(--ink); color: var(--ivory) }
+.local-note-grid { display: grid; grid-template-columns: minmax(0,.75fr) minmax(0,1.25fr); gap: clamp(40px,7vw,100px); align-items: start }
+.local-note-label h2 { color: var(--ivory); font-size: clamp(33px,3.5vw,48px); line-height: 1.16; margin-bottom: 25px }
+.local-note-label h2 em { color: var(--bronze) }
+.local-note-label .eyebrow { color: var(--bronze) }
+.local-stamp { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 3px; padding-left: 16px; border-left: 2px solid var(--bronze); color: rgba(247,248,244,.72); font-size: 10px; line-height: 1.7 }
+.local-stamp strong { font-family: Manrope,sans-serif; color: var(--ivory); font-size: 29px; font-weight: 800; line-height: 1.5; letter-spacing: -.03em }
+.local-note-lead { color: var(--ivory); font-family: Manrope,sans-serif; font-size: clamp(25px,2.4vw,34px); font-weight: 700; line-height: 1.3; letter-spacing: -.025em; margin-bottom: 19px }
+.local-note-copy>p:not(.local-note-lead) { color: rgba(247,248,244,.8); font-size: 14px; line-height: 1.85; max-width: 66ch }
+.local-principles { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 28px; padding-top: 25px; border-top: 1px solid rgba(247,248,244,.24) }
+.local-principles>div { min-width: 0 }
+.local-principles>div>span { display: block; color: var(--bronze); font-size: 11px; line-height: 1.7; margin-bottom: 8px }
+.local-principles strong { color: var(--ivory); font-size: 14px; font-weight: 600; line-height: 1.6 }
+.local-principles p { color: rgba(247,248,244,.69); font-size: 12px; line-height: 1.75; margin-top: 7px }
+.local-note .atlas-text-link { margin-top: 24px; color: var(--ivory); border-color: rgba(247,248,244,.4) }
+.local-note .atlas-text-link:hover { color: var(--bronze); border-color: var(--bronze) }
+.packs { background: var(--sand) }
+.pack-grid { gap: 27px }
+.pack { border: 0; border-radius: 4px; background: #fff; box-shadow: none }
+.pack:hover { transform: translateY(-3px); box-shadow: 0 14px 38px -25px rgba(18,44,53,.28) }
+.pack .package-media { aspect-ratio: 1.45; border-radius: 4px 4px 0 0 }
+.pack .package-media::after, .pack .media-overlay { display: none }
+.pack .tag { font-size: 10px; letter-spacing: 0; color: var(--ink); background: var(--ivory); padding: 6px 10px; border: 0; border-radius: 2px; left: 16px; top: 16px; backdrop-filter: none }
+.pack .save-btn { width: 39px; height: 39px; color: var(--ink); background: var(--ivory); border: 0; border-radius: 3px; top: 16px; right: 16px; backdrop-filter: none }
+.pack .save-btn:hover, .pack .save-btn[aria-pressed="true"] { background: var(--terra); color: var(--ivory); transform: none }
+.pack .package-body { padding: 25px 25px 20px }
+.pack .card-meta { color: var(--muted); font-size: 11px; margin-bottom: 14px; letter-spacing: 0; gap: 12px }
+.pack .card-meta .ico { width: 14px; height: 14px }
+.pack h3 { color: var(--ink); font-size: 27px; line-height: 1.2; margin-bottom: 14px; letter-spacing: -.025em }
+.pack p { color: var(--body); font-size: 13px; line-height: 1.8 }
+.pack .card-footer { padding-top: 23px; gap: 14px; flex-wrap: nowrap }
+.pack .card-price>span, .pack .card-price>small { font-size: 11px }
+.pack .card-price>strong { color: var(--ink); font-family: Manrope,sans-serif; font-size: 28px; line-height: 1.2; font-weight: 800; letter-spacing: -.03em }
+.pack .card-price { gap: 3px 6px }
+.pack .card-footer .btn { min-height: 43px; font-size: 12px; padding: 11px 13px }
+.pack .card-actions { border-color: var(--line); margin-top: 18px; padding-top: 9px; gap: 12px }
+.pack .package-days { font-size: 10px; letter-spacing: 0 }
+.pack .plan-toggle { font-size: 11px; min-height: 40px }
+.quote { background: #fff; color: var(--ink); padding-block: 73px; border-bottom: 1px solid var(--line) }
+.quote-inner { max-width: 1050px }
+.quote .eyebrow { color: var(--terra); font-size: 11px; margin-bottom: 27px }
+.quote-mark { display: none }
+.quote .review-quote, .quote blockquote { font-family: Manrope,sans-serif; color: var(--ink); font-size: clamp(26px,2.5vw,36px); line-height: 1.42; font-weight: 700; font-style: normal; letter-spacing: -.025em }
+.quote-by { margin-top: 25px }
+.quote-by b { color: var(--ink); font-size: 13px; font-weight: 600 }
+.quote-by span, .quote-by a { color: var(--muted); font-size: 12px; letter-spacing: 0; border-color: var(--line) }
+.quote-by a { padding-block: 6px; min-height: 38px }
+.quote-by a:hover { color: var(--terra) }
+.quote-controls { margin-top: 23px; gap: 15px }
+.quote-controls button { color: var(--ink); border-color: var(--line); border-radius: 3px; width: 43px; height: 43px }
+.quote-controls button:hover { background: var(--sand) }
+.quote-controls span { color: var(--muted); font-size: 12px }
+.review-note { color: var(--muted); font-size: 11px; line-height: 1.8; margin-top: 21px; max-width: 64ch }
+.contact-copy h2 { font-size: clamp(34px,3.5vw,48px); line-height: 1.15; margin-bottom: 20px }
+.contact-copy>p:not(.eyebrow) { color: var(--body); font-size: 14px; line-height: 1.85 }
+.contact-list li, .contact-list a { font-size: 13px; line-height: 1.8; overflow-wrap: anywhere }
+.contact-form { gap: 23px; padding: 31px; background: #fff; border: 1px solid var(--line); border-radius: 4px }
+.field label { color: var(--muted); font-size: 11px; letter-spacing: 0; text-transform: none; font-weight: 500 }
+.field input, .field select, .field textarea { padding: 10px 0; min-height: 43px; font-size: 14px; line-height: 1.5 }
+.field input::placeholder, .field textarea::placeholder { color: var(--muted) }
+.check-row { color: var(--muted); font-size: 12px; line-height: 1.7 }
+.check-row input { width: 14px; height: 14px; margin-top: 4px }
+.form-note, .form-error { font-size: 12px; line-height: 1.8 }
+.foot { background: var(--ink); padding-block: 55px 25px }
+.foot .brand { color: var(--ivory) }
+.foot .brand-mark { stroke: var(--bronze) }
+.footer-wordmark { display: block; width: 100%; overflow: hidden; font-family: Manrope,sans-serif; font-size: clamp(58px,10.7vw,165px); font-weight: 800; color: var(--ivory); line-height: 1.04; letter-spacing: -.075em; white-space: nowrap }
+.footer-wordmark>span { display: block; color: var(--bronze); font-family: "DM Sans",sans-serif; font-size: 11px; font-weight: 500; line-height: 1.7; letter-spacing: .14em; margin-top: 15px }
+.foot-grid { border-top: 1px solid rgba(247,248,244,.22); padding-top: 35px; margin-top: 31px; gap: 35px }
+.foot-brand p { font-size: 13px; line-height: 1.85; font-weight: 400; color: rgba(247,248,244,.75); max-width: 31ch }
+.foot-links h4, .foot-col h4, .foot-news h4 { font-family: "DM Sans",sans-serif; color: var(--ivory); font-size: 12px; font-weight: 600; letter-spacing: .03em; margin-bottom: 16px }
+.foot-links a, .foot-col a, .foot-links button { color: rgba(247,248,244,.73); font-size: 13px; line-height: 1.8; padding-block: 5px; min-height: 34px }
+.foot-news p, .foot-news input { font-size: 13px; color: rgba(247,248,244,.77) }
+.foot-news input { min-height: 44px }
+.foot-news form>button { width: 44px; min-height: 44px }
+.foot-news .check-row { color: rgba(247,248,244,.73); font-size: 11px; line-height: 1.8 }
+.newsletter-feedback { font-size: 12px; color: var(--bronze) }
+.foot-bottom, .foot-base { font-size: 11px; letter-spacing: 0; margin-top: 32px; padding-top: 21px; color: rgba(247,248,244,.7) }
+.footer-demo { font-size: 11px; color: rgba(247,248,244,.62); margin-top: 14px }
+.premium-dialog { border-radius: 4px }
+.premium-dialog .dialog-head, .premium-dialog .dialog-actions { background: rgba(247,248,244,.98) }
+.dialog-head h2 { font-size: 25px; line-height: 1.3 }
+.dialog-head .eyebrow { font-size: 10px }
+.dialog-close { width: 42px; height: 42px; border-radius: 3px }
+.dialog-close:hover { transform: none }
+.detail-hero h3, .detail-hero h2 { font-size: 38px; line-height: 1.17 }
+.detail-hero p { font-size: 13px; line-height: 1.85 }
+.detail-hero .eyebrow { font-size: 11px }
+.detail-hero>span { font-size: 11px }
+.detail-description { font-size: 14px; line-height: 1.85 }
+.detail-tabs { gap: 18px }
+.detail-tab { font-size: 12px; min-height: 44px; padding-block: 11px }
+.detail-panel { font-size: 13px; line-height: 1.85 }
+.detail-panel h3 { font-size: 25px; line-height: 1.25 }
+.detail-day h4, .detail-itinerary>li h4 { font-size: 21px; line-height: 1.4 }
+.detail-itinerary>li p, .detail-day p { font-size: 12px; line-height: 1.85 }
+.detail-itinerary>li>span { font-size: 11px }
+.detail-list li { font-size: 12px; line-height: 1.8 }
+.detail-facts dt { font-size: 11px; letter-spacing: 0; text-transform: none }
+.detail-facts dd { font-size: 12px }
+.detail-controls label, .plan-context label { font-size: 11px; letter-spacing: 0; text-transform: none }
+.detail-controls input, .detail-controls select, .plan-context input, .plan-context select { min-height: 43px; font-size: 14px }
+.detail-sidebar, .detail-summary { background: var(--sand); border-radius: 3px }
+.detail-sidebar h3, .detail-summary h3 { font-size: 24px; line-height: 1.3 }
+.detail-sidebar p, .detail-summary p { font-size: 12px; line-height: 1.85 }
+.detail-quote>strong { font-family: Manrope,sans-serif; font-size: 34px; font-weight: 800 }
+.detail-quote>span, .detail-quote>small { font-size: 11px; letter-spacing: 0 }
+.detail-price-note { font-size: 12px !important }
+.detail-availability { font-size: 12px !important }
+.detail-sidebar>small { font-size: 11px }
+.detail-plan { font-size: 12px }
+.dialog-actions .btn { min-height: 44px; font-size: 12px }
+.plan-item h3 { font-size: 23px; line-height: 1.3 }
+.plan-item strong { font-family: Manrope,sans-serif; font-size: 25px; font-weight: 800 }
+.plan-item p, .plan-item small, .plan-meta, .dialog-note { font-size: 12px }
+.plan-item .eyebrow { font-size: 10px }
+.plan-item-actions .text-button { font-size: 12px }
+.plan-total { font-size: 13px }
+.plan-total strong { font-family: Manrope,sans-serif; font-size: 30px; font-weight: 800 }
+.comparison-table h3 { font-size: 22px }
+.comparison-table small, .comparison-table .text-button { font-size: 12px }
+.comparison-table th, .comparison-table td { font-size: 12px; line-height: 1.75 }
+.comparison-table thead th { font-size: 22px }
+.contact-message, #contact-preview-content p, #legal-content { font-size: 13px; line-height: 1.85 }
+#contact-preview-content h3 { font-size: 26px }
+.premium-toast { font-size: 13px; border-radius: 3px }
+.compare-bar>span, .compare-bar>p, .compare-bar .text-button { font-size: 12px }
+.compare-bar .btn { min-height: 44px; font-size: 12px }
+@media (max-width:1200px) {
+  .wrap { width: calc(100% - 80px) }
+  .head-inner, .site-head.solid .head-inner { width: calc(100% - 60px); gap: 19px }
+  .nav { gap: 17px }
+  .nav a { font-size: 11px }
+  .head-tools { gap: 10px }
+  .head-plan { font-size: 11px }
+  .field-hero-content { max-width: 640px; padding-top: 145px }
+  .field-hero h1 { font-size: clamp(67px,6.8vw,90px) }
+  .field-booking { grid-template-columns: 155px minmax(0,1fr); padding-inline: 17px }
+  .field-booking .book-field { padding-inline: 13px }
+  .field-booking .book-go { font-size: 12px; padding-inline: 17px }
+  .field-booking .book-input input, .field-booking .book-input select { font-size: 12px }
+  .feature-grid { gap: 43px }
+  .feature-image>img, .feature-image>picture>img { height: 485px }
+  .feature-copy h2 { font-size: 42px }
+  .feature-specs { gap: 15px }
+  .feature-specs dd { font-size: 13px }
+  .dest-grid .route-row.dest { grid-template-columns: 270px minmax(0,1fr) 177px; gap: 27px }
+  .route-booking { padding-left: 20px }
+  .route-row.dest h3 { font-size: 29px }
+  .route-specs { gap: 18px }
+  .route-price.card-price>strong { font-size: 29px }
+  .pack .package-body { padding-inline: 21px }
+  .pack h3 { font-size: 25px }
+  .pack .card-footer { gap: 10px; flex-wrap: wrap }
+  .pack .card-footer .btn { padding-inline: 12px }
+  .pack .card-price>strong { font-size: 25px }
+}
+@media (max-width:980px) {
+  .head-inner, .site-head.solid .head-inner { min-height: 80px; padding-block: 14px }
+  .nav { background: var(--ink); border-color: rgba(247,248,244,.2); gap: 15px }
+  .nav a, .site-head.solid .nav a, .site-head.solid .nav a[aria-current="location"] { font-family: Manrope,sans-serif; color: var(--ivory); font-size: 28px; line-height: 1.4; font-weight: 700; letter-spacing: -.025em; min-height: 47px }
+  .site-head.menu-open .brand, .site-head.menu-open .head-plan, .site-head.menu-open .menu-btn, .site-head.menu-open .locale-controls select { color: var(--ivory) }
+  .site-head.menu-open .brand-mark { stroke: var(--bronze) }
+  .head-tools { gap: 14px }
+  .field-hero { min-height: 730px }
+  .field-hero-content { max-width: 610px; padding-top: 133px; padding-bottom: 42px }
+  .field-hero h1 { font-size: 77px }
+  .field-hero-description { max-width: 43ch }
+  .field-hero-media { left: 22% }
+  .field-hero-media::after { background: linear-gradient(90deg,#122c35 0%,rgba(18,44,53,.8) 17%,rgba(18,44,53,.3) 57%,rgba(18,44,53,.18)),linear-gradient(0deg,rgba(18,44,53,.72) 0%,transparent 58%) }
+  .field-booking { grid-template-columns: minmax(0,1fr); gap: 17px; padding: 20px }
+  .field-booking-label { flex-direction: row; align-items: center; flex-wrap: wrap; gap: 6px 15px; padding: 0 }
+  .field-booking-label strong { font-size: 16px }
+  .field-booking-label span, .field-booking-label small { font-size: 12px }
+  .field-booking .book-field:first-child { padding-left: 0; border-left: 0 }
+  .field-booking .book-input input, .field-booking .book-input select { font-size: 13px }
+  .territory-strip { gap: 18px; padding-block: 24px }
+  .territory-button strong { font-size: 16px }
+  .territory-button span { font-size: 11px }
+  .signature-feature { padding-block: 46px 55px }
+  .feature-grid { gap: 32px; grid-template-columns: minmax(0,1fr) minmax(0,1fr) }
+  .feature-image>img, .feature-image>picture>img { height: 490px }
+  .feature-copy h2 { font-size: 36px }
+  .feature-copy>p { font-size: 13px }
+  .feature-specs { gap: 12px; margin-block: 21px; padding-block: 18px }
+  .feature-specs dt { font-size: 10px }
+  .feature-specs dd { font-size: 12px }
+  .feature-route { grid-template-columns: 1fr 1fr; gap: 17px 0; margin-bottom: 23px }
+  .feature-route li { padding-top: 12px; font-size: 12px }
+  .feature-actions { gap: 15px }
+  .feature-actions .btn { padding-inline: 17px; font-size: 12px }
+  .feature-price strong { font-size: 30px }
+  .section { padding-block: 67px }
+  .sec-head { gap: 27px }
+  .sec-head h2 { font-size: 39px }
+  .sec-lede { font-size: 13px; max-width: 34ch }
+  .dest-grid .route-row.dest { grid-template-columns: 225px minmax(0,1fr); gap: 21px 27px; align-items: start; padding-block: 27px }
+  .route-row.dest .route-media { grid-column: 1; grid-row: 1/3; height: 305px }
+  .route-index { top: 41px }
+  .route-row.dest .route-copy { grid-column: 2; grid-row: 1 }
+  .route-row.dest h3 { font-size: 28px }
+  .route-booking { grid-column: 2; grid-row: 2; border-left: 0; padding-left: 0; margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 9px 17px; align-items: center }
+  .route-access { grid-column: 1/-1; margin-bottom: 0 }
+  .route-price.card-price { margin: 0; gap: 3px }
+  .route-price.card-price>strong { font-size: 29px }
+  .route-booking>.btn { width: auto; min-width: 135px; padding-inline: 13px }
+  .route-booking>.route-itinerary { grid-column: 1/-1; width: fit-content; gap: 10px; margin: 0; min-height: 32px; font-size: 11px }
+  .route-actions { grid-column: 1/-1; width: 100%; flex-direction: row; justify-content: space-between; gap: 8px 13px; margin-top: 1px; padding-top: 6px }
+  .route-actions .text-button { min-height: 34px; font-size: 11px }
+  .local-note-grid { grid-template-columns: .8fr 1.2fr; gap: 41px }
+  .local-note-lead { font-size: 29px }
+  .local-principles { grid-template-columns: 1fr; gap: 20px; margin-top: 22px; padding-top: 21px }
+  .pack .card-footer { flex-direction: column; align-items: flex-start; gap: 13px }
+  .pack .card-footer .btn { width: 100% }
+  .pack .card-price>strong { font-size: 26px }
+  .contact-copy h2 { font-size: 38px }
+  .foot-grid { gap: 30px }
+  .foot-news { max-width: none; padding-top: 0 }
+}
+@media (max-width:760px) {
+  .wrap { width: calc(100% - 48px) }
+  .head-inner, .site-head.solid .head-inner { width: calc(100% - 40px); min-height: 77px; padding-block: 14px; gap: 12px }
+  .head-tools { gap: 10px }
+  .brand-txt b { font-size: 22px }
+  .brand-txt i { font-size: 8px }
+  .brand-mark { width: 28px; height: 34px }
+  .field-hero { min-height: 0; padding-bottom: 26px }
+  .field-hero-media { left: 0; top: 330px; bottom: 235px; opacity: .76 }
+  .field-hero-media>img, .field-hero-media picture img { object-position: 60% 45% }
+  .field-hero-media::after { background: linear-gradient(180deg,#122c35 0%,rgba(18,44,53,.35) 32%,rgba(18,44,53,.24) 70%,#122c35 100%),linear-gradient(90deg,rgba(18,44,53,.6),transparent 80%) }
+  .field-hero-content { max-width: 620px; padding-top: 126px; padding-bottom: 230px }
+  .field-eyebrow { font-size: 11px; margin-bottom: 19px }
+  .field-hero h1 { font-size: clamp(61px,10.6vw,79px); margin-bottom: 20px }
+  .field-hero-description { font-size: 14px; max-width: 43ch }
+  .field-hero-actions { margin-top: 23px; gap: 12px }
+  .field-hero-actions>.btn { font-size: 12px; min-height: 46px; padding-inline: 19px }
+  .field-hero-facts { margin-top: 25px; padding-top: 18px; gap: 15px }
+  .field-hero-facts>div { padding-right: 14px }
+  .field-hero-facts>div+div { padding-left: 16px }
+  .field-hero-facts dd { font-size: 16px }
+  .field-destination-menu { justify-content: flex-start; margin-top: -15px; margin-bottom: 23px; gap: 9px }
+  .field-destination-menu button { font-size: 12px; min-height: 44px; padding-inline: 12px; gap: 8px }
+  .field-booking { padding: 19px; gap: 13px; border-radius: 3px }
+  .field-booking .book-bar { grid-template-columns: 1.2fr 1fr .8fr; gap: 14px 0 }
+  .field-booking .book-field { min-height: 55px; padding: 5px 11px }
+  .field-booking .book-field:nth-child(3) { border-left: 1px solid var(--line); border-top: 0 }
+  .field-booking .book-go { grid-column: 1/-1; min-height: 46px; width: 100%; margin: 0; padding: 12px 19px; font-size: 13px }
+  .field-booking .book-input input, .field-booking .book-input select { font-size: 12px }
+  .territory-strip { grid-template-columns: 1fr 1fr; padding-block: 22px; gap: 16px 25px }
+  .territory-button { min-height: 71px; gap: 10px }
+  .territory-button strong { font-size: 18px }
+  .territory-button span { font-size: 12px }
+  .feature-top { font-size: 10px; gap: 20px; margin-bottom: 25px; padding-bottom: 18px }
+  .feature-grid { grid-template-columns: minmax(0,1fr); gap: 31px }
+  .feature-image>img, .feature-image>picture>img { height: 370px }
+  .feature-image figcaption { padding: 11px 0 0; font-size: 11px }
+  .feature-copy { max-width: 620px }
+  .feature-copy h2 { font-size: clamp(35px,6.4vw,46px); max-width: 18ch }
+  .feature-copy>p { font-size: 14px; max-width: 55ch }
+  .feature-specs { margin-block: 25px; padding-block: 20px; gap: 23px }
+  .feature-specs dt { font-size: 11px }
+  .feature-specs dd { font-size: 14px }
+  .feature-route { grid-template-columns: repeat(4,minmax(0,1fr)); gap: 0; margin-bottom: 26px }
+  .feature-route li { padding-top: 14px; font-size: 12px }
+  .feature-actions .btn { font-size: 13px; padding-inline: 20px }
+  .section { padding-block: 56px }
+  .sec-head { flex-direction: column; align-items: flex-start; gap: 18px; margin-bottom: 29px }
+  .sec-head h2 { font-size: 37px; max-width: 21ch }
+  .sec-lede { font-size: 14px; max-width: 54ch }
+  .collection-controls { gap: 17px; align-items: flex-start; margin-bottom: 20px }
+  .filter-tab { font-size: 12px; min-height: 43px; padding-inline: 14px }
+  .filter-tabs { gap: 7px }
+  .search-refine input { font-size: 13px }
+  .catalog-options { gap: 20px }
+  .catalog-options .search-refine select { font-size: 12px; width: 172px }
+  .catalog-options .check-row { font-size: 12px }
+  .results-status { font-size: 12px }
+  .dest-grid .route-row.dest { grid-template-columns: 210px minmax(0,1fr); gap: 18px 25px; padding-block: 27px }
+  .route-row.dest .route-media { grid-column: 1; grid-row: 1; height: 236px }
+  .route-row.dest .route-copy { grid-column: 2; grid-row: 1 }
+  .route-row.dest h3 { font-size: 27px }
+  .route-row.dest .route-copy>p { font-size: 12px }
+  .route-location { font-size: 10px; margin-bottom: 10px }
+  .route-category { display: none }
+  .route-specs { gap: 16px; margin-top: 16px }
+  .route-specs dt { font-size: 10px }
+  .route-specs dd { font-size: 11px }
+  .route-booking { grid-column: 1/-1; grid-row: 2; grid-template-columns: 1fr 1fr; padding-top: 17px; border-top: 1px solid var(--line); gap: 11px 25px }
+  .route-access { grid-column: 1; grid-row: 1; font-size: 11px }
+  .route-price.card-price { grid-column: 1; grid-row: 2; flex-direction: row; align-items: baseline; flex-wrap: wrap; gap: 3px 8px }
+  .route-price.card-price>strong { font-size: 31px }
+  .route-price.card-price>small { width: 100%; font-size: 11px }
+  .route-booking>.btn { grid-column: 2; grid-row: 1/3; justify-self: stretch; width: 100%; min-height: 47px; font-size: 12px; padding-inline: 16px }
+  .route-booking>.route-itinerary { grid-column: 1/-1; grid-row: 3; font-size: 12px; min-height: 36px }
+  .route-actions { grid-column: 1/-1; grid-row: 4; gap: 12px; margin-top: 0; padding-top: 8px }
+  .route-actions .compare-toggle, .route-actions .text-button { font-size: 12px; min-height: 39px }
+  .local-note { padding-block: 52px }
+  .local-note-grid { grid-template-columns: 1fr; gap: 35px }
+  .local-note-label { display: grid; grid-template-columns: 1fr auto; gap: 0 25px; align-items: center }
+  .local-note-label .eyebrow { grid-column: 1/-1 }
+  .local-note-label h2 { font-size: 35px; margin-bottom: 0 }
+  .local-stamp { font-size: 10px }
+  .local-stamp>span:last-child { max-width: 14ch }
+  .local-note-lead { font-size: 30px; margin-bottom: 18px }
+  .local-note-copy>p:not(.local-note-lead) { font-size: 14px }
+  .local-principles { grid-template-columns: 1fr 1fr; gap: 25px }
+  .local-note .atlas-text-link { margin-top: 19px; font-size: 13px }
+  .pack-grid { grid-template-columns: 1fr; max-width: 620px; gap: 26px }
+  .pack .package-media { aspect-ratio: 1.8 }
+  .pack .package-body { padding: 25px }
+  .pack h3 { font-size: 29px }
+  .pack p { font-size: 14px }
+  .pack .card-footer { flex-direction: row; align-items: center; gap: 20px; padding-top: 24px }
+  .pack .card-footer .btn { width: auto; min-height: 45px; font-size: 12px; padding-inline: 17px }
+  .pack .card-price>strong { font-size: 30px }
+  .pack .card-price>span, .pack .card-price>small, .pack .package-days { font-size: 11px }
+  .pack .plan-toggle { font-size: 12px }
+  .quote { padding-block: 55px }
+  .quote .review-quote { font-size: 28px; line-height: 1.4 }
+  .quote-by b { font-size: 13px }
+  .quote-by span, .quote-by a { font-size: 12px }
+  .review-note { font-size: 11px }
+  .contact-grid { gap: 31px }
+  .contact-copy h2 { font-size: 36px }
+  .contact-copy>p:not(.eyebrow) { font-size: 14px }
+  .contact-list li, .contact-list a { font-size: 13px }
+  .contact-form { padding: 28px }
+  .field label { font-size: 12px }
+  .field input, .field select, .field textarea { font-size: 16px; min-height: 45px }
+  .check-row, .form-note { font-size: 12px }
+  .foot { padding-top: 44px }
+  .footer-wordmark { font-size: 11.9vw; letter-spacing: -.06em }
+  .footer-wordmark>span { font-size: 10px; margin-top: 14px }
+  .foot-grid { margin-top: 25px; padding-top: 28px; gap: 28px 26px }
+  .foot-brand p { font-size: 13px }
+  .foot-links a, .foot-col a, .foot-news p, .foot-news input { font-size: 13px }
+  .foot-bottom, .foot-base, .footer-demo { font-size: 11px }
+  .dialog-head { padding: 18px 22px }
+  .dialog-head h2 { font-size: 24px }
+  .detail-hero h3, .detail-hero h2 { font-size: 34px }
+  .detail-description { font-size: 14px }
+  .detail-quote>strong { font-size: 33px }
+  .detail-plan { font-size: 12px }
+  .dialog-actions { gap: 12px; padding: 17px 22px }
+  .dialog-actions .btn { font-size: 12px; min-height: 44px }
+  .compare-bar .btn { font-size: 11px }
+  .compare-bar>span, .compare-bar>p { font-size: 11px }
+}
+@media (max-width:480px) {
+  html { scroll-padding-top: 86px }
+  .wrap { width: calc(100% - 40px) }
+  .head-inner, .site-head.solid .head-inner { width: calc(100% - 30px); min-height: 72px; padding-block: 13px; gap: 9px }
+  .brand { gap: 7px }
+  .brand-mark { width: 24px; height: 31px }
+  .brand-txt b { font-size: 20px }
+  .brand-txt i { font-size: 7px; letter-spacing: .18em }
+  .head-tools { gap: 7px }
+  .locale-controls select { font-size: 10px; padding-inline: 4px; min-height: 38px }
+  .head-plan { gap: 4px }
+  .head-plan>span:not(.count-badge) { display: none }
+  .count-badge { width: 16px; min-width: 16px; height: 16px; font-size: 9px }
+  .menu-btn { width: 27px; min-height: 42px }
+  .nav a, .site-head.solid .nav a { font-size: 27px }
+  .field-hero { padding-bottom: 22px }
+  .field-hero-content { padding-top: 113px; padding-bottom: 232px }
+  .field-eyebrow { font-size: 10px; letter-spacing: .025em; margin-bottom: 17px; gap: 8px }
+  .field-hero h1 { font-size: clamp(49px,13.25vw,64px); line-height: 1.04; letter-spacing: -.055em; margin-bottom: 19px }
+  .field-hero-description { font-size: 13px; line-height: 1.85; max-width: 43ch }
+  .field-hero-actions { gap: 10px; margin-top: 22px }
+  .field-hero-actions>.btn { min-height: 45px; font-size: 12px; padding-inline: 16px }
+  .field-hero-facts { grid-template-columns: 1fr 1fr 1fr; width: 100%; gap: 8px; margin-top: 25px; padding-top: 18px }
+  .field-hero-facts>div { padding-right: 5px }
+  .field-hero-facts>div+div { padding-left: 11px }
+  .field-hero-facts dt { font-size: 10px; line-height: 1.6 }
+  .field-hero-facts dd { font-size: 13px; line-height: 1.6; margin-top: 5px }
+  .field-hero-media { top: 360px; bottom: 250px; opacity: .9 }
+  .field-hero-media>img, .field-hero-media picture img { object-position: 63% 48% }
+  .field-destination-menu { gap: 8px; margin-bottom: 19px }
+  .field-destination-menu button { min-height: 45px; padding: 8px 10px; gap: 7px; flex: 1; font-size: 11px }
+  .field-destination-menu button small { font-size: 10px }
+  .field-destination-menu button strong { font-size: 12px }
+  .field-destination-menu button span { font-size: 10px }
+  .field-destination-menu button>.ico { width: 13px; height: 13px }
+  .field-booking { padding: 18px; gap: 15px }
+  .field-booking-label { gap: 5px; align-items: flex-start; flex-direction: column }
+  .field-booking-label strong { font-size: 17px }
+  .field-booking-label small, .field-booking-label span { font-size: 12px }
+  .field-booking .book-bar { grid-template-columns: 1fr 1fr; gap: 13px 0 }
+  .field-booking .book-field { min-height: 54px; padding: 5px 10px }
+  .field-booking .book-field:first-child { grid-column: 1/-1; border-bottom: 1px solid var(--line); padding: 0 0 13px; min-height: 55px }
+  .field-booking .book-field:nth-child(2) { border-left: 0; padding-left: 0 }
+  .field-booking .book-field:nth-child(3) { border-left: 1px solid var(--line) }
+  .field-booking .book-field label { font-size: 11px; margin-bottom: 5px }
+  .field-booking .book-input input, .field-booking .book-input select { font-size: 13px; min-height: 29px }
+  .field-booking .book-go { min-height: 45px; font-size: 13px }
+  .territory-strip { gap: 15px 20px; padding-block: 19px }
+  .territory-button { gap: 8px; min-height: 68px }
+  .territory-button>small { font-size: 10px }
+  .territory-button strong { font-size: 16px }
+  .territory-button span { font-size: 11px }
+  .territory-button>.ico { width: 14px; height: 14px }
+  .signature-feature { padding-block: 39px 45px }
+  .feature-top { font-size: 10px; gap: 17px; line-height: 1.7; margin-bottom: 22px }
+  .feature-top span { max-width: 14ch; text-align: right }
+  .feature-image>img, .feature-image>picture>img { height: 283px }
+  .feature-image figcaption { font-size: 10px; line-height: 1.8; padding-top: 10px }
+  .feature-image-label { top: 14px; left: 14px; font-size: 10px }
+  .feature-grid { gap: 25px }
+  .feature-copy h2 { font-size: 36px; line-height: 1.14; margin-bottom: 17px }
+  .feature-copy .eyebrow { font-size: 11px }
+  .feature-copy>p { font-size: 13px; line-height: 1.85 }
+  .feature-specs { gap: 12px; margin-block: 22px; padding-block: 19px }
+  .feature-specs dt { font-size: 10px }
+  .feature-specs dd { font-size: 12px; line-height: 1.8 }
+  .feature-route { grid-template-columns: 1fr 1fr; gap: 18px 0 }
+  .feature-route li { font-size: 12px; padding-top: 12px }
+  .feature-actions { gap: 16px }
+  .feature-actions .btn { min-height: 46px; font-size: 12px; padding-inline: 15px }
+  .feature-price strong { font-size: 29px }
+  .feature-price small { font-size: 11px }
+  .atlas-text-link { font-size: 12px; line-height: 1.7; margin-top: 14px }
+  .section { padding-block: 47px }
+  .sec-head h2 { font-size: 32px; line-height: 1.15 }
+  .sec-head { gap: 17px; margin-bottom: 26px }
+  .sec-lede { font-size: 13px; line-height: 1.85 }
+  .eyebrow { font-size: 10px; letter-spacing: .04em; margin-bottom: 15px }
+  .collection-controls { gap: 16px; margin-bottom: 18px }
+  .filter-tabs { gap: 6px }
+  .filter-tab { min-height: 43px; padding: 9px 12px; font-size: 11px }
+  .catalog-options { gap: 15px; justify-content: space-between }
+  .catalog-options .search-refine select { width: 163px; font-size: 12px }
+  .catalog-options .check-row { font-size: 12px }
+  .results-status { font-size: 11px; line-height: 1.8 }
+  .dest-grid .route-row.dest { grid-template-columns: minmax(0,1fr); gap: 19px; padding-block: 25px }
+  .route-row.dest .route-media { grid-column: 1; grid-row: 1; height: 238px }
+  .route-index { top: 39px; left: 14px; font-size: 12px }
+  .route-row.dest .route-copy { grid-column: 1; grid-row: 2 }
+  .route-location { font-size: 11px; gap: 8px; margin-bottom: 11px }
+  .route-category { display: inline; font-size: 10px; padding-left: 9px }
+  .route-row.dest h3 { font-size: 29px; line-height: 1.16; margin-bottom: 12px }
+  .route-row.dest .route-copy>p { font-size: 13px; line-height: 1.85 }
+  .route-specs { margin-top: 18px; gap: 26px }
+  .route-specs dt { font-size: 11px }
+  .route-specs dd { font-size: 12px }
+  .route-booking { grid-column: 1; grid-row: 3; gap: 10px 18px; padding-top: 18px }
+  .route-access { font-size: 10px }
+  .route-price.card-price>strong { font-size: 29px }
+  .route-price.card-price>span, .route-price.card-price>small { font-size: 11px }
+  .route-booking>.btn { min-width: 0; font-size: 12px; min-height: 46px; padding-inline: 12px }
+  .route-actions { gap: 10px; padding-top: 8px }
+  .route-actions .compare-toggle, .route-actions .text-button { font-size: 11px; min-height: 40px }
+  .route-booking>.route-itinerary { font-size: 12px; min-height: 40px }
+  .section-note { font-size: 11px; line-height: 1.8 }
+  .local-note { padding-block: 43px }
+  .local-note-label { grid-template-columns: 1fr; gap: 0 }
+  .local-note-label h2 { font-size: 33px; margin-bottom: 22px }
+  .local-stamp { font-size: 10px; gap: 2px }
+  .local-stamp>span:last-child { max-width: none }
+  .local-note-grid { gap: 28px }
+  .local-note-lead { font-size: 27px; line-height: 1.35 }
+  .local-note-copy>p:not(.local-note-lead) { font-size: 13px }
+  .local-principles { grid-template-columns: 1fr; gap: 21px; margin-top: 23px; padding-top: 22px }
+  .local-principles strong { font-size: 14px }
+  .local-principles p { font-size: 12px }
+  .pack-grid { gap: 24px }
+  .pack .package-media { aspect-ratio: 1.48 }
+  .pack .package-body { padding: 23px 22px 19px }
+  .pack h3 { font-size: 28px }
+  .pack p { font-size: 13px }
+  .pack .card-footer { gap: 13px; flex-wrap: wrap }
+  .pack .card-price>strong { font-size: 28px }
+  .pack .card-footer .btn { font-size: 12px; min-height: 44px; padding-inline: 14px }
+  .pack .package-days { font-size: 11px }
+  .pack .plan-toggle { font-size: 11px; min-height: 40px }
+  .quote { padding-block: 47px }
+  .quote .eyebrow { font-size: 10px; margin-bottom: 22px }
+  .quote .review-quote { font-size: 25px; line-height: 1.45 }
+  .quote-by { margin-top: 22px }
+  .quote-by b { font-size: 12px }
+  .quote-by span, .quote-by a { font-size: 11px }
+  .review-note { font-size: 10px; line-height: 1.8 }
+  .contact-copy h2 { font-size: 32px }
+  .contact-copy>p:not(.eyebrow) { font-size: 13px }
+  .contact-list li, .contact-list a { font-size: 12px }
+  .contact-form { padding: 23px 21px; gap: 20px }
+  .form-row { grid-template-columns: 1fr; gap: 20px }
+  .field label { font-size: 12px }
+  .field input, .field select, .field textarea { font-size: 16px }
+  .check-row, .form-note, .form-error { font-size: 12px; line-height: 1.8 }
+  .foot { padding-top: 38px }
+  .footer-wordmark { font-size: 11.65vw; line-height: 1.15; letter-spacing: -.055em }
+  .footer-wordmark>span { font-size: 10px; letter-spacing: .09em; margin-top: 12px }
+  .foot-grid { gap: 27px 23px; margin-top: 23px; padding-top: 27px }
+  .foot-brand p { font-size: 12px }
+  .foot-links h4, .foot-col h4, .foot-news h4 { font-size: 12px }
+  .foot-links a, .foot-col a, .foot-news p, .foot-news input { font-size: 12px }
+  .foot-news .check-row { font-size: 11px }
+  .foot-bottom, .foot-base { font-size: 10px; gap: 12px; margin-top: 25px }
+  .footer-demo { font-size: 10px; line-height: 1.8 }
+  .premium-dialog { border-radius: 4px 4px 0 0 }
+  .dialog-head { padding: 17px 20px; gap: 16px }
+  .dialog-head h2 { font-size: 22px }
+  .dialog-head .eyebrow { font-size: 10px }
+  .dialog-head .dialog-close { width: 40px; height: 40px }
+  .detail-hero h3, .detail-hero h2 { font-size: 29px; line-height: 1.2 }
+  .detail-hero p { font-size: 12px; line-height: 1.8 }
+  .detail-hero .eyebrow, .detail-hero>span { font-size: 10px }
+  .detail-content, #detail-content>.detail-layout { padding: 24px 21px }
+  .detail-description { font-size: 13px; line-height: 1.85 }
+  .detail-tab { font-size: 12px }
+  .detail-panel { font-size: 13px }
+  .detail-panel h3 { font-size: 24px }
+  .detail-itinerary>li h4 { font-size: 20px }
+  .detail-itinerary>li p, .detail-day p { font-size: 12px }
+  .detail-facts { gap: 18px }
+  .detail-facts dt { font-size: 11px }
+  .detail-facts dd { font-size: 12px }
+  .detail-sidebar h3, .detail-summary h3 { font-size: 23px }
+  .detail-sidebar p, .detail-summary p { font-size: 12px }
+  .detail-quote>strong { font-size: 32px }
+  .detail-controls input, .detail-controls select, .plan-context input, .plan-context select { font-size: 16px }
+  .detail-sidebar>small { font-size: 11px }
+  .detail-plan { font-size: 12px }
+  .dialog-actions { padding: 15px 20px; gap: 10px }
+  .dialog-actions .btn { font-size: 12px; min-height: 44px; padding-inline: 12px }
+  .plan-item h3 { font-size: 22px }
+  .plan-item strong { font-size: 24px }
+  .plan-item p, .plan-item small { font-size: 11px }
+  .plan-item-actions .text-button { font-size: 11px }
+  .plan-total strong { font-size: 29px }
+  .plan-total { font-size: 12px }
+  .comparison-table h3 { font-size: 22px }
+  .comparison-table thead th { font-size: 21px }
+  .comparison-table th, .comparison-table td, .comparison-table small { font-size: 12px }
+  .contact-message, #contact-preview-content p, #legal-content { font-size: 12px; line-height: 1.85 }
+  #contact-preview-content h3 { font-size: 25px }
+  .compare-bar { gap: 10px; padding: 11px 12px; flex-wrap: wrap; max-width: calc(100% - 24px) }
+  .compare-bar>span, .compare-bar>p { font-size: 11px; max-width: 128px }
+  .compare-bar .btn { font-size: 11px; min-height: 42px; padding-inline: 12px }
+  .compare-bar .text-button { font-size: 11px }
+  .premium-toast { font-size: 12px; line-height: 1.8 }
+}
+@media (max-width:350px) {
+  .wrap { width: calc(100% - 32px) }
+  .head-inner, .site-head.solid .head-inner { width: calc(100% - 24px); gap: 7px }
+  .brand-mark { width: 19px; height: 29px }
+  .brand-txt b { font-size: 18px }
+  .brand-txt i { font-size: 6px }
+  .head-tools { gap: 5px }
+  .locale-controls select { font-size: 9px; padding-inline: 3px }
+  .field-hero h1 { font-size: 45px }
+  .field-eyebrow { font-size: 10px }
+  .field-hero-actions>.btn { font-size: 11px; padding-inline: 13px }
+  .field-hero-facts>div+div { padding-left: 9px }
+  .field-hero-facts dd { font-size: 12px }
+  .field-hero-facts dt { font-size: 10px }
+  .field-destination-menu { gap: 7px }
+  .field-destination-menu button { padding-inline: 8px; gap: 5px }
+  .field-destination-menu button small { display: none }
+  .field-booking { padding: 16px }
+  .territory-strip { gap: 13px 16px }
+  .territory-button strong { font-size: 15px }
+  .territory-button>small { font-size: 10px }
+  .territory-button span { font-size: 10px }
+  .feature-image>img, .feature-image>picture>img { height: 255px }
+  .feature-copy h2 { font-size: 32px }
+  .feature-specs { gap: 9px }
+  .feature-specs dd { font-size: 11px }
+  .feature-actions .btn { font-size: 11px; padding-inline: 12px }
+  .feature-price strong { font-size: 27px }
+  .sec-head h2 { font-size: 29px }
+  .filter-tab { padding-inline: 10px }
+  .route-row.dest .route-media { height: 220px }
+  .route-row.dest h3 { font-size: 27px }
+  .route-booking { gap: 10px 15px }
+  .route-booking>.btn { font-size: 11px; padding-inline: 10px }
+  .route-price.card-price>strong { font-size: 27px }
+  .route-actions .text-button, .route-actions .compare-toggle { font-size: 10px }
+  .local-note-label h2 { font-size: 30px }
+  .pack .card-footer { flex-direction: column; align-items: flex-start }
+  .pack .card-footer .btn { width: 100% }
+  .pack h3 { font-size: 26px }
+  .contact-copy h2 { font-size: 29px }
+  .catalog-options .search-refine select { width: 153px }
+  .catalog-options .check-row { font-size: 11px }
+}
+.field-hero-content.wrap { max-width: var(--wrap); width: min(var(--wrap),calc(100% - 112px)) }
+.route-row.dest .save-btn, .pack .save-btn { width: 44px; height: 44px }
+.route-actions .text-button, .route-booking>.route-itinerary { min-height: 44px }
+.quote-controls button, .dialog-head .dialog-close { width: 44px; height: 44px }
+.head-tools>.btn { min-height: 44px }
+.site-head.solid .head-tools>.btn { color: var(--ink); border-color: var(--ink); background: transparent }
+.site-head.solid .head-tools>.btn:hover { color: var(--ivory); background: var(--ink) }
+@media (max-width:1200px) {
+  .field-hero-content.wrap { width: calc(100% - 80px) }
+}
+@media (max-width:980px) {
+  .decision-strip { gap: 22px; padding-block: 30px 28px }
+  .decision-strip strong { font-size: 12px }
+  .decision-strip>div>div>span { font-size: 11px }
+}
+@media (max-width:760px) {
+  .field-hero-content.wrap { width: calc(100% - 48px) }
+  .field-hero-media figcaption { top: auto; bottom: 34px; right: 24px; font-size: 10px }
+  .field-hero { padding-bottom: 62px }
+  .field-destination-menu .territory-button { min-height: 51px; padding-inline: 12px }
+  .field-destination-menu #cover-next { min-height: 51px }
+  .feature-route { grid-template-columns: 1fr 1fr; gap: 18px 24px }
+  .decision-strip { gap: 20px; padding-block: 28px }
+  .decision-strip>div { gap: 10px }
+  .decision-strip strong { font-size: 12px }
+  .decision-strip>div>div>span { font-size: 11px }
+}
+@media (max-width:480px) {
+  .field-hero-content.wrap { width: calc(100% - 40px) }
+  .field-destination-menu { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: -16px; margin-bottom: 16px }
+  .field-destination-menu .territory-button { width: 100%; padding: 8px 11px; min-height: 52px; gap: 9px }
+  .field-destination-menu .territory-button>small { display: block; font-size: 10px }
+  .field-destination-menu .territory-button strong { font-size: 12px }
+  .field-destination-menu .territory-button span { font-size: 10px }
+  .field-destination-menu #cover-next { display: none }
+  .field-booking { margin-top: -45px }
+  .feature-route { gap: 18px 18px }
+  .feature-route li { gap: 9px }
+  .feature-route li strong { font-size: 12px }
+  .feature-route li small { font-size: 11px }
+  .decision-strip { grid-template-columns: 1fr; gap: 16px; padding-block: 25px 26px }
+  .decision-strip>div { gap: 12px }
+  .decision-strip>div>span { width: 27px; height: 27px; font-size: 10px }
+  .decision-strip strong { font-size: 13px }
+  .decision-strip>div>div>span { font-size: 12px; margin-top: 0 }
+}
+@media (max-width:350px) {
+  .field-hero-content.wrap { width: calc(100% - 32px) }
+  .field-destination-menu .territory-button { gap: 7px; padding-inline: 9px }
+}
+@media (min-width: 981px) and (max-height: 820px) {
+  .field-hero { min-height: 690px; padding-bottom: 42px }
+  .field-hero-content { padding-top: 129px; padding-bottom: 29px }
+  .field-hero h1 { font-size: clamp(66px,5.7vw,86px) }
+  .field-eyebrow { margin-bottom: 18px }
+  .field-hero-facts { margin-top: 25px; padding-top: 18px }
+  .field-destination-menu { margin-bottom: 16px }
+}
+@media (max-width: 760px) {
+  .field-hero { display: flex; flex-direction: column; padding-bottom: 48px }
+  .field-hero-content { order: 1; padding-top: 115px; padding-bottom: 28px }
+  .field-hero-media { position: relative; order: 2; inset: auto; width: 100%; height: 280px; opacity: 1; z-index: 0 }
+  .field-hero-media>img { object-position: 50% 55%; transform: none }
+  .field-hero-media::after { background: linear-gradient(0deg,rgba(18,44,53,.4),transparent 35%) }
+  .field-hero-media figcaption { bottom: 15px; right: 20px; font-size: 10px; background: rgba(18,44,53,.64) }
+  .field-destination-menu { order: 3; margin-top: 18px; margin-bottom: 16px }
+  .field-hero-facts { grid-template-columns: 1fr 1.15fr 1fr; width: 100%; gap: 10px }
+  .field-hero-facts>div { padding-right: 4px }
+  .field-hero-facts>div+div { padding-left: 11px }
+}
+@media (max-width: 350px) {
+  .field-hero-media { height: 230px }
+  .field-hero-facts dd { font-size: 12px }
+}
+@media (prefers-reduced-motion:reduce) {
+  .field-hero-media>img, .field-hero-media picture img, .route-row.dest .route-image-button:hover img, .feature-image:hover>img, .feature-image:hover>picture>img { transform: none }
+}
+@media print {
+  .field-hero { min-height: 0; color: var(--ink); background: white }
+  .field-hero-content { padding: 0 }
+  .field-hero h1, .field-hero h1 span, .field-hero h1 em, .field-hero-description, .field-eyebrow, .field-hero-facts dt, .field-hero-facts dd { color: var(--ink) }
+  .field-hero-media, .field-hero-actions, .field-destination-menu, .field-booking, .territory-strip, .route-booking, .route-index, .footer-wordmark { display: none }
+  .feature-grid, .local-note-grid { grid-template-columns: 1fr }
+  .dest-grid .route-row.dest { grid-template-columns: 180px 1fr; gap: 25px; break-inside: avoid }
+  .route-row.dest .route-media { height: 150px }
+  .local-note { background: white; color: var(--ink) }
+  .local-note-label h2, .local-note-label h2 em, .local-note-lead, .local-note-copy>p, .local-principles strong, .local-principles p, .local-stamp, .local-stamp strong { color: var(--ink) }
+}

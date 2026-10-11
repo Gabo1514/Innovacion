@@ -1,0 +1,597 @@
+:root {
+  --ink: #27221c;
+  --ink-2: #332c24;
+  --ivory: #f4f0e7;
+  --sand: #e7dfd2;
+  --sand-2: #c7b9a5;
+  --terra: #6d293c;
+  --terra-d: #512032;
+  --bronze: #af8c65;
+  --forest: #39453b;
+  --body: #51493f;
+  --muted: #756b5e;
+  --line: rgba(39,34,28,.2);
+  --wrap: 1320px;
+  --r: 0;
+}
+body { background: var(--ivory) }
+.wrap { width: min(var(--wrap),calc(100% - 112px)) }
+.btn { border-radius: 0; letter-spacing: .035em; font-size: 11px }
+.btn-solid:hover, .btn.solid:hover { box-shadow: none; transform: none }
+.btn-outline { border-color: var(--line) }
+.eyebrow { font-size: 9px; letter-spacing: .16em }
+.eyebrow::before { display: none }
+.section { padding: 90px 0 }
+.sec-head { margin-bottom: 40px; border-top: 1px solid var(--line); padding-top: 27px }
+.sec-head h2 { font-size: clamp(44px,4.4vw,62px); line-height: 1.02; letter-spacing: -.03em }
+.sec-lede { max-width: 43ch; font-size: 12px; color: var(--body) }
+.site-head, .site-head.solid { background: rgba(244,240,231,.93); color: var(--ink); border-bottom: 1px solid var(--line); box-shadow: none }
+.head-inner, .site-head.solid .head-inner { width: min(1440px,calc(100% - 88px)); padding-block: 19px; gap: 24px }
+.brand { color: var(--ink) }
+.brand-mark { stroke: var(--terra); width: 29px; height: 37px }
+.brand-txt b { font-size: 27px; font-weight: 600 }
+.brand-txt i { font-size: 7px; letter-spacing: .26em }
+.nav { gap: 23px }
+.nav a, .nav a[aria-current="location"] { color: var(--ink); font-size: 10px }
+.nav a:hover { color: var(--terra) }
+.nav a::after { background: var(--terra) }
+.locale-controls { border-color: var(--line); padding-left: 12px }
+.locale-controls select, .head-plan, .menu-btn { color: var(--ink) }
+.locale-controls select:hover { background: var(--sand) }
+.locale-controls select option { background: var(--ivory); color: var(--ink) }
+.head-tools { gap: 12px }
+.head-plan { font-size: 10px }
+.count-badge { color: var(--ivory); background: var(--terra) }
+.head-tools>.btn { min-height: 40px; padding: 10px 16px; font-size: 10px }
+.atlas-hero { padding-top: 86px; color: var(--ink); position: relative }
+.atlas-issue { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 17px 0 15px; color: var(--muted); font-size: 8px; font-weight: 500; line-height: 1.6; letter-spacing: .16em; text-transform: uppercase }
+.atlas-issue span:last-child { color: var(--terra) }
+.atlas-cover { display: grid; grid-template-columns: minmax(0,.83fr) minmax(0,1.17fr); column-gap: clamp(32px,5vw,72px); align-items: center; position: relative }
+.atlas-copy { position: relative; padding: 25px 0 27px; min-width: 0 }
+.atlas-kicker { color: var(--terra); font-size: 9px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 19px }
+.atlas-copy h1 { font-size: clamp(67px,6.3vw,98px); font-weight: 500; line-height: .87; letter-spacing: -.047em; margin: 0 0 27px; overflow-wrap: normal }
+.atlas-copy h1 em { display: block; color: var(--terra); font-weight: 400; line-height: .95; letter-spacing: -.045em; margin-top: 8px }
+.atlas-intro { max-width: 39ch; color: var(--body); font-size: 12px; line-height: 1.85 }
+.atlas-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 22px; margin-top: 25px }
+.atlas-actions .btn { min-height: 46px; padding: 13px 20px }
+.atlas-actions>a:not(.btn), .atlas-actions>button:not(.btn) { display: inline-flex; align-items: center; gap: 9px; padding: 8px 0; border: 0; border-bottom: 1px solid var(--line); background: none; color: var(--ink); font-size: 10px; transition: color .35s var(--ease),border-color .35s var(--ease) }
+.atlas-actions>a:not(.btn):hover, .atlas-actions>button:not(.btn):hover { color: var(--terra); border-color: var(--terra) }
+.atlas-coordinate { display: flex; align-items: center; gap: 15px; margin-top: 34px; color: var(--muted); font-size: 8px; line-height: 1.7; letter-spacing: .08em; text-transform: uppercase }
+.atlas-coordinate>svg { width: 70px; height: 38px; fill: none; stroke: var(--terra); stroke-width: .7; flex: none; opacity: .75 }
+.atlas-coordinate strong { display: block; color: var(--ink); font-weight: 500 }
+.atlas-photo { height: 510px; position: relative; overflow: hidden; background: #796046 }
+.atlas-photo>img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 58%; transform: scale(1.025); transition: opacity .5s var(--ease),transform 1.4s var(--ease) }
+.atlas-photo:hover>img { transform: scale(1.05) }
+.atlas-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg,rgba(27,24,19,.26),transparent 36%,transparent 64%,rgba(27,24,19,.64)); pointer-events: none }
+.atlas-photo-top { position: absolute; top: 23px; left: 25px; right: 25px; z-index: 2; display: flex; justify-content: space-between; align-items: center; gap: 20px; font-size: 8px; line-height: 1.6; color: #fff9ef; letter-spacing: .13em; text-transform: uppercase }
+.atlas-photo figcaption { position: absolute; z-index: 2; inset: auto 25px 23px; display: flex; align-items: center; gap: 17px; color: #fff9ef }
+.cover-number { font-family: "Cormorant Garamond",Georgia,serif; font-size: 56px; font-weight: 400; line-height: 1; border-right: 1px solid rgba(255,249,239,.45); padding-right: 18px }
+.cover-caption { display: flex; flex-direction: column; gap: 5px; flex: 1 }
+.cover-caption small { font-size: 7px; letter-spacing: .13em; text-transform: uppercase }
+.cover-caption strong { font-size: 12px; font-weight: 500; line-height: 1.5 }
+#cover-next { display: grid; place-items: center; flex: none; width: 43px; height: 43px; padding: 0; border: 1px solid rgba(255,249,239,.6); border-radius: 0; color: #fff9ef; background: transparent; transition: color .35s var(--ease),background .35s var(--ease) }
+#cover-next:hover { background: var(--ivory); color: var(--ink) }
+#cover-next .ico { width: 20px; height: 20px }
+.atlas-vertical { position: absolute; right: -30px; top: 0; height: 100%; writing-mode: vertical-rl; display: flex; align-items: center; justify-content: space-between; color: var(--muted); font-size: 7px; letter-spacing: .17em; text-transform: uppercase }
+.atlas-bottom { display: grid; grid-template-columns: .83fr 1.17fr; gap: clamp(32px,5vw,72px); align-items: center; padding: 23px 0 25px; margin-top: 0; border-bottom: 1px solid var(--line) }
+.atlas-volume { display: flex; align-items: center; gap: 18px; color: var(--body); font-size: 9px; line-height: 1.8 }
+.atlas-volume>strong { flex: none; color: var(--terra); font-family: "Cormorant Garamond",Georgia,serif; font-size: 45px; font-weight: 400; line-height: 1 }
+.atlas-volume small { display: block; color: var(--muted); font-size: 7px; letter-spacing: .12em; text-transform: uppercase }
+.atlas-bottom .book-bar { width: 100%; margin: 0; padding: 0; gap: 0; border: 0; border-radius: 0; box-shadow: none; background: transparent; grid-template-columns: 1.35fr 1.12fr .7fr auto }
+.atlas-bottom .book-field { min-height: 54px; padding: 4px 15px }
+.atlas-bottom .book-field:first-child { padding-left: 0 }
+.atlas-bottom .book-field label { font-size: 7px; letter-spacing: .11em }
+.atlas-bottom .book-input { gap: 7px }
+.atlas-bottom .book-input input, .atlas-bottom .book-input select { font-size: 10px; min-height: 27px }
+.atlas-bottom .book-input .ico { width: 13px; height: 13px }
+.atlas-bottom .book-go { min-height: 54px; padding-inline: 17px; font-size: 10px }
+.territory-strip { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); padding: 26px 0 0; gap: 0 }
+.territory-button { position: relative; display: grid; grid-template-columns: 22px minmax(0,1fr) 15px; gap: 0 10px; align-items: center; padding: 7px 23px 13px; border: 0; border-bottom: 1px solid transparent; background: transparent; text-align: left; transition: border-color .4s var(--ease),color .4s var(--ease); color: var(--ink) }
+.territory-button:first-child { padding-left: 0 }
+.territory-button:last-child { padding-right: 0 }
+.territory-button+.territory-button { border-left: 1px solid var(--line) }
+.territory-button>small { grid-column: 1; grid-row: 1/3; align-self: start; color: var(--terra); font-size: 8px; padding-top: 5px }
+.territory-button>strong { grid-column: 2; font-family: "Cormorant Garamond",Georgia,serif; font-size: 26px; font-weight: 500; line-height: 1.1 }
+.territory-button>span { grid-column: 2; color: var(--muted); font-size: 8px; line-height: 1.8; margin-top: 4px }
+.territory-button>.ico { grid-column: 3; grid-row: 1/3; width: 15px; height: 15px; transition: transform .4s var(--ease) }
+.territory-button:hover, .territory-button.active, .territory-button[aria-pressed="true"] { color: var(--terra); border-bottom-color: var(--terra) }
+.territory-button:hover>.ico { transform: translate(2px,-2px) }
+.signature-feature { margin-top: 65px; padding: 33px 0 45px; color: var(--ivory); background: var(--terra-d); overflow: hidden }
+.feature-top { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 0 0 26px; border-bottom: 1px solid rgba(244,240,231,.25); margin-bottom: 31px; font-size: 8px; line-height: 1.7; letter-spacing: .14em; text-transform: uppercase; color: rgba(244,240,231,.8) }
+.feature-top>span:last-child { color: #d6b6ae }
+.feature-grid { display: grid; grid-template-columns: minmax(0,1.08fr) minmax(0,.92fr); align-items: center; gap: clamp(40px,5.5vw,80px) }
+.feature-image { position: relative; overflow: hidden; background: #82674f }
+.feature-image>img { width: 100%; height: 490px; object-fit: cover; transition: transform 1.2s var(--ease) }
+.feature-image:hover>img { transform: scale(1.05) }
+.feature-image figcaption { padding: 11px 15px; color: rgba(244,240,231,.72); background: var(--terra-d); font-size: 7px; line-height: 1.8; letter-spacing: .025em }
+.feature-copy h2 { color: var(--ivory); font-size: clamp(47px,4.9vw,69px); font-weight: 400; line-height: .96; letter-spacing: -.035em; margin-bottom: 21px }
+.feature-copy h2 em { color: #d6b6ae }
+.feature-copy>p { max-width: 48ch; color: rgba(244,240,231,.8); font-size: 12px; line-height: 1.85 }
+.feature-copy .eyebrow { color: #d6b6ae; font-size: 8px; margin-bottom: 18px }
+.feature-specs { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; padding: 21px 0; margin: 26px 0 24px; border-block: 1px solid rgba(244,240,231,.25) }
+.feature-specs div { min-width: 0 }
+.feature-specs dt { color: rgba(244,240,231,.62); font-size: 7px; text-transform: uppercase; letter-spacing: .1em; line-height: 1.7 }
+.feature-specs dd { margin: 8px 0 0; color: var(--ivory); font-size: 12px; line-height: 1.7; font-weight: 400 }
+.feature-route { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); list-style: none; padding: 0; margin: 0 0 28px; gap: 0; counter-reset: feature-route }
+.feature-route li { position: relative; padding: 16px 7px 0 0; color: rgba(244,240,231,.8); font-size: 8px; line-height: 1.7; border-top: 1px solid rgba(244,240,231,.34) }
+.feature-route li::before { content: ""; position: absolute; width: 5px; height: 5px; left: 0; top: -3px; background: #d6b6ae; border-radius: 50% }
+.feature-route li>span { display: block; color: #d6b6ae; font-size: 7px; margin-bottom: 3px }
+.feature-actions { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap }
+.feature-actions .btn { color: var(--terra-d); background: var(--ivory); border-color: var(--ivory); min-height: 46px; padding: 13px 20px }
+.feature-actions .btn:hover { color: var(--ivory); background: transparent }
+.feature-actions>.feature-price, .feature-actions>p, .feature-actions>div { display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: rgba(244,240,231,.75); line-height: 1.6 }
+.feature-price strong, .feature-actions>p strong, .feature-actions>div strong { font-family: "Cormorant Garamond",Georgia,serif; font-size: 34px; color: var(--ivory); font-weight: 400; line-height: 1 }
+.feature-actions small { font-size: 7px; color: rgba(244,240,231,.7) }
+.collection { background: var(--ivory) }
+.collection-controls { gap: 20px; align-items: flex-end; padding-bottom: 18px; border-bottom: 1px solid var(--line) }
+.filter-tab { border: 0; border-bottom: 1px solid transparent; border-radius: 0; padding: 6px 10px; min-height: 35px; font-size: 10px }
+.filter-tab:first-child { padding-left: 0 }
+.filter-tab.active, .filter-tab[aria-pressed="true"], .filter-tab[aria-selected="true"] { background: transparent; color: var(--terra); border-color: var(--terra) }
+.filter-tab:hover { border-color: var(--terra); color: var(--terra) }
+.results-status { font-size: 9px; color: var(--muted); margin-top: 15px }
+.dest-grid, .dest-grid:has(.dest:only-child), .dest-grid:has(.dest:nth-child(2):last-child) { display: grid; grid-template-columns: minmax(0,1fr); gap: 0 }
+.dest-grid .route-row.dest { display: grid; grid-template-columns: 30px minmax(185px,250px) minmax(0,1fr) minmax(150px,188px); gap: clamp(18px,2.4vw,35px); align-items: center; grid-column: 1/-1; position: relative; min-height: 0; max-width: none; width: 100%; padding: 29px 0; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; color: var(--ink); overflow: visible; isolation: auto; box-shadow: none; transform: none; transition: none }
+.route-row.dest::before, .route-row.dest::after { display: none }
+.route-row.dest:hover { transform: none; box-shadow: none }
+.route-index { align-self: start; padding-top: 2px; font-size: 10px; color: var(--terra); letter-spacing: .03em }
+.route-row.dest .route-media { position: relative; inset: auto; overflow: hidden; width: 100%; height: 211px; z-index: auto; min-height: 0; border-radius: 0 }
+.route-row.dest .route-media::before, .route-row.dest .route-media::after { display: none }
+.route-image-button { display: block; width: 100%; height: 100%; padding: 0; border: 0; background: var(--sand); overflow: hidden }
+.route-row.dest .route-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ease) }
+.route-row.dest:hover .route-media img { transform: none }
+.route-row.dest .route-image-button:hover img { transform: scale(1.05) }
+.route-row.dest .save-btn { position: absolute; top: 12px; right: 12px; width: 31px; height: 31px; background: var(--ivory); border: 0; border-radius: 0; color: var(--ink); backdrop-filter: none; box-shadow: none }
+.route-row.dest .save-btn:hover, .route-row.dest .save-btn[aria-pressed="true"] { background: var(--terra); color: var(--ivory); transform: none }
+.route-row.dest .save-btn[aria-pressed="true"] .ico { fill: rgba(244,240,231,.25) }
+.route-row.dest .route-copy { display: block; position: static; padding: 0; margin: 0; min-height: 0; z-index: auto; pointer-events: auto }
+.route-location { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; color: var(--terra); font-size: 8px; line-height: 1.7; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 13px }
+.route-category { color: var(--muted); padding-left: 9px; border-left: 1px solid var(--line) }
+.route-row.dest h3 { color: var(--ink); font-size: clamp(30px,2.8vw,41px); line-height: 1.02; letter-spacing: -.03em; margin: 0 0 12px }
+.route-row.dest h3 button { color: inherit; text-align: left; line-height: inherit; transition: color .35s var(--ease) }
+.route-row.dest h3 button:hover { color: var(--terra) }
+.route-row.dest .route-copy>p { color: var(--body); font-size: 11px; line-height: 1.9; max-width: 52ch }
+.route-specs { display: grid; grid-template-columns: auto 1fr; column-gap: 30px; margin: 19px 0 0 }
+.route-specs dt { color: var(--muted); font-size: 7px; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 3px }
+.route-specs dd { margin: 0; color: var(--ink); font-size: 10px; line-height: 1.7 }
+.route-booking { align-self: stretch; display: flex; flex-direction: column; justify-content: center; gap: 0; padding-left: 24px; border-left: 1px solid var(--line); min-width: 0 }
+.route-access { color: var(--muted); font-size: 7px; line-height: 1.7; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 13px }
+.route-access-online { color: var(--terra) }
+.route-price.card-price { align-items: flex-start; gap: 3px; margin: 0 0 13px; color: var(--ink) }
+.route-price.card-price>span { font-size: 7px; color: var(--muted); letter-spacing: .08em }
+.route-price.card-price>strong { color: var(--ink); font-family: "Cormorant Garamond",Georgia,serif; font-size: 39px; line-height: 1; font-weight: 500; letter-spacing: -.02em }
+.route-price.card-price>small { color: var(--muted); font-size: 7px; margin-top: 2px }
+.route-booking>.btn { width: 100%; min-height: 39px; padding: 10px 12px; font-size: 9px; justify-content: space-between }
+.route-booking>.route-itinerary { justify-content: space-between; margin-top: 10px; font-size: 8px; min-height: 24px }
+.route-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line) }
+.route-actions .compare-toggle { color: var(--muted); font-size: 8px; min-height: 25px; line-height: 1.5 }
+.route-actions .compare-toggle input { width: 11px; height: 11px; accent-color: var(--terra) }
+.route-actions .text-button { color: var(--body); font-size: 8px; min-height: 27px; border: 0; padding: 3px 0; gap: 6px }
+.route-actions .text-button:hover, .route-actions .text-button[aria-pressed="true"] { color: var(--terra) }
+.route-actions .text-button .ico { width: 12px; height: 12px }
+.local-note { display: grid; grid-template-columns: .7fr 1.3fr; gap: clamp(45px,7vw,110px); align-items: start; border-top: 1px solid var(--line); padding-top: 33px }
+.local-note h2 { font-size: clamp(40px,4.1vw,57px); line-height: 1.04; margin-bottom: 25px; max-width: 12ch }
+.local-note>.local-copy>p:first-child, .local-note>.local-text>p:first-child { color: var(--ink); font-family: "Cormorant Garamond",Georgia,serif; font-size: clamp(28px,2.8vw,40px); line-height: 1.28; letter-spacing: -.016em; margin-bottom: 23px }
+.local-note>.local-copy>p:not(:first-child), .local-note>.local-text>p:not(:first-child) { max-width: 61ch; font-size: 12px; line-height: 1.9; color: var(--muted) }
+.local-note ul { display: flex; flex-wrap: wrap; align-items: center; list-style: none; padding: 0; margin: 26px 0 0; gap: 12px 25px; font-size: 9px; color: var(--ink) }
+.local-stamp { display: inline-flex; align-items: center; justify-content: center; flex-direction: column; border: 1px solid var(--terra); width: 95px; height: 95px; border-radius: 50%; color: var(--terra); line-height: 1.4; transform: rotate(-8deg) }
+.local-stamp small, .local-stamp span { font-size: 7px; letter-spacing: .13em; text-transform: uppercase }
+.local-stamp strong { font-family: "Cormorant Garamond",Georgia,serif; font-weight: 500; font-size: 34px; letter-spacing: -.03em }
+.packages { background: #eae3d8 }
+.pack-grid { gap: 28px }
+.pack { border: 0; border-radius: 0; background: transparent; box-shadow: none }
+.pack:hover { transform: none; box-shadow: none }
+.pack .package-media { border-radius: 0; aspect-ratio: 1.5 }
+.pack .package-media::after, .pack .media-overlay { display: none }
+.pack .tag { border: 0; border-radius: 0; background: var(--ivory); color: var(--ink); padding: 5px 8px; font-size: 7px; left: 13px; top: 14px; backdrop-filter: none }
+.pack .save-btn { width: 31px; height: 31px; border: 0; border-radius: 0; color: var(--ink); background: var(--ivory); top: 14px; right: 13px; backdrop-filter: none }
+.pack .save-btn:hover, .pack .save-btn[aria-pressed="true"] { color: var(--ivory); background: var(--terra); transform: none }
+.pack .package-body { padding: 23px 0 0; background: transparent }
+.pack .card-meta { color: var(--muted); margin-bottom: 13px; font-size: 8px }
+.pack h3 { font-size: 35px; margin-bottom: 13px }
+.pack p { font-size: 11px; line-height: 1.9; color: var(--body) }
+.pack .card-footer { margin-top: 19px; padding-top: 18px; border-top-color: var(--line) }
+.pack .card-price>strong { font-size: 32px }
+.pack .card-actions { border-color: var(--line); color: var(--muted); padding-top: 13px; margin-top: 13px }
+.pack .package-days, .pack .plan-toggle { font-size: 8px }
+.quote { background: var(--ivory); color: var(--ink); padding-block: 85px; border-bottom: 1px solid var(--line) }
+.quote-inner { max-width: 950px }
+.quote .eyebrow { color: var(--terra); font-size: 8px; margin-bottom: 25px }
+.quote-mark { display: none }
+.quote .review-quote, .quote blockquote { color: var(--ink); font-size: clamp(35px,3.5vw,50px); line-height: 1.2; font-style: normal }
+.quote-by { margin-top: 23px }
+.quote-by b { color: var(--ink); font-size: 10px }
+.quote-by span, .quote-by a { color: var(--muted); font-size: 8px; border-color: var(--line) }
+.quote-by a:hover { color: var(--terra) }
+.quote-controls { margin-top: 21px }
+.quote-controls button { color: var(--ink); border-color: var(--line); border-radius: 0; width: 32px; height: 32px }
+.quote-controls button:hover { background: var(--sand) }
+.quote-controls span { color: var(--muted); font-size: 8px }
+.review-note { color: var(--muted); font-size: 8px; margin-top: 19px }
+.contact { background: var(--ivory) }
+.contact-copy h2 { font-size: clamp(43px,4.5vw,63px) }
+.contact-form { border: 0; border-top: 1px solid var(--line); padding: 24px 0 0; border-radius: 0; background: transparent }
+.contact-list li, .contact-list a { font-size: 11px }
+.foot { background: var(--ink); padding-top: 65px }
+.foot .brand { color: var(--ivory) }
+.foot .brand-mark { stroke: var(--sand-2) }
+.footer-wordmark { margin: 54px 0 0; border-top: 1px solid rgba(244,240,231,.2); padding-top: 31px; font-family: "Cormorant Garamond",Georgia,serif; font-size: clamp(68px,13.2vw,210px); line-height: .85; letter-spacing: -.05em; text-align: center; color: var(--ivory); font-weight: 400; white-space: nowrap }
+.foot-bottom, .foot-base { margin-top: 35px; border-top: 0; font-size: 8px }
+.premium-dialog { border-radius: 0 }
+.premium-dialog .dialog-head, .premium-dialog .dialog-actions { background: rgba(244,240,231,.97) }
+.premium-dialog .detail-sidebar { background: var(--sand); border-radius: 0 }
+.dialog-close { border-radius: 0 }
+.compare-bar, .premium-toast { border-radius: 0 }
+@media (max-width:1200px) {
+  .wrap { width: calc(100% - 80px) }
+  .head-inner, .site-head.solid .head-inner { width: calc(100% - 60px); gap: 19px }
+  .nav { gap: 16px }
+  .nav a { font-size: 9px }
+  .head-tools { gap: 10px }
+  .atlas-cover, .atlas-bottom { grid-template-columns: minmax(0,.88fr) minmax(0,1.12fr); gap: 38px }
+  .atlas-copy h1 { font-size: clamp(66px,6.45vw,83px) }
+  .atlas-photo { height: 500px }
+  .atlas-bottom .book-bar { grid-template-columns: 1.3fr 1.1fr .65fr auto }
+  .atlas-bottom .book-field { padding-inline: 9px }
+  .atlas-bottom .book-go { padding-inline: 11px; font-size: 9px }
+  .atlas-volume { font-size: 8px; gap: 13px }
+  .atlas-volume>strong { font-size: 39px }
+  .dest-grid .route-row.dest { grid-template-columns: 25px minmax(165px,215px) minmax(0,1fr) 158px; gap: 22px }
+  .route-row.dest .route-media { height: 210px }
+  .route-booking { padding-left: 19px }
+  .route-row.dest h3 { font-size: 34px }
+  .route-specs { column-gap: 18px }
+  .feature-grid { gap: 42px }
+  .feature-image>img { height: 465px }
+  .feature-copy h2 { font-size: 57px }
+  .feature-specs { gap: 11px }
+  .feature-specs dd { font-size: 10px }
+  .feature-route li { font-size: 7px }
+}
+@media (max-width:980px) {
+  .head-inner, .site-head.solid .head-inner { padding-block: 16px }
+  .nav { background: var(--ivory); border-left: 1px solid var(--line); gap: 11px }
+  .nav a, .nav a[aria-current="location"] { font-size: 37px; color: var(--ink) }
+  .nav a:hover { color: var(--terra) }
+  .head-tools { gap: 16px }
+  .atlas-hero { padding-top: 78px }
+  .atlas-cover, .atlas-bottom { grid-template-columns: minmax(0,.92fr) minmax(0,1.08fr); gap: 28px }
+  .atlas-copy h1 { font-size: 67px; line-height: .9 }
+  .atlas-photo { height: 490px }
+  .atlas-photo figcaption { left: 17px; right: 17px; bottom: 18px; gap: 11px }
+  .atlas-photo-top { left: 17px; right: 17px; top: 18px; font-size: 7px }
+  .cover-number { font-size: 46px; padding-right: 12px }
+  .cover-caption strong { font-size: 10px }
+  .cover-caption small { font-size: 6px }
+  #cover-next { width: 35px; height: 35px }
+  .atlas-intro { font-size: 11px; max-width: 37ch }
+  .atlas-actions { gap: 11px; margin-top: 21px }
+  .atlas-actions .btn { min-height: 41px; padding: 11px 13px; font-size: 10px }
+  .atlas-actions>a:not(.btn), .atlas-actions>button:not(.btn) { font-size: 9px }
+  .atlas-coordinate { margin-top: 24px; gap: 10px; font-size: 7px }
+  .atlas-coordinate>svg { width: 55px; height: 30px }
+  .atlas-bottom { grid-template-columns: 1fr; gap: 15px; padding: 22px 0 }
+  .atlas-volume { display: none }
+  .atlas-bottom .book-bar { grid-template-columns: 1.35fr 1.15fr .8fr auto }
+  .atlas-bottom .book-field { padding: 5px 20px }
+  .atlas-bottom .book-input input, .atlas-bottom .book-input select { font-size: 11px }
+  .atlas-bottom .book-go { padding-inline: 25px; font-size: 10px }
+  .territory-button { padding-inline: 15px; gap: 0 7px }
+  .territory-button>strong { font-size: 23px }
+  .territory-button>span { font-size: 7px }
+  .signature-feature { margin-top: 47px }
+  .feature-grid { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 32px }
+  .feature-image>img { height: 460px }
+  .feature-copy h2 { font-size: 49px }
+  .feature-copy>p { font-size: 11px }
+  .feature-specs { gap: 8px; margin-block: 22px; padding-block: 17px }
+  .feature-specs dt { font-size: 6px }
+  .feature-specs dd { font-size: 9px }
+  .feature-route { grid-template-columns: 1fr 1fr; gap: 15px 0; margin-bottom: 25px }
+  .feature-route li { font-size: 8px; padding-top: 10px }
+  .feature-actions { gap: 12px }
+  .feature-actions .btn { font-size: 10px; padding-inline: 17px }
+  .dest-grid .route-row.dest { grid-template-columns: 20px 185px minmax(0,1fr); gap: 20px; align-items: start; padding-block: 25px }
+  .route-row.dest .route-media { height: 210px }
+  .route-index { grid-row: 1/3 }
+  .route-media { grid-row: 1/3 }
+  .route-booking { grid-column: 3; flex-direction: row; align-items: center; flex-wrap: wrap; gap: 9px 13px; border: 0; padding: 0; margin-top: 0 }
+  .route-access { display: none }
+  .route-price.card-price { margin: 0; flex: 1; gap: 0 }
+  .route-price.card-price>strong { font-size: 32px }
+  .route-booking>.btn { width: auto; min-width: 128px; justify-content: space-between; min-height: 36px }
+  .route-booking>.route-itinerary { margin: 0; width: 100%; justify-content: flex-start; gap: 7px; min-height: 27px }
+  .route-actions { flex-direction: row; justify-content: space-between; align-items: center; gap: 14px; width: 100%; margin-top: 3px; padding-top: 5px }
+  .route-row.dest h3 { font-size: 34px; margin-bottom: 10px }
+  .route-location { font-size: 7px; margin-bottom: 10px }
+  .route-row.dest .route-copy>p { font-size: 10px }
+  .route-specs { margin-top: 13px; gap: 20px }
+  .route-specs dd { font-size: 9px }
+  .local-note { grid-template-columns: .8fr 1.2fr; gap: 40px }
+  .pack .package-body { padding: 20px 0 0 }
+  .pack h3 { font-size: 32px }
+  .pack .card-footer .btn { width: auto }
+  .pack .card-footer { gap: 12px }
+  .footer-wordmark { margin-top: 42px; padding-top: 25px }
+}
+@media (max-width:760px) {
+  .wrap { width: calc(100% - 48px) }
+  .head-inner, .site-head.solid .head-inner { width: calc(100% - 40px); gap: 13px; padding-block: 15px }
+  .head-tools { gap: 9px }
+  .brand-txt b { font-size: 25px }
+  .brand-mark { width: 25px; height: 33px }
+  .atlas-hero { padding-top: 75px }
+  .atlas-issue { padding: 15px 0 13px; font-size: 7px; gap: 15px }
+  .atlas-cover { grid-template-columns: minmax(0,1fr); gap: 28px }
+  .atlas-copy { padding: 16px 0 0 }
+  .atlas-copy h1 { font-size: clamp(61px,10.9vw,84px); max-width: 560px; margin-bottom: 23px }
+  .atlas-copy h1 em { display: inline; margin: 0; line-height: 1; font-size: 1em }
+  .atlas-copy h1 em br { display: none }
+  .atlas-copy h1>span { display: block }
+  .atlas-intro { font-size: 12px; max-width: 50ch }
+  .atlas-actions { margin-top: 22px; gap: 14px 20px }
+  .atlas-actions .btn { font-size: 10px; min-height: 43px; padding: 12px 17px }
+  .atlas-coordinate { margin-top: 23px }
+  .atlas-photo { height: 360px }
+  .atlas-photo>img { object-position: 50% 56% }
+  .atlas-photo figcaption { left: 23px; right: 23px; bottom: 20px; gap: 16px }
+  .cover-number { font-size: 50px; padding-right: 17px }
+  .cover-caption strong { font-size: 11px }
+  .cover-caption small { font-size: 7px }
+  .atlas-photo-top { top: 21px; left: 23px; right: 23px; font-size: 7px }
+  #cover-next { width: 40px; height: 40px }
+  .atlas-vertical { display: none }
+  .atlas-bottom { padding: 20px 0; gap: 0 }
+  .atlas-bottom .book-bar { grid-template-columns: 1.3fr 1.15fr .8fr auto; gap: 0 }
+  .atlas-bottom .book-field { min-height: 54px; padding: 5px 11px }
+  .atlas-bottom .book-field:first-child { padding-left: 0; grid-column: auto; border: 0 }
+  .atlas-bottom .book-field:nth-child(3) { border: 0 }
+  .atlas-bottom .book-field+.book-field::before { display: block }
+  .atlas-bottom .book-input { gap: 5px }
+  .atlas-bottom .book-go { padding-inline: 13px; font-size: 9px; margin: 0; min-height: 54px; grid-column: auto }
+  .atlas-bottom .book-input input, .atlas-bottom .book-input select { font-size: 10px }
+  .territory-strip { grid-template-columns: 1fr 1fr; padding-top: 18px; gap: 14px 0 }
+  .territory-button { padding: 3px 17px 9px; grid-template-columns: 19px minmax(0,1fr) 15px }
+  .territory-button:nth-child(3) { padding-left: 0; border-left: 0 }
+  .territory-button:nth-child(2) { padding-right: 0 }
+  .territory-button>strong { font-size: 25px }
+  .territory-button>span { font-size: 8px }
+  .signature-feature { margin-top: 33px; padding: 27px 0 35px }
+  .feature-top { padding-bottom: 20px; margin-bottom: 23px; font-size: 7px; gap: 16px }
+  .feature-grid { grid-template-columns: minmax(0,1fr); gap: 29px }
+  .feature-image>img { height: 340px; object-position: 50% 50% }
+  .feature-image figcaption { padding: 10px 0 0; font-size: 7px }
+  .feature-copy { max-width: 630px }
+  .feature-copy h2 { font-size: clamp(45px,8vw,59px); margin-bottom: 19px; max-width: 14ch }
+  .feature-copy>p { font-size: 12px; max-width: 50ch }
+  .feature-specs { gap: 18px; margin-top: 24px; margin-bottom: 22px; padding-block: 18px }
+  .feature-specs dt { font-size: 7px }
+  .feature-specs dd { font-size: 11px }
+  .feature-route { grid-template-columns: repeat(4,minmax(0,1fr)); gap: 0 }
+  .feature-route li { font-size: 8px; padding-top: 14px }
+  .feature-actions .btn { font-size: 10px; padding-inline: 20px }
+  .section { padding: 58px 0 }
+  .sec-head { padding-top: 22px; gap: 17px; margin-bottom: 28px }
+  .sec-head h2 { font-size: 49px }
+  .sec-lede { font-size: 11px; max-width: 49ch }
+  .collection-controls { align-items: flex-start; gap: 14px; padding-bottom: 16px; margin-bottom: 0 }
+  .filter-tab { padding: 5px 11px; font-size: 9px }
+  .results-status { font-size: 8px; line-height: 1.8; margin-top: 14px; margin-bottom: 0 }
+  .dest-grid .route-row.dest { grid-template-columns: 170px minmax(0,1fr); gap: 15px 20px; padding: 26px 0 23px }
+  .route-index { display: none }
+  .route-media { grid-column: 1; grid-row: 1 }
+  .route-row.dest .route-media { height: 190px }
+  .route-row.dest .route-copy { grid-column: 2; grid-row: 1 }
+  .route-row.dest h3 { font-size: 32px }
+  .route-row.dest .route-copy>p { font-size: 10px; line-height: 1.85 }
+  .route-location { font-size: 7px; gap: 6px }
+  .route-category { display: none }
+  .route-specs { margin-top: 13px; gap: 16px }
+  .route-specs dt { font-size: 6px }
+  .route-specs dd { font-size: 9px }
+  .route-booking { grid-column: 1/-1; grid-row: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; align-items: center }
+  .route-price.card-price { grid-column: 1; grid-row: 1; display: grid; grid-template-columns: auto 1fr; align-items: baseline; gap: 1px 8px }
+  .route-price.card-price>strong { font-size: 34px }
+  .route-price.card-price>small { grid-column: 2; font-size: 7px; margin-top: 0 }
+  .route-booking>.btn { grid-column: 2; grid-row: 1; justify-self: stretch; min-height: 41px }
+  .route-booking>.route-itinerary { grid-column: 1; grid-row: 2; width: auto; margin-top: 8px; font-size: 8px }
+  .route-actions { grid-column: 1/-1; grid-row: 3; margin-top: 13px; padding-top: 9px; gap: 20px }
+  .route-actions .compare-toggle { font-size: 9px; min-height: 30px }
+  .route-actions .text-button { font-size: 9px; min-height: 30px }
+  .local-note { grid-template-columns: 1fr; gap: 27px; padding-top: 23px }
+  .local-note h2 { font-size: 47px; max-width: 16ch }
+  .local-note>div:first-child { display: grid; grid-template-columns: 1fr auto; gap: 0 25px; align-items: center }
+  .local-note>div:first-child>.eyebrow { grid-column: 1/-1; margin-bottom: 15px }
+  .local-note>div:first-child>h2 { margin: 0 }
+  .local-stamp { width: 83px; height: 83px }
+  .local-stamp strong { font-size: 31px }
+  .local-stamp small, .local-stamp span { font-size: 6px }
+  .local-note>.local-copy>p:first-child, .local-note>.local-text>p:first-child { font-size: 34px; margin-bottom: 18px }
+  .local-note>.local-copy>p:not(:first-child), .local-note>.local-text>p:not(:first-child) { font-size: 11px }
+  .pack-grid { grid-template-columns: 1fr; gap: 38px; max-width: 620px; margin-inline: auto }
+  .pack .package-media { aspect-ratio: 1.8 }
+  .pack .package-body { padding: 22px 0 0 }
+  .pack h3 { font-size: 37px }
+  .pack .card-footer { flex-direction: row; align-items: center; gap: 20px }
+  .pack .card-footer .btn { width: auto }
+  .pack .card-price>strong { font-size: 34px }
+  .pack .package-days, .pack .plan-toggle { font-size: 9px }
+  .quote { padding-block: 58px }
+  .quote .review-quote { font-size: 37px; line-height: 1.25 }
+  .contact-copy h2 { font-size: 48px }
+  .contact-grid { gap: 32px }
+  .contact-form { padding: 24px 0 0 }
+  .foot { padding-top: 45px }
+  .footer-wordmark { font-size: clamp(59px,13.9vw,103px); margin-top: 36px; padding-top: 25px }
+  .foot-bottom, .foot-base { margin-top: 20px }
+}
+@media (max-width:480px) {
+  .wrap { width: calc(100% - 40px) }
+  .head-inner, .site-head.solid .head-inner { width: calc(100% - 30px); padding-block: 14px; gap: 9px }
+  .brand { gap: 7px }
+  .brand-txt b { font-size: 24px }
+  .brand-txt i { font-size: 6px; letter-spacing: .25em }
+  .brand-mark { width: 24px; height: 31px }
+  .head-tools { gap: 7px }
+  .head-tools .locale-controls select { padding-inline: 4px; font-size: 8px }
+  .head-plan { gap: 4px }
+  .count-badge { font-size: 7px }
+  .atlas-hero { padding-top: 71px }
+  .atlas-issue { font-size: 6px; letter-spacing: .1em; gap: 12px; padding-block: 13px }
+  .atlas-issue>span:last-child { text-align: right; max-width: 23ch }
+  .atlas-copy { padding-top: 11px }
+  .atlas-kicker { font-size: 8px; margin-bottom: 16px }
+  .atlas-copy h1 { font-size: clamp(53px,15.4vw,73px); line-height: .9; margin-bottom: 22px; letter-spacing: -.045em }
+  .atlas-copy h1 em { display: block; margin-top: 6px; font-size: 1.02em; line-height: .94 }
+  .atlas-copy h1 em br { display: initial }
+  .atlas-intro { font-size: 11px; line-height: 1.9; max-width: 41ch }
+  .atlas-actions { margin-top: 20px; gap: 11px 20px }
+  .atlas-actions .btn { font-size: 10px; padding-inline: 16px }
+  .atlas-actions>a:not(.btn), .atlas-actions>button:not(.btn) { font-size: 9px }
+  .atlas-coordinate { font-size: 6px; margin-top: 22px; gap: 11px }
+  .atlas-coordinate>svg { width: 61px; height: 31px }
+  .atlas-cover { gap: 24px }
+  .atlas-photo { height: 325px }
+  .atlas-photo-top { top: 18px; left: 18px; right: 18px; font-size: 6px }
+  .atlas-photo figcaption { left: 18px; right: 18px; bottom: 19px; gap: 13px }
+  .cover-number { font-size: 45px; padding-right: 13px }
+  .cover-caption small { font-size: 6px }
+  .cover-caption strong { font-size: 10px }
+  #cover-next { width: 36px; height: 36px }
+  .atlas-bottom { padding: 18px 0 }
+  .atlas-bottom .book-bar { grid-template-columns: 1fr 1fr; gap: 10px 0 }
+  .atlas-bottom .book-field { min-height: 51px; padding: 5px 11px }
+  .atlas-bottom .book-field:first-child { grid-column: 1/-1; border-bottom: 1px solid var(--line); padding: 0 0 10px; min-height: 52px }
+  .atlas-bottom .book-field:nth-child(2) { padding-left: 0 }
+  .atlas-bottom .book-field:nth-child(2)::before { display: none }
+  .atlas-bottom .book-field:nth-child(3)::before { display: block }
+  .atlas-bottom .book-field label { font-size: 7px; margin-bottom: 4px }
+  .atlas-bottom .book-input input, .atlas-bottom .book-input select { font-size: 11px; min-height: 27px }
+  .atlas-bottom .book-go { grid-column: 1/-1; min-height: 43px; font-size: 10px; padding: 11px 18px; margin-top: 1px }
+  .territory-strip { padding-top: 17px; gap: 13px 0 }
+  .territory-button { padding: 4px 13px 8px; gap: 0 6px; grid-template-columns: 17px minmax(0,1fr) 12px }
+  .territory-button>strong { font-size: 23px }
+  .territory-button>small { font-size: 7px; padding-top: 4px }
+  .territory-button>span { font-size: 7px }
+  .territory-button>.ico { width: 12px; height: 12px }
+  .signature-feature { margin-top: 29px }
+  .feature-top { font-size: 6px; letter-spacing: .08em; gap: 15px }
+  .feature-top>span:last-child { max-width: 20ch; text-align: right }
+  .feature-image>img { height: 290px }
+  .feature-image figcaption { font-size: 6px }
+  .feature-grid { gap: 24px }
+  .feature-copy h2 { font-size: 49px; margin-bottom: 18px }
+  .feature-copy>p { font-size: 11px; line-height: 1.9 }
+  .feature-specs { gap: 11px; padding-block: 16px }
+  .feature-specs dt { font-size: 6px }
+  .feature-specs dd { font-size: 10px }
+  .feature-route { grid-template-columns: 1fr 1fr; gap: 16px 0; margin-bottom: 26px }
+  .feature-route li { padding-top: 11px; font-size: 8px }
+  .feature-actions { gap: 15px }
+  .feature-actions .btn { min-height: 43px; font-size: 9px; padding-inline: 16px }
+  .feature-price strong, .feature-actions>p strong, .feature-actions>div strong { font-size: 33px }
+  .section { padding-block: 49px }
+  .sec-head h2 { font-size: 43px }
+  .sec-lede { font-size: 11px }
+  .eyebrow { font-size: 8px; letter-spacing: .1em }
+  .filter-tabs { gap: 4px }
+  .filter-tab { padding-inline: 9px; font-size: 8px }
+  .catalog-options { gap: 15px; width: 100% }
+  .catalog-options .search-refine select { width: 145px }
+  .catalog-options .check-row { font-size: 8px }
+  .results-status { font-size: 8px; line-height: 1.9 }
+  .dest-grid .route-row.dest { grid-template-columns: minmax(0,1fr); gap: 18px; padding: 24px 0 }
+  .route-row.dest .route-media { height: 216px; grid-column: 1; grid-row: 1 }
+  .route-row.dest .route-copy { grid-column: 1; grid-row: 2 }
+  .route-location { font-size: 7px; gap: 9px; margin-bottom: 10px }
+  .route-category { display: inline; padding-left: 9px }
+  .route-row.dest h3 { font-size: 38px; margin-bottom: 12px }
+  .route-row.dest .route-copy>p { font-size: 11px; line-height: 1.85 }
+  .route-specs { margin-top: 14px; gap: 28px; grid-template-columns: auto 1fr }
+  .route-specs dt { font-size: 7px }
+  .route-specs dd { font-size: 10px }
+  .route-booking { grid-column: 1; grid-row: 3; gap: 0 18px; margin-top: 0; border-top: 1px solid var(--line); padding-top: 17px }
+  .route-price.card-price>strong { font-size: 35px }
+  .route-booking>.btn { min-width: 0; min-height: 42px; font-size: 9px; padding-inline: 13px }
+  .route-actions { gap: 15px; margin-top: 11px; padding-top: 7px }
+  .route-actions .compare-toggle, .route-actions .text-button { font-size: 8px }
+  .local-note { gap: 24px }
+  .local-note>div:first-child { gap: 0 20px }
+  .local-note h2 { font-size: 41px }
+  .local-stamp { width: 72px; height: 72px }
+  .local-stamp strong { font-size: 28px }
+  .local-stamp small, .local-stamp span { font-size: 5px }
+  .local-note>.local-copy>p:first-child, .local-note>.local-text>p:first-child { font-size: 31px; line-height: 1.3 }
+  .local-note ul { gap: 11px 21px; font-size: 8px; margin-top: 22px }
+  .pack-grid { gap: 34px }
+  .pack .package-media { aspect-ratio: 1.55 }
+  .pack .package-body { padding-top: 20px }
+  .pack h3 { font-size: 36px }
+  .pack p { font-size: 11px }
+  .pack .card-footer { gap: 15px }
+  .pack .card-footer .btn { min-height: 40px; font-size: 9px; padding-inline: 13px }
+  .pack .card-price>strong { font-size: 33px }
+  .pack .package-days, .pack .plan-toggle { font-size: 8px }
+  .quote { padding-block: 50px }
+  .quote .review-quote { font-size: 32px; line-height: 1.3 }
+  .quote .eyebrow { font-size: 7px; margin-bottom: 21px }
+  .review-note { font-size: 7px }
+  .contact-copy h2 { font-size: 43px }
+  .contact-copy>p:not(.eyebrow) { font-size: 11px }
+  .contact-form { gap: 18px }
+  .form-row { grid-template-columns: 1fr }
+  .foot { padding-top: 43px }
+  .foot-grid { gap: 29px 24px }
+  .footer-wordmark { font-size: 13.6vw; letter-spacing: -.035em; padding-top: 23px; margin-top: 31px }
+  .foot-bottom, .foot-base { margin-top: 17px; padding-top: 10px; font-size: 7px }
+}
+@media (max-width:350px) {
+  .head-inner, .site-head.solid .head-inner { width: calc(100% - 24px) }
+  .wrap { width: calc(100% - 32px) }
+  .brand-mark { width: 19px }
+  .brand-txt b { font-size: 22px }
+  .brand-txt i { font-size: 5px }
+  .head-tools { gap: 5px }
+  .head-tools .locale-controls select { font-size: 7px; padding-inline: 3px }
+  .atlas-copy h1 { font-size: 52px }
+  .atlas-actions { gap: 11px 14px }
+  .atlas-actions .btn { font-size: 9px; padding-inline: 14px }
+  .atlas-actions>a:not(.btn), .atlas-actions>button:not(.btn) { font-size: 8px }
+  .atlas-photo { height: 285px }
+  .cover-caption strong { font-size: 9px }
+  .cover-number { font-size: 41px }
+  .territory-button { gap: 0 4px; padding-inline: 11px }
+  .territory-button>strong { font-size: 21px }
+  .territory-button>span { font-size: 6px }
+  .feature-image>img { height: 255px }
+  .feature-copy h2 { font-size: 44px }
+  .feature-specs { gap: 9px }
+  .feature-specs dd { font-size: 9px }
+  .feature-actions .btn { font-size: 8px; padding-inline: 13px }
+  .feature-price strong, .feature-actions>p strong, .feature-actions>div strong { font-size: 30px }
+  .sec-head h2 { font-size: 39px }
+  .route-row.dest h3 { font-size: 35px }
+  .route-row.dest .route-media { height: 195px }
+  .route-actions { gap: 10px }
+  .route-actions .text-button, .route-actions .compare-toggle { font-size: 7px }
+  .route-price.card-price { gap: 1px 6px }
+  .route-price.card-price>strong { font-size: 31px }
+  .local-note h2 { font-size: 37px }
+  .local-stamp { width: 64px; height: 64px }
+  .local-note>div:first-child { gap: 0 15px }
+  .local-note>.local-copy>p:first-child, .local-note>.local-text>p:first-child { font-size: 29px }
+}
+@media (prefers-reduced-motion:reduce) {
+  .atlas-photo>img, .atlas-photo:hover>img, .route-row.dest .route-image-button:hover img, .feature-image:hover>img { transform: none }
+}
+@media print {
+  .atlas-hero { padding-top: 0 }
+  .atlas-cover, .feature-grid, .local-note { grid-template-columns: 1fr }
+  .atlas-photo { height: 260px }
+  .atlas-actions, .atlas-bottom, .territory-strip, .route-booking, #cover-next, .footer-wordmark { display: none }
+  .signature-feature { background: white; color: var(--ink) }
+  .feature-copy h2, .feature-copy h2 em, .feature-copy>p, .feature-specs dt, .feature-specs dd { color: var(--ink) }
+  .feature-image>img { height: 250px }
+  .dest-grid .route-row.dest { grid-template-columns: 170px 1fr; break-inside: avoid }
+  .route-index { display: none }
+  .route-row.dest .route-media { height: 130px }
+}

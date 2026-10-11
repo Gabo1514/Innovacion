@@ -1,0 +1,76 @@
+/* Desplegables de Buganvilla (js/selector.js). El <select> original queda oculto debajo. */
+.sel { position: relative; display: block; width: 100%; min-width: 0 }
+.sel > select.sel-native { position: absolute !important; left: 0 !important; bottom: 0 !important; width: 1px !important; height: 1px !important; min-width: 0 !important; min-height: 0 !important; padding: 0 !important; margin: 0 !important; border: 0 !important; opacity: 0 !important; pointer-events: none !important; clip-path: inset(50%) !important }
+
+.sel-trigger { display: flex; align-items: center; gap: 10px; width: 100%; min-width: 0; color: inherit; font: inherit; line-height: 1.3; text-align: left; cursor: pointer; -webkit-tap-highlight-color: transparent }
+.sel-trigger:not(.select) { padding: 0; border: 0; background: none }
+.sel-trigger:disabled { cursor: not-allowed; opacity: .55 }
+.sel-value { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.sel-chevron { flex: none; width: 18px; height: 18px; fill: none; stroke: #0c6f67; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: transform .35s cubic-bezier(.22, 1, .36, 1) }
+.sel.is-open .sel-chevron { transform: rotate(180deg) }
+.sel-trigger:focus-visible { outline: 2px solid #3fd3c1; outline-offset: 4px; border-radius: 10px }
+
+/* Lista desplegable */
+.sel-list { position: fixed; inset: auto; z-index: 1000; display: none; margin: 0; min-width: 0; max-height: 340px; padding: 6px; overflow-y: auto; overscroll-behavior: contain; border: 1px solid rgba(27, 21, 17, .1); border-radius: 18px; background: #fffdf8; color: #1b1511; box-shadow: 0 34px 70px -24px rgba(27, 21, 17, .5), 0 4px 12px rgba(27, 21, 17, .06); font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 15px; font-weight: 500; letter-spacing: 0; text-transform: none; text-align: left; outline: none; scrollbar-width: thin; scrollbar-color: rgba(27, 21, 17, .2) transparent }
+.sel.is-open > .sel-list { display: block; animation: selIn .24s cubic-bezier(.22, 1, .36, 1) both }
+.sel-list.is-above { transform-origin: bottom center }
+@keyframes selIn { from { opacity: 0; transform: translateY(-6px) scale(.98) } to { opacity: 1; transform: none } }
+.sel-list.is-above { animation-name: selInUp }
+@keyframes selInUp { from { opacity: 0; transform: translateY(6px) scale(.98) } to { opacity: 1; transform: none } }
+.sel-option { display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 9px 12px; border-radius: 12px; cursor: pointer; user-select: none; transition: background .15s ease, color .15s ease }
+.sel-option > span { flex: 1; min-width: 0 }
+.sel-option.is-active { background: #f3e8d6 }
+.sel-option[aria-selected="true"] { color: #0c6f67; font-weight: 700 }
+.sel-option[aria-disabled="true"] { opacity: .4; cursor: not-allowed }
+.sel-check { flex: none; width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; opacity: 0; transform: scale(.6); transition: opacity .2s ease, transform .25s ease }
+.sel-option[aria-selected="true"] .sel-check { opacity: 1; transform: none }
+.sel-thumb { flex: none; width: 38px; height: 38px; border-radius: 12px; background: #e2cfae center / cover no-repeat; box-shadow: inset 0 0 0 1px rgba(27, 21, 17, .08) }
+.sel-thumb-all { background: radial-gradient(circle at 30% 30%, #ffe2a1, #eab562 45%, #0e7a71 100%) }
+.sel-rich .sel-option { min-height: 54px; padding: 8px 12px 8px 8px }
+
+/* Variante oscura (cabecera y paneles nocturnos) */
+.sel-dark { border-color: rgba(251, 246, 238, .12); background: rgba(21, 17, 14, .97); color: #fbf6ee; box-shadow: 0 34px 70px -24px rgba(0, 0, 0, .8); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); scrollbar-color: rgba(251, 246, 238, .25) transparent }
+.sel-dark .sel-option.is-active { background: rgba(251, 246, 238, .09) }
+.sel-dark .sel-option[aria-selected="true"] { color: #3fd3c1 }
+
+/* Planificador de la portada */
+.book-input .sel { flex: 1 }
+.book-input .sel-trigger { min-height: 30px; color: #1b1511; font-size: 16px; font-weight: 600 }
+
+/* Formularios con campo en caja (contacto y detalle de la portada) */
+.field .sel-trigger:not(.select) { min-height: 54px; padding: 13px 18px; border: 1px solid rgba(27, 21, 17, .22); border-radius: 16px; background: #fff; color: #1b1511; font-size: 16px; transition: border-color .3s ease, box-shadow .3s ease }
+.field .sel-trigger:not(.select):hover { border-color: rgba(27, 21, 17, .4) }
+.field .sel.is-open > .sel-trigger:not(.select), .field .sel-trigger:not(.select):focus-visible, .plan-context .sel.is-open > .sel-trigger { border-color: #0c6f67; box-shadow: 0 0 0 4px rgba(12, 111, 103, .14); outline: none }
+.sel-trigger.select { display: flex }
+.sel.is-open > .sel-trigger.select, .sel-trigger.select:focus-visible { border-color: #0c6f67; box-shadow: 0 0 0 4px rgba(12, 111, 103, .14); outline: none }
+.sel-trigger.invalid { border-color: #b0233a !important; box-shadow: 0 0 0 3px rgba(176, 35, 58, .12) }
+
+/* Orden del catálogo */
+.select-refine .sel { width: auto }
+.select-refine .sel-trigger { min-height: 50px; color: #1b1511; font-size: 15px; font-weight: 500 }
+.select-refine .sel.is-open > .sel-trigger { box-shadow: none }
+
+/* Idioma y moneda en la cabecera */
+.locale-controls .sel { width: auto }
+.locale-controls .sel-trigger { gap: 4px; min-height: 34px; padding: 6px 8px 6px 11px; border-radius: 999px; color: #fbf6ee; font-size: 12px; font-weight: 600; letter-spacing: .04em; transition: background .3s ease }
+.locale-controls .sel-trigger:hover, .locale-controls .sel.is-open > .sel-trigger { background: rgba(251, 246, 238, .12); box-shadow: none }
+.locale-controls .sel-chevron { width: 13px; height: 13px; stroke: #eab562 }
+
+/* Paneles del detalle y de "Mi viaje" */
+.detail-controls .sel-trigger { min-height: 50px; padding: 10px 14px; border: 1px solid rgba(251, 246, 238, .14); border-radius: 14px; background: rgba(251, 246, 238, .06); color: #fbf6ee; font-size: 16px; letter-spacing: 0; text-transform: none; font-weight: 500 }
+.detail-controls .sel-chevron { stroke: #eab562 }
+.detail-controls .sel.is-open > .sel-trigger { border-color: #eab562; box-shadow: none }
+.plan-context .sel-trigger { min-height: 48px; padding: 8px 14px; border: 1px solid rgba(27, 21, 17, .22); border-radius: 14px; background: #fff; color: #1b1511; font-size: 16px; letter-spacing: 0; text-transform: none; font-weight: 500 }
+
+/* Prefijo telefónico del checkout */
+.phone-group .sel-trigger.select { padding-inline: 12px }
+
+@media (max-width: 720px) {
+  .locale-controls .sel-chevron { display: none }
+  .locale-controls .sel-trigger { padding: 6px 7px; font-size: 11px }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sel.is-open > .sel-list { animation: none }
+  .sel-chevron, .sel-check { transition: none }
+}
+@media print { .sel-list { display: none !important } }

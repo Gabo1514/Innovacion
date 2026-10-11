@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="robots" content="noindex,nofollow"/>
+  <meta name="referrer" content="no-referrer"/>
+  <meta name="theme-color" content="#0e0c0b"/>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+  <title>Mi reserva | Buganvilla Tours</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=DM+Sans:opsz,wght@9..40,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="css/tour.css"/>
+  <link rel="stylesheet" href="css/premium-bridge.css" />
+  <link rel="stylesheet" href="css/experiencia-paginas.css" />
+  <link rel="stylesheet" href="css/selector.css" />
+</head>
+<body class="voucher-page">
+  <main class="voucher-main">
+    <section class="voucher-hero" aria-labelledby="voucher-title">
+      <figure class="voucher-hero-bg" aria-hidden="true"><img src="https://images.unsplash.com/photo-1716584155947-8b4330dbc980?auto=format&amp;fit=crop&amp;w=2000&amp;q=80" alt="" /></figure>
+      <canvas class="page-sand" id="page-sand" aria-hidden="true"></canvas>
+      <div class="page-grain" aria-hidden="true"></div>
+      <div class="container">
+        <span class="eyebrow">Tu viaje, en un solo lugar</span>
+        <h1 id="voucher-title">Mi <em>reserva</em></h1>
+        <p>Consulta el estado de tu experiencia y lleva tu voucher contigo.</p>
+      </div>
+    </section>
+    <div class="container voucher-lookup">
+    <div id="voucher-loading" class="glass voucher-empty" role="status">Consultando tu reserva…</div>
+    <div id="voucher-error" class="booking-error" role="alert" hidden></div>
+    <section id="voucher-result" aria-live="polite" hidden></section>
+    <section class="glass voucher-empty" id="voucher-empty" hidden>
+      <h2>Tu próxima aventura empieza aquí</h2>
+      <p class="muted">Cuando completes una reserva, encontrarás su voucher en este navegador. También puedes abrir el enlace privado que guardaste al reservar.</p>
+      <a class="btn btn-primary" href="tour-utv.html#reservar">Explorar UTV en Huacachina</a>
+    </section>
+    <details class="glass voucher-link-form">
+      <summary>Abrir otra reserva</summary>
+      <form id="voucher-form">
+        <div class="field"><label for="voucher-link">Enlace privado de tu voucher</label><input class="input" id="voucher-link" type="text" autocomplete="off" placeholder="Pega aquí el enlace de tu reserva" required/></div>
+        <button class="btn btn-primary btn-sm" type="submit">Consultar reserva</button>
+      </form>
+    </details>
+    </div>
+  </main>
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/voucher.js"></script>
+  <script src="js/experiencia-paginas.js"></script>
+  <script src="js/selector.js"></script>
+</body>
+</html>

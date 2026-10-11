@@ -1,0 +1,2 @@
+# Solo PDF y QR; servidor, transacciones y pruebas usan la biblioteca estándar.
+reportlab>=4.0,<5.0
