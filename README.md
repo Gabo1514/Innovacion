@@ -6,6 +6,16 @@ El catálogo permite buscar por destino y texto, ordenar por precio o duración,
 
 La ficha UTV incluye disponibilidad por salida, checkout, voucher con QR y PDF, y un panel operativo protegido. Las reservas se conservan en SQLite y se comparten entre los navegadores que usan este servidor.
 
+## Cómo probarlo (para el equipo)
+
+1. Instala **Python 3** desde https://www.python.org/downloads/ y marca **"Add Python to PATH"** durante la instalación.
+2. Descarga el proyecto: botón verde **Code → Download ZIP** en GitHub (y descomprímelo) o `git clone https://github.com/Gabo1514/Innovacion.git`.
+3. Haz doble clic en **`iniciar.cmd`**. La primera vez instala lo necesario y luego abre la página en el navegador (http://127.0.0.1:8000/).
+4. Prueba una reserva en **Reservar UTV** con cualquier número de tarjeta de 13 a 19 dígitos, fecha futura y CVV (no se cobra nada).
+5. Panel del operador: http://127.0.0.1:8000/admin.html — contraseña `Buganvilla2026!`.
+
+Dónde está el código: `index.html` (portada), `tour-utv.html` (reserva), `voucher.html` (mi reserva), `admin.html` (panel), `css/` (estilos), `js/` (lógica del navegador) y `server.py` (servidor Python con SQLite).
+
 ## Iniciar
 
 Haz doble clic en `iniciar.cmd`: abre el navegador y deja el servidor en segundo plano. También puedes ejecutar desde esta carpeta en PowerShell:

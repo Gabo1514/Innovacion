@@ -18,8 +18,14 @@ foreach ($candidate in ($pythonCandidates | Select-Object -Unique)) {
         if ($LASTEXITCODE -eq 0) { $pythonExecutable = $candidate; break }
     } catch { }
 }
+if (-not $pythonExecutable -and $systemPython) {
+    Write-Host 'Instalando requisitos de Python (solo la primera vez)...'
+    & $systemPython.Source -m pip install --user -r (Join-Path $projectDirectory 'requirements.txt')
+    & $systemPython.Source -c 'import reportlab' 2>$null
+    if ($LASTEXITCODE -eq 0) { $pythonExecutable = $systemPython.Source }
+}
 if (-not $pythonExecutable) {
-    throw 'No se encuentra Python con reportlab. Instala los requisitos con python -m pip install -r requirements.txt.'
+    throw 'No se encuentra Python. Instala Python 3 desde https://www.python.org/downloads/ (marca "Add Python to PATH") y vuelve a ejecutar iniciar.cmd.'
 }
 $runtimeDirectory = Join-Path $projectDirectory '.runtime'
 New-Item -ItemType Directory -Path $runtimeDirectory -Force | Out-Null
