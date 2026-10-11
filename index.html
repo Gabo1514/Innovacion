@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0e0c0b">
+<title data-i18n="uiTitle">Buganvilla Tours — Huacachina, Paracas, Nasca e Ica</title>
+<meta name="description" content="UTV privado en Huacachina, Islas Ballestas, Líneas de Nasca y bodegas de Ica. Recorridos y programas por el sur peruano con Buganvilla Tours, desde 2001.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://buganvillatours.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=DM+Sans:opsz,wght@9..40,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/experiencia.css">
+<link rel="stylesheet" href="css/selector.css">
+<script>
+(function () {
+  var root = document.documentElement;
+  root.classList.add('js');
+  try {
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches && !sessionStorage.getItem('bgv_intro')) root.classList.add('intro');
+  } catch (error) {}
+  setTimeout(function () { root.classList.remove('intro'); }, 6000);
+})();
+</script>
+<script src="js/premium-data.js" defer></script>
+<script src="js/premium-i18n.js" defer></script>
+<script src="js/premium-copy.js" defer></script>
+<script src="js/experiencia-copy.js" defer></script>
+<script src="js/premium.js" defer></script>
+<script src="js/atlas.js" defer></script>
+<script src="js/experiencia.js" defer></script>
+<script src="js/selector.js" defer></script>
+</head>
+<body>
+
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader-inner">
+    <svg class="preloader-mark" viewBox="0 0 32 32"><path pathLength="1" d="M16 3c3 4 4 7 4 10a4 4 0 0 1-8 0c0-3 1-6 4-10Z"/><path pathLength="1" d="M16 29c-5-3-8-7-8-12 0 0 4 1 8 5 4-4 8-5 8-5 0 5-3 9-8 12Z"/></svg>
+    <p class="preloader-word"><span>Buganvilla</span></p>
+    <p class="preloader-sub">Ica · Perú · 2001</p>
+  </div>
+  <span class="preloader-count" id="preloader-count">00</span>
+</div>
+
+<div class="scroll-progress" aria-hidden="true"><span id="scroll-progress"></span></div>
+<a href="#destinos" class="skip-link"><span data-i18n="skip">Ir al catálogo</span></a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></symbol>
+  <symbol id="i-diagonal" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20a7 7 0 0 1 14 0"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+  <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4V3Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-3 2c2 3 4 5 7 6l2-3 4 2v4c0 1-1 2-2 2C10 20 4 14 3 5c0-1 1-2 2-2Z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 19.5 5.3 16A8 8 0 1 1 8 18.7Z"/><path d="M9 10.5h6M9 13.5h4"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2m-17-7 2 2m10 10 2 2m0-14-2 2M7 17l-2 2"/></symbol>
+  <symbol id="i-sunset" viewBox="0 0 24 24"><path d="M3 18h18M6 18a6 6 0 0 1 12 0M12 4v4m-7.1 1.9 1.4 1.4m13.6-1.4-1.4 1.4M9 4l3 3 3-3"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 6v12M15 6v12"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13L18.5 12Z"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2c.6 5.4 4.6 9.4 10 10-5.4.6-9.4 4.6-10 10-.6-5.4-4.6-9.4-10-10 5.4-.6 9.4-4.6 10-10Z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5Zm0 0V19.5"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M14 8.5V7c0-.8.5-1.3 1.3-1.3H17V2.5h-2.6C11.9 2.5 10.6 4 10.6 6.6v1.9H8v3.3h2.6V21.5H14V11.8h2.6l.5-3.3Z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4 4 20"/></symbol>
+  <symbol id="i-quote" viewBox="0 0 48 48"><path d="M8 34c0-9 4-16 13-20l2 4c-5 3-7 6-7 10h7v12H8Zm19 0c0-9 4-16 13-20l2 4c-5 3-7 6-7 10h7v12H27Z"/></symbol>
+</svg>
+
+<header class="site-head" id="head">
+  <div class="head-inner">
+    <a class="brand" href="#top" aria-label="Buganvilla Tours">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3c3 4 4 7 4 10a4 4 0 0 1-8 0c0-3 1-6 4-10Z"/><path d="M16 29c-5-3-8-7-8-12 0 0 4 1 8 5 4-4 8-5 8-5 0 5-3 9-8 12Z"/></svg>
+      <span class="brand-txt"><b>Buganvilla</b><i>Tours · Ica</i></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#destinos"><span data-i18n="navDestinations">Recorridos</span></a>
+      <a href="#experiencias"><span data-i18n="navExperiences">UTV Huacachina</span></a>
+      <a href="#paquetes"><span data-i18n="navPackages">Programas</span></a>
+      <a href="#casa"><span data-i18n="navHouse">Desde Ica</span></a>
+      <a href="#contacto"><span data-i18n="navContact">Contacto</span></a>
+    </nav>
+    <div class="head-tools">
+      <div class="locale-controls">
+        <label><span class="sr-only" data-i18n="language">Idioma</span><select id="language-select" data-i18n-aria="language" aria-label="Idioma"><option value="es">ES</option><option value="en">EN</option></select></label>
+        <label><span class="sr-only" data-i18n="currency">Moneda</span><select id="currency-select" data-i18n-aria="currency" aria-label="Moneda"><option value="PEN">PEN</option><option value="USD">USD</option><option value="EUR">EUR</option></select></label>
+      </div>
+      <button id="open-plan" type="button" class="head-plan" aria-haspopup="dialog"><svg class="ico" aria-hidden="true"><use href="#i-bookmark"/></svg><span data-i18n="plan">Mi viaje</span><span id="plan-count" class="count-badge">0</span></button>
+      <a href="tour-utv.html#reservar" class="btn btn-glow btn-sm head-book"><span data-i18n="headBooking">Reservar UTV</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menú" aria-controls="nav" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 01 · Portada cinematográfica -->
+  <section class="hero" id="reserva" aria-labelledby="hero-title" data-dest="huacachina">
+    <div class="hero-stage" aria-hidden="true">
+      <figure class="hero-slide is-active" data-slide="huacachina" data-video="https://buganvillatours.com/wp-content/uploads/2026/02/utv-web.mp4"><img data-hero-image="utv" src="https://buganvillatours.com/wp-content/uploads/2025/06/Tour-Paseo-Premium-en-UTV-Huacachina3.jpg" alt="" width="1500" height="1500" fetchpriority="high" decoding="async"></figure>
+      <figure class="hero-slide" data-slide="paracas"><img data-hero-image="paracas" alt="" width="1500" height="1000" decoding="async"></figure>
+      <figure class="hero-slide" data-slide="nasca" data-video="https://buganvillatours.com/wp-content/uploads/2024/06/Sobrevuelo-A-Las-Lineas-De-Nasca.mp4"><img data-hero-image="nasca" alt="" width="1800" height="1200" decoding="async"></figure>
+      <figure class="hero-slide" data-slide="ica"><img data-hero-image="introMain" alt="" width="1500" height="1000" decoding="async"></figure>
+    </div>
+    <canvas class="hero-sand" id="hero-sand" aria-hidden="true"></canvas>
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <div class="hero-inner wrap">
+      <div class="hero-top">
+        <p class="hero-eyebrow"><span class="pulse-dot" aria-hidden="true"></span><span id="cover-label">01 / Desierto costero</span><span class="hero-coords" id="cover-coords">14°05′S · 75°46′O</span></p>
+        <div class="hero-live">
+          <span><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg><span data-i18n="heroLocal">Hora en Ica</span><b id="lima-clock">--:--</b></span>
+          <span><svg class="ico" aria-hidden="true"><use href="#i-sunset"/></svg><span data-i18n="heroSunset">Atardecer en Huacachina</span><b id="sunset-time">--:--</b></span>
+        </div>
+      </div>
+
+      <h1 id="hero-title" class="hero-title">
+        <span class="hero-line" id="cover-title-line-one">en UTV.</span>
+        <span class="hero-place" id="cover-title-place">HUACACHINA</span>
+        <span id="cover-title-line-two" class="sr-only"></span>
+      </h1>
+
+      <div class="hero-bottom">
+        <div class="hero-copy">
+          <p class="hero-description" id="cover-description">Desde GO Adventure hacia las dunas de Huacachina. Una hora de recorrido, mirador del oasis y sandboarding, con conductor y equipo incluidos.</p>
+          <div class="hero-actions">
+            <a href="tour-utv.html#reservar" class="btn btn-glow btn-lg magnetic" id="cover-action"><span data-i18n="fieldBook">Ver turnos y reservar</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a href="#destinos" class="btn btn-glass btn-lg magnetic"><span data-i18n="fieldBrowse">Todos los recorridos</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <dl class="hero-facts">
+          <div><dt data-i18n="duration">Duración</dt><dd id="cover-fact-duration">1 hora aprox.</dd></div>
+          <div><dt id="cover-fact-group-label">Por UTV</dt><dd id="cover-fact-group">Hasta 3 viajeros</dd></div>
+          <div><dt data-i18n="modality">Modalidad</dt><dd id="cover-fact-mode">UTV privado</dd></div>
+        </dl>
+      </div>
+
+      <nav class="hero-dests" aria-label="Elegir destino" data-i18n-aria="atlasTerritories">
+        <button type="button" class="territory-button selected" data-territory="huacachina" aria-pressed="true"><span class="territory-progress" aria-hidden="true"><i></i></span><small>01</small><strong>Huacachina</strong><span data-i18n="territoryhuacachina">UTV y sandboard</span></button>
+        <button type="button" class="territory-button" data-territory="paracas" aria-pressed="false"><span class="territory-progress" aria-hidden="true"><i></i></span><small>02</small><strong>Paracas</strong><span data-i18n="territoryparacas">Ballestas y reserva</span></button>
+        <button type="button" class="territory-button" data-territory="nasca" aria-pressed="false"><span class="territory-progress" aria-hidden="true"><i></i></span><small>03</small><strong>Nasca</strong><span data-i18n="territorynasca">Líneas desde el aire</span></button>
+        <button type="button" class="territory-button" data-territory="ica" aria-pressed="false"><span class="territory-progress" aria-hidden="true"><i></i></span><small>04</small><strong>Ica</strong><span data-i18n="territoryica">Bodegas y pisco</span></button>
+        <div class="hero-dest-tools">
+          <button id="hero-autoplay" type="button" class="round-btn" aria-label="Pausar la presentación de destinos" data-i18n-aria="heroPause"><svg class="ico" aria-hidden="true"><use href="#i-pause"/></svg></button>
+          <button id="cover-next" type="button" class="round-btn" aria-label="Ver el siguiente destino" data-i18n-aria="atlasNext"><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </nav>
+    </div>
+    <p class="hero-credit" id="cover-credit">Fotografía de Buganvilla Tours</p>
+  </section>
+
+  <!-- 02 · Planificador -->
+  <section class="planner" id="planifica" aria-labelledby="planner-title">
+    <div class="wrap">
+      <div class="planner-card">
+        <div class="planner-label">
+          <h2 id="planner-title" data-i18n="fieldSearchTitle">Planifica tu salida</h2>
+          <p data-i18n="fieldSearchNote">Destino, fecha y viajeros.</p>
+        </div>
+        <form class="book-bar" id="search-form">
+          <div class="book-field"><label for="q-dest" data-i18n="destination">Destino</label><div class="book-input"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><select id="q-dest" data-sel-thumbs><option value="all" data-i18n="allDestinations">Todos los destinos</option><option value="huacachina">Huacachina</option><option value="paracas">Paracas</option><option value="nasca">Nasca</option><option value="ica" data-i18n="valleyOption">Ica · Ruta del Pisco</option></select></div></div>
+          <div class="book-field"><label for="q-fecha" data-i18n="date">Fecha</label><div class="book-input"><svg class="ico" aria-hidden="true"><use href="#i-cal"/></svg><input id="q-fecha" type="date" required></div></div>
+          <div class="book-field"><label for="q-pax" data-i18n="group">Viajeros</label><div class="book-input"><svg class="ico" aria-hidden="true"><use href="#i-user"/></svg><select id="q-pax"><option value="2" data-i18n="pax2">2 viajeros</option><option value="3" data-i18n="pax3">3 viajeros</option><option value="4" data-i18n="pax4">4 viajeros</option><option value="5" data-i18n="pax5">5 viajeros</option><option value="6" data-i18n="pax6">6 viajeros</option><option value="7" data-i18n="pax7">7 viajeros</option><option value="8" data-i18n="pax8">8 viajeros</option><option value="9" data-i18n="pax9">9 viajeros</option></select></div></div>
+          <button type="submit" class="btn btn-glow book-go"><span data-i18n="fieldSearch">Ver opciones</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </form>
+      </div>
+      <ol class="steps" aria-label="Tu salida en tres pasos" data-i18n-aria="plannerKicker">
+        <li><span>01</span><div><strong data-i18n="decisionOne">Elige el recorrido</strong><p data-i18n="decisionOneCopy">Precio, duración e inclusiones a la vista.</p></div></li>
+        <li><span>02</span><div><strong data-i18n="decisionTwo">Define tu salida</strong><p data-i18n="decisionTwoCopy">Selecciona fecha, grupo y turno.</p></div></li>
+        <li><span>03</span><div><strong data-i18n="decisionThree">Reserva o consulta</strong><p data-i18n="decisionThreeCopy">UTV online. Otras rutas con la agencia.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 03 · Cinta de destinos -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-group">
+        <span class="mq-solid">Huacachina</span><i class="mq-photo" data-bg="sandboarding"></i><span class="mq-outline">Paracas</span><svg class="mq-spark"><use href="#i-spark"/></svg><span class="mq-solid">Nasca</span><i class="mq-photo" data-bg="paracas"></i><span class="mq-outline">Ica</span><svg class="mq-spark"><use href="#i-spark"/></svg>
+      </div>
+      <div class="marquee-group">
+        <span class="mq-solid">Huacachina</span><i class="mq-photo" data-bg="sandboarding"></i><span class="mq-outline">Paracas</span><svg class="mq-spark"><use href="#i-spark"/></svg><span class="mq-solid">Nasca</span><i class="mq-photo" data-bg="paracas"></i><span class="mq-outline">Ica</span><svg class="mq-spark"><use href="#i-spark"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04 · Manifiesto -->
+  <section class="manifesto" id="manifiesto" aria-labelledby="manifesto-title">
+    <div class="wrap manifesto-grid">
+      <div class="manifesto-copy">
+        <p class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg><span data-i18n="fieldLocation">Buganvilla Tours / Ica, Perú</span></p>
+        <h2 id="manifesto-title" class="manifesto-text" data-split-key="manifestoText">Desde 2001 llevamos viajeros al desierto, al mar y a la pampa de Ica. Un equipo local, rutas claras y la luz del sur en cada salida.</h2>
+      </div>
+      <figure class="manifesto-photo parallax" data-speed="0.12">
+        <img data-image="introAccent" src="https://images.unsplash.com/photo-1527628852234-8128619df1b0?auto=format&amp;fit=crop&amp;w=1000&amp;q=82" alt="Viajeros en la cresta de una duna en Huacachina" width="1000" height="1250" loading="lazy" decoding="async">
+      </figure>
+    </div>
+    <div class="wrap">
+      <dl class="stats">
+        <div><dt><span class="stat-num" data-count="2001" data-count-from="1960">2001</span></dt><dd data-i18n="statFoundedLabel">El año en que empezamos, en Ica</dd></div>
+        <div><dt><span class="stat-num" data-count="4">4</span></dt><dd data-i18n="statDestinationsLabel">Destinos del sur con un mismo equipo</dd></div>
+        <div><dt><span class="stat-num" data-count="8" data-count-source="catalog">8</span></dt><dd data-i18n="statCatalogLabel">Recorridos y programas para elegir</dd></div>
+        <div><dt><span class="stat-num" data-count="3">3</span></dt><dd data-i18n="statDeparturesLabel">Salidas diarias en UTV: 10:00, 14:00 y 16:30</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 05 · Historia UTV en scroll horizontal -->
+  <section class="story" id="experiencias" aria-labelledby="exp-title">
+    <div class="story-pin">
+      <div class="story-head wrap">
+        <div>
+          <p class="kicker kicker-light"><span class="pulse-dot" aria-hidden="true"></span><span data-i18n="storyEyebrow">Huacachina · UTV privado</span></p>
+          <h2 id="exp-title"><span data-i18n="storyTitleOne">Una hora</span> <em data-i18n="storyTitleTwo">entre dunas.</em></h2>
+        </div>
+        <div class="story-meter" aria-hidden="true"><span class="story-meter-label" id="story-step">01 / 04</span><span class="story-meter-bar"><i id="story-progress"></i></span></div>
+      </div>
+      <div class="story-viewport">
+        <div class="story-track" id="story-track">
+          <article class="story-panel story-intro">
+            <p class="story-big" data-i18n="storyIntro">Sesenta minutos, cuatro momentos y un vehículo solo para tu grupo.</p>
+            <dl class="story-specs">
+              <div><dt data-i18n="duration">Duración</dt><dd>60 min</dd></div>
+              <div><dt data-i18n="featureVehicle">Por vehículo</dt><dd data-i18n="featurePax">Hasta 3</dd></div>
+              <div><dt data-i18n="featureDepartures">Salidas</dt><dd>10:00 · 14:00 · 16:30</dd></div>
+            </dl>
+            <p class="story-hint"><span class="hint-pinned" data-i18n="storyHint">Sigue bajando</span><span class="hint-swipe" data-i18n="storyHintSwipe">Desliza para ver más</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></p>
+          </article>
+          <article class="story-panel story-step" data-step="1">
+            <figure class="story-media"><img data-image="guide" src="https://buganvillatours.com/wp-content/uploads/2025/06/Tour-Paseo-Premium-en-UTV-Huacachina4.jpg" alt="Guía ayudando a una viajera con casco a prepararse en Huacachina" width="1500" height="1500" loading="lazy" decoding="async"></figure>
+            <div class="story-copy"><span class="story-num">01</span><h3 data-i18n="featureStopOne">Encuentro</h3><p data-i18n="storyStepOne">Presentación en GO Adventure. Recibes casco, lentes y las indicaciones del conductor.</p></div>
+          </article>
+          <article class="story-panel story-step" data-step="2">
+            <figure class="story-media"><img data-image="utv" src="https://buganvillatours.com/wp-content/uploads/2025/06/Tour-Paseo-Premium-en-UTV-Huacachina3.jpg" alt="UTV de Buganvilla Tours recorriendo las dunas de Huacachina" width="1500" height="1500" loading="lazy" decoding="async"></figure>
+            <div class="story-copy"><span class="story-num">02</span><h3 data-i18n="featureStopTwo">Dunas</h3><p data-i18n="storyStepTwo">Subes al UTV con conductor. Cada vehículo lleva hasta tres viajeros.</p></div>
+          </article>
+          <article class="story-panel story-step" data-step="3">
+            <figure class="story-media"><img data-image="utvGroup" src="https://buganvillatours.com/wp-content/uploads/2025/06/Tour-Paseo-Premium-en-UTV-Huacachina2.jpg" alt="Grupo de viajeros junto a los UTV, con el oasis de Huacachina al fondo" width="1500" height="1500" loading="lazy" decoding="async"></figure>
+            <div class="story-copy"><span class="story-num">03</span><h3 data-i18n="storyStepThreeTitle">Mirador</h3><p data-i18n="storyStepThree">Una pausa en lo alto para mirar el oasis de Huacachina.</p></div>
+          </article>
+          <article class="story-panel story-step" data-step="4">
+            <figure class="story-media"><img data-image="sandboarding" src="https://buganvillatours.com/wp-content/uploads/2025/06/Tour-Paseo-Premium-en-UTV-Huacachina.jpg" alt="Viajero con casco rojo descendiendo en tabla por una duna de Huacachina" width="1500" height="1500" loading="lazy" decoding="async"></figure>
+            <div class="story-copy"><span class="story-num">04</span><h3 data-i18n="featureStopThree">Sandboard</h3><p data-i18n="storyStepFour">Descensos para principiantes, con tabla y equipo incluidos.</p></div>
+          </article>
+          <article class="story-panel story-cta">
+            <svg class="story-cta-sun" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sun-gradient" cx="50%" cy="38%" r="62%"><stop offset="0" stop-color="#ffe2a1"/><stop offset=".45" stop-color="#ffab4c"/><stop offset=".85" stop-color="#f07a3a"/><stop offset="1" stop-color="#c4502a"/></radialGradient></defs><circle cx="100" cy="100" r="66"/></svg>
+            <h3 data-i18n="storyCtaTitle">¿Listo para las dunas?</h3>
+            <p data-i18n="storyCtaCopy">Elige fecha, turno y viajeros. La reserva en línea calcula tu tarifa al momento.</p>
+            <div class="story-price"><small data-i18n="from">Desde</small><strong data-price-pen="120">S/ 120</strong><small data-i18n="perPerson">por persona</small></div>
+            <div class="story-cta-actions">
+              <a class="btn btn-glow btn-lg magnetic" href="tour-utv.html#reservar"><span data-i18n="featureReserve">Ver turnos y reservar</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <button type="button" class="link-button" data-detail="utv-huacachina"><span data-i18n="featureDetails">Itinerario, incluye y condiciones</span><svg class="ico" aria-hidden="true"><use href="#i-diagonal"/></svg></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 · Mapa del territorio -->
+  <section class="territory" id="mapa" aria-labelledby="map-title">
+    <div class="wrap territory-grid">
+      <div class="territory-copy">
+        <p class="kicker kicker-light"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="mapEyebrow">El territorio</span></p>
+        <h2 id="map-title"><span data-i18n="mapTitleOne">Del Pacífico</span> <em data-i18n="mapTitleTwo">a la pampa.</em></h2>
+        <p class="territory-lede" data-i18n="mapCopy">Ica es nuestro punto de partida. Elige un lugar del mapa para ver la distancia por carretera y el recorrido que te lleva hasta allí.</p>
+        <div class="map-places" role="group" aria-label="Lugares del mapa" data-i18n-aria="mapPlaces">
+          <button type="button" class="map-place" data-map-place="huacachina" aria-pressed="false"><small>01</small><strong>Huacachina</strong><span data-map-distance="huacachina">≈ 5 km</span></button>
+          <button type="button" class="map-place" data-map-place="paracas" aria-pressed="true"><small>02</small><strong>Paracas</strong><span data-map-distance="paracas">≈ 75 km</span></button>
+          <button type="button" class="map-place" data-map-place="nasca" aria-pressed="false"><small>03</small><strong>Nasca</strong><span data-map-distance="nasca">≈ 145 km</span></button>
+          <button type="button" class="map-place" data-map-place="ica" aria-pressed="false"><small>04</small><strong>Ica</strong><span data-map-distance="ica">0 km</span></button>
+        </div>
+        <p class="map-note" data-i18n="mapNote">Mapa esquemático. Distancias y tiempos por carretera aproximados.</p>
+      </div>
+
+      <div class="map-wrap">
+        <svg class="map" id="map" viewBox="0 0 600 600" role="img" aria-labelledby="map-title">
+          <defs>
+            <pattern id="map-dunes" width="36" height="18" patternUnits="userSpaceOnUse"><path d="M0 14c6-6 12-6 18 0s12 6 18 0" fill="none"/></pattern>
+            <pattern id="map-waves" width="28" height="14" patternUnits="userSpaceOnUse"><path d="M0 7c3.5-3 7-3 10.5 0s7 3 10.5 0 7-3 7 0" fill="none"/></pattern>
+            <radialGradient id="map-glow"><stop offset="0" stop-color="currentColor" stop-opacity=".55"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/></radialGradient>
+          </defs>
+          <rect class="map-land" width="600" height="600"/>
+          <rect class="map-land-texture" width="600" height="600" fill="url(#map-dunes)"/>
+          <path class="map-ocean" d="M0 0H114L117 60 114 96 96 120 105 132 80 135 66 138 54 159 63 172 72 180 96 177 105 195 103 210 105 225 128 246 150 264 172 290 195 315 225 360 248 384 270 405 300 436 330 465 352 495 375 525 400 556 426 585 438 600H0Z"/>
+          <path class="map-ocean-texture" fill="url(#map-waves)" d="M0 0H114L117 60 114 96 96 120 105 132 80 135 66 138 54 159 63 172 72 180 96 177 105 195 103 210 105 225 128 246 150 264 172 290 195 315 225 360 248 384 270 405 300 436 330 465 352 495 375 525 400 556 426 585 438 600H0Z"/>
+          <path class="map-coast" d="M114 0 117 60 114 96 96 120 105 132 80 135 66 138 54 159 63 172 72 180 96 177 105 195 103 210 105 225 128 246 150 264 172 290 195 315 225 360 248 384 270 405 300 436 330 465 352 495 375 525 400 556 426 585 438 600"/>
+          <g class="map-grid">
+            <path d="M180 0V600M480 0V600M0 180H600M0 480H600"/>
+            <text x="186" y="592">76°O</text><text x="486" y="592">75°O</text><text x="592" y="174" text-anchor="end">14°S</text><text x="592" y="474" text-anchor="end">15°S</text>
+          </g>
+          <text class="map-ocean-label" x="40" y="390" transform="rotate(-62 40 390)" data-i18n="mapOcean">Océano Pacífico</text>
+          <g class="map-islands"><circle cx="56" cy="95" r="3"/><circle cx="62" cy="101" r="2.2"/><circle cx="52" cy="103" r="1.8"/><text x="44" y="84" text-anchor="middle">Ballestas</text></g>
+          <g class="map-town"><circle cx="116" cy="94" r="2.6"/><text x="126" y="92">Pisco</text></g>
+          <path class="map-route-base" d="M118 -10C120 40 122 70 124 92C150 120 210 165 258 198C300 250 380 330 420 370C450 395 478 414 496 428"/>
+          <path class="map-route" id="map-route" pathLength="1" d="M118 -10C120 40 122 70 124 92C150 120 210 165 258 198C300 250 380 330 420 370C450 395 478 414 496 428"/>
+          <path class="map-branch" d="M124 92C118 108 110 118 106 128M258 198 247 214"/>
+          <circle class="map-traveller" id="map-traveller" r="5" cx="118" cy="-10"/>
+          <g class="map-lima"><path d="M128 40V14m-6 6 6-6 6 6"/><text x="138" y="30" data-i18n="mapLima">Hacia Lima</text><text class="map-lima-km" x="138" y="46">≈ 300 km</text></g>
+          <g class="map-pin" data-map-place="paracas" transform="translate(106 129)" tabindex="-1"><circle class="map-pin-glow" r="26" fill="url(#map-glow)"/><circle class="map-pin-ring" r="11"/><circle class="map-pin-dot" r="5.5"/><text x="14" y="22">Paracas</text></g>
+          <g class="map-pin is-base" data-map-place="ica" transform="translate(261 199)" tabindex="-1"><circle class="map-pin-glow" r="26" fill="url(#map-glow)"/><circle class="map-pin-ring" r="11"/><circle class="map-pin-dot" r="5.5"/><text x="16" y="-6">Ica</text></g>
+          <g class="map-pin" data-map-place="huacachina" transform="translate(245 216)" tabindex="-1"><circle class="map-pin-glow" r="26" fill="url(#map-glow)"/><circle class="map-pin-ring" r="11"/><circle class="map-pin-dot" r="5.5"/><text x="-16" y="28" text-anchor="end">Huacachina</text></g>
+          <g class="map-pin" data-map-place="nasca" transform="translate(497 429)" tabindex="-1"><circle class="map-pin-glow" r="26" fill="url(#map-glow)"/><circle class="map-pin-ring" r="11"/><circle class="map-pin-dot" r="5.5"/><text x="-16" y="-14" text-anchor="end">Nasca</text></g>
+          <g class="map-scale" transform="translate(470 40)"><path d="M0 0H135M0 -5V5M135 -5V5"/><text x="67" y="-10" text-anchor="middle">50 km</text></g>
+          <g class="map-compass" transform="translate(548 108)"><circle r="20"/><path d="M0-15 5 0 0 15-5 0Z"/><text y="-26" text-anchor="middle">N</text></g>
+        </svg>
+
+        <article class="map-card" id="map-card" aria-live="polite">
+          <figure class="map-card-media"><img id="map-card-image" src="https://buganvillatours.com/wp-content/uploads/2018/04/Tour-Islas-Ballestas-Chincha.jpg" alt="" width="640" height="420" loading="lazy" decoding="async"></figure>
+          <div class="map-card-body">
+            <p class="map-card-kicker" id="map-card-kicker">02 · Ballestas y reserva</p>
+            <h3 id="map-card-title">Paracas</h3>
+            <dl class="map-card-facts">
+              <div><dt data-i18n="mapFromIca">Desde Ica</dt><dd id="map-card-distance">≈ 75 km · 1 h 15 min</dd></div>
+              <div><dt>GPS</dt><dd id="map-card-coords">13°50′S · 76°15′O</dd></div>
+            </dl>
+            <button type="button" class="btn btn-glow btn-sm" id="map-card-action" data-detail="ballestas-paracas"><span data-i18n="details">Ver recorrido</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 · Catálogo -->
+  <section class="section catalog" id="destinos" aria-labelledby="dest-title">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <p class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg><span data-i18n="destinationsEyebrow">Elige qué quieres recorrer</span></p>
+          <h2 id="dest-title" class="display"><span data-i18n="destinationsTitle">Un destino para cada plan.</span></h2>
+        </div>
+        <p class="sec-lede" data-i18n="destinationsCopy">Compara UTV, arenero, Ballestas, sobrevuelo y bodegas. El precio y la duración te ayudan a decidir.</p>
+      </div>
+      <div class="catalog-bar">
+        <div id="destination-filters" class="filter-tabs" role="group" aria-label="Destinos" data-i18n-aria="filterDestination">
+          <button type="button" class="filter-tab active" data-filter="all" aria-pressed="true"><span data-i18n="filterAll">Todos</span></button>
+          <button type="button" class="filter-tab" data-filter="huacachina" aria-pressed="false">Huacachina</button>
+          <button type="button" class="filter-tab" data-filter="paracas" aria-pressed="false">Paracas</button>
+          <button type="button" class="filter-tab" data-filter="nasca" aria-pressed="false">Nasca</button>
+          <button type="button" class="filter-tab" data-filter="ica" aria-pressed="false">Ica</button>
+        </div>
+        <div class="catalog-options">
+          <label class="search-refine"><svg class="ico" aria-hidden="true"><use href="#i-search"/></svg><span class="sr-only" data-i18n="filterText">Buscar en el catálogo</span><input id="catalog-search" type="search" maxlength="100" placeholder="Buscar un recorrido" data-i18n-placeholder="catalogPlaceholder"></label>
+          <label class="select-refine"><span class="sr-only" data-i18n="sort">Ordenar</span><select id="catalog-sort"><option data-i18n="sortRecommended" value="editorial">Orden recomendado</option><option data-i18n="sortPriceAsc" value="price-asc">Menor precio</option><option data-i18n="sortDuration" value="duration">Menor duración</option></select></label>
+          <label class="switch-row"><input id="only-saved" type="checkbox"><span class="switch" aria-hidden="true"></span><span data-i18n="favourites">Guardados</span></label>
+        </div>
+      </div>
+      <p id="results-status" class="results-status" aria-live="polite"></p>
+      <div class="dest-grid" id="tour-grid"></div>
+      <p data-i18n="catalogNote" class="section-note">Tarifas referenciales por persona. La reserva UTV funciona en modo demostración; los demás recorridos se coordinan con la agencia.</p>
+    </div>
+  </section>
+
+  <!-- 08 · Más experiencias de la agencia -->
+  <section class="more" id="mas-experiencias" aria-labelledby="more-title">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <p class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg><span data-i18n="moreEyebrow">Más del sur</span></p>
+          <h2 id="more-title" class="display"><span data-i18n="moreTitleOne">Hay mucho más</span> <em data-i18n="moreTitleTwo">por recorrer.</em></h2>
+        </div>
+        <p class="sec-lede" data-i18n="moreCopy">Además de los recorridos con tarifa, la agencia organiza estas salidas por Ica, Paracas, Nasca y Chincha. Elige una y prepara tu consulta.</p>
+      </div>
+      <div class="more-bar">
+        <div class="filter-tabs" id="more-filters" role="group" aria-label="Filtrar por destino" data-i18n-aria="filterDestination">
+          <button type="button" class="filter-tab active" data-more-filter="all" aria-pressed="true"><span data-i18n="moreAll">Todas</span></button>
+          <button type="button" class="filter-tab" data-more-filter="ica" aria-pressed="false">Ica</button>
+          <button type="button" class="filter-tab" data-more-filter="paracas" aria-pressed="false">Paracas</button>
+          <button type="button" class="filter-tab" data-more-filter="nasca" aria-pressed="false">Nasca</button>
+          <button type="button" class="filter-tab" data-more-filter="chincha" aria-pressed="false">Chincha</button>
+        </div>
+        <div class="more-arrows">
+          <button type="button" class="round-btn round-btn-light" id="more-prev" aria-label="Ver anteriores" data-i18n-aria="morePrev"><svg class="ico" aria-hidden="true"><use href="#i-left"/></svg></button>
+          <button type="button" class="round-btn round-btn-light" id="more-next" aria-label="Ver siguientes" data-i18n-aria="moreNext"><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="more-rail" id="more-rail" role="region" tabindex="0" aria-label="Más experiencias de la agencia" data-i18n-aria="moreRail"></div>
+    <div class="wrap"><p class="section-note" data-i18n="moreNote">Recorridos publicados por Buganvilla Tours. Itinerario, tarifa y disponibilidad se confirman en la cotización.</p></div>
+  </section>
+
+  <!-- 09 · La casa -->
+  <section class="house" id="casa" aria-labelledby="house-title">
+    <div class="wrap house-grid">
+      <div class="house-visual">
+        <figure class="house-photo house-photo-main parallax" data-speed="0.08"><img data-image="introMain" src="https://buganvillatours.com/wp-content/uploads/2018/04/ruta-del-pisco-ica.jpg" alt="Visitantes de Buganvilla Tours frente a la torre de la bodega Tacama en Ica" width="1200" height="900" loading="lazy" decoding="async"></figure>
+        <figure class="house-photo house-photo-accent parallax" data-speed="-0.1"><img data-image="guide" src="https://buganvillatours.com/wp-content/uploads/2025/06/Tour-Paseo-Premium-en-UTV-Huacachina4.jpg" alt="Guía ayudando a una viajera con casco a prepararse en Huacachina" width="800" height="800" loading="lazy" decoding="async"></figure>
+        <div class="badge" aria-hidden="true">
+          <svg viewBox="0 0 200 200"><defs><path id="badge-circle" d="M100 100m-78 0a78 78 0 1 1 156 0a78 78 0 1 1-156 0"/></defs><text><textPath href="#badge-circle" id="badge-text" data-i18n="badgeText">Buganvilla Tours · Ica · Perú · Desde 2001 · </textPath></text></svg>
+          <strong>2001</strong>
+        </div>
+      </div>
+      <div class="house-copy">
+        <p class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg><span data-i18n="houseEyebrow">Buganvilla Tours / Desde 2001</span></p>
+        <h2 id="house-title" class="display"><span data-i18n="houseTitle">Tu viaje,</span> <em data-i18n="houseSubtitle">desde aquí.</em></h2>
+        <p class="house-lead" data-i18n="houseLead">Un equipo en Ica. Una atención directa.</p>
+        <p class="house-body" data-i18n="houseCopy">Una salida a Ballestas no se organiza igual que un recorrido por las dunas. El estado del mar, el turno del UTV y los horarios de las bodegas forman parte de la conversación. Nuestro equipo coordina esos detalles contigo.</p>
+        <div class="principles">
+          <div class="reveal"><span>01</span><strong data-i18n="houseRuleOne">Hablas con la agencia</strong><p data-i18n="houseRuleOneBody">Fechas, punto de encuentro y recorrido en una sola conversación.</p></div>
+          <div class="reveal"><span>02</span><strong data-i18n="houseRuleTwo">Sabes qué estás eligiendo</strong><p data-i18n="houseRuleTwoBody">Duración, modalidad, precio e inclusiones antes de reservar.</p></div>
+        </div>
+        <div class="values reveal">
+          <p class="values-title" data-i18n="valuesTitle">Lo que nos mueve</p>
+          <ul class="values-list">
+            <li data-i18n="value1">Atención al cliente</li><li data-i18n="value2">Trabajo en equipo</li><li data-i18n="value3">Compromiso</li><li data-i18n="value4">Puntualidad</li><li data-i18n="value5">Respeto</li>
+          </ul>
+        </div>
+        <div class="trust reveal">
+          <p class="values-title" data-i18n="trustTitle">Respaldo</p>
+          <ul class="trust-list">
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="trustRegistered">Agencia de viajes y turismo registrada</span></li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="trustEuro">Flota con estándar de emisiones Euro V</span></li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span><b data-i18n="trustGuilds">Gremios y aliados</b> CANATUR · Cámara de Comercio de Lima · Cámara de Comercio, Industria y Turismo de Ica · PromPerú</span></li>
+          </ul>
+        </div>
+        <a href="#contacto" class="link-button"><span data-i18n="houseContact">Consultar con el equipo</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 · Programas -->
+  <section class="section packs" id="paquetes" aria-labelledby="pack-title">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <p class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg><span data-i18n="packagesEyebrow">Combina destinos</span></p>
+          <h2 id="pack-title" class="display"><span data-i18n="packagesTitle">Tu ruta por el sur.</span></h2>
+        </div>
+        <p class="sec-lede" data-i18n="packagesCopy">Tres rutas de uno, dos o cuatro días. Elige una base para coordinar transporte, actividades y alojamiento con el equipo.</p>
+      </div>
+      <div class="pack-grid" id="package-grid"></div>
+      <p data-i18n="packageNote" class="section-note">Programas y tarifas referenciales. Transporte, alojamiento e inclusiones se detallan en la cotización según tus fechas.</p>
+    </div>
+  </section>
+
+  <!-- 11 · Reseñas -->
+  <section class="quote" aria-labelledby="reviews-title">
+    <figure class="quote-bg parallax" data-speed="0.15" aria-hidden="true"><img data-image="hero" src="https://images.unsplash.com/photo-1705034598432-1694e203cdf3?auto=format&amp;fit=crop&amp;w=2400&amp;q=82" alt="" width="2400" height="1600" loading="lazy" decoding="async"></figure>
+    <div class="wrap quote-inner">
+      <h2 id="reviews-title" class="sr-only"><span data-i18n="reviewsTitle">La atención también se recuerda.</span></h2>
+      <p class="kicker kicker-light kicker-center"><span data-i18n="reviewsEyebrow">Viajeros de Buganvilla</span></p>
+      <svg class="quote-mark" aria-hidden="true"><use href="#i-quote"/></svg>
+      <p class="review-quote" id="review-summary" aria-live="polite"></p>
+      <div class="quote-by">
+        <b id="review-author"></b><span id="review-theme"></span>
+        <a id="review-source" href="https://buganvillatours.com/utv-en-huacachina/" target="_blank" rel="noopener noreferrer"><span data-i18n="reviewSource">Consultar la reseña publicada</span><svg class="ico" aria-hidden="true"><use href="#i-diagonal"/></svg></a>
+      </div>
+      <div class="quote-controls">
+        <button type="button" id="review-prev" class="round-btn" aria-label="Reseña anterior" data-i18n-aria="previousReview"><svg class="ico" aria-hidden="true"><use href="#i-left"/></svg></button>
+        <span id="review-counter"></span>
+        <button type="button" id="review-next" class="round-btn" aria-label="Siguiente reseña" data-i18n-aria="nextReview"><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </div>
+      <p data-i18n="reviewNote" class="review-note">Resúmenes editoriales de reseñas publicadas en la web de la agencia.</p>
+    </div>
+  </section>
+
+  <!-- 12 · Contacto -->
+  <section class="section contact" id="contacto" aria-labelledby="contact-title">
+    <div class="wrap contact-grid">
+      <div class="contact-copy reveal">
+        <p class="kicker kicker-light"><span class="pulse-dot" aria-hidden="true"></span><span data-i18n="contactEyebrow">Consulta directa</span></p>
+        <h2 id="contact-title"><span data-i18n="contactTitle">Fechas, grupo y punto de partida.</span></h2>
+        <p data-i18n="contactCopy">Cuéntanos cuándo llegas y qué quieres recorrer. Prepara tu consulta y habla con el equipo de Buganvilla.</p>
+        <p class="contact-direct" data-i18n="contactDirect">O escríbenos directo</p>
+        <ul class="contact-list">
+          <li><a href="https://wa.me/51948401267" target="_blank" rel="noopener noreferrer"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg><span><small data-i18n="contactWhatsApp">Escribir por WhatsApp</small>+51 948 401 267</span><svg class="ico go" aria-hidden="true"><use href="#i-diagonal"/></svg></a></li>
+          <li><a href="tel:+51947929246"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span><small data-i18n="phone">Teléfono</small>+51 947 929 246</span><svg class="ico go" aria-hidden="true"><use href="#i-diagonal"/></svg></a></li>
+          <li><a href="mailto:reservas@buganvillatours.com.pe"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg><span><small data-i18n="contactEmail">Correo</small>reservas@buganvillatours.com.pe</span><svg class="ico go" aria-hidden="true"><use href="#i-diagonal"/></svg></a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Huacachina%2C+Ica%2C+Peru" target="_blank" rel="noopener noreferrer"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span><small>Huacachina</small><span data-i18n="contactMap">Huacachina, Ica · Ver ubicación</span></span><svg class="ico go" aria-hidden="true"><use href="#i-diagonal"/></svg></a></li>
+        </ul>
+      </div>
+      <form class="contact-form reveal" id="contact-form">
+        <div class="form-row">
+          <div class="field"><label for="cf-name" data-i18n="contactName">Nombre</label><input id="cf-name" name="name" autocomplete="name" minlength="2" maxlength="100" required></div>
+          <div class="field"><label for="cf-email" data-i18n="contactEmail">Correo</label><input id="cf-email" name="email" type="email" autocomplete="email" maxlength="254" required></div>
+        </div>
+        <div class="field"><label for="cf-destination" data-i18n="contactInterest">Recorrido o programa</label><select id="cf-destination" name="destination" data-sel-thumbs><option data-i18n="allDestinations" value="all">Todos los destinos</option><option value="huacachina">Huacachina</option><option value="paracas">Paracas</option><option value="nasca">Nasca</option><option data-i18n="valleyOption" value="ica">Ica · Ruta del Pisco</option></select></div>
+        <div class="form-row">
+          <div class="field"><label for="cf-date" data-i18n="date">Fecha</label><input id="cf-date" name="date" type="date" required></div>
+          <div class="field"><label for="cf-pax" data-i18n="group">Viajeros</label><select id="cf-pax" name="pax"><option data-i18n="pax2" value="2">2 viajeros</option><option data-i18n="pax3" value="3">3 viajeros</option><option data-i18n="pax4" value="4">4 viajeros</option><option data-i18n="pax5" value="5">5 viajeros</option><option data-i18n="pax6" value="6">6 viajeros</option><option data-i18n="pax7" value="7">7 viajeros</option><option data-i18n="pax8" value="8">8 viajeros</option><option data-i18n="pax9" value="9">9 viajeros</option></select></div>
+        </div>
+        <div class="field"><label for="cf-message" data-i18n="contactMessage">Tu consulta</label><textarea id="cf-message" name="message" maxlength="2000" rows="3" placeholder="Horarios, punto de partida, preferencias…" data-i18n-placeholder="contactPlaceholder"></textarea></div>
+        <label class="check-row"><input id="cf-consent" type="checkbox" required><span data-i18n="contactPrivacy">Acepto el uso de mis datos para responder esta consulta.</span></label>
+        <p id="contact-error" class="form-error" role="alert" hidden></p>
+        <button type="submit" class="btn btn-glow btn-lg"><span data-i18n="contactPrepare">Revisar mi consulta</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <p data-i18n="contactNotSent" class="form-note">Tu mensaje se prepara para WhatsApp o correo. Tú decides cuándo enviarlo.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <svg class="foot-dunes" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path class="foot-dunes-back" d="M0 120V70C140 30 260 20 400 52s250 70 420 40 260-80 400-72c90 5 160 30 220 50V120Z"/><path class="foot-dunes-front" d="M0 120V90C180 60 300 72 470 84s300-40 470-46 330 40 500 26V120Z"/></svg>
+  <div class="foot-main">
+    <div class="wrap">
+      <div class="foot-cta">
+        <h2 data-i18n="footerCtaTitle">¿Te vemos en las dunas?</h2>
+        <p data-i18n="footerCtaCopy">Elige tu turno en línea o arma tu ruta por el sur con el equipo.</p>
+        <div class="foot-cta-actions">
+          <a href="tour-utv.html#reservar" class="btn btn-glow btn-lg magnetic"><span data-i18n="headBooking">Reservar UTV</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a href="#contacto" class="btn btn-glass btn-lg magnetic"><span data-i18n="houseContact">Consultar con el equipo</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a href="#top" class="brand" aria-label="Buganvilla Tours"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3c3 4 4 7 4 10a4 4 0 0 1-8 0c0-3 1-6 4-10Z"/><path d="M16 29c-5-3-8-7-8-12 0 0 4 1 8 5 4-4 8-5 8-5 0 5-3 9-8 12Z"/></svg><span class="brand-txt"><b>Buganvilla</b><i>Tours · Ica</i></span></a>
+          <p data-i18n="footerCopy">Desde Ica, desde 2001. Huacachina, Paracas, Nasca y la ruta del pisco.</p>
+          <div class="foot-social">
+            <a href="https://www.facebook.com/Buganvillatours" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg class="ico" aria-hidden="true"><use href="#i-facebook"/></svg></a>
+            <a href="https://twitter.com/Buganvillatours" target="_blank" rel="noopener noreferrer" aria-label="X"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></a>
+            <a href="https://wa.me/51948401267" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg></a>
+          </div>
+          <a class="complaints" href="https://buganvillatours.com/libro-de-reclamaciones/" target="_blank" rel="noopener noreferrer"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg><span data-i18n="complaintsBook">Libro de reclamaciones</span></a>
+        </div>
+        <div class="foot-links">
+          <h3 data-i18n="footerExplore">Explorar</h3>
+          <a href="#destinos" data-i18n="navDestinations">Recorridos</a>
+          <a href="#experiencias" data-i18n="navExperiences">UTV Huacachina</a>
+          <a href="#paquetes" data-i18n="navPackages">Programas</a>
+          <a href="#casa" data-i18n="navHouse">Desde Ica</a>
+          <a href="#mas-experiencias" data-i18n="moreEyebrow">Más del sur</a>
+          <a href="https://buganvillatours.com/mice/" target="_blank" rel="noopener noreferrer" data-i18n="footerMice">Eventos corporativos (MICE)</a>
+          <a href="https://buganvillatours.com/gastronomia-y-bebida-nacional/" target="_blank" rel="noopener noreferrer" data-i18n="footerFood">Experiencia gastronómica</a>
+        </div>
+        <div class="foot-links">
+          <h3 data-i18n="footerService">Tu viaje</h3>
+          <a href="tour-utv.html#reservar" data-i18n="headBooking">Reservar UTV</a>
+          <a href="voucher.html" data-i18n="myReservation">Mi reserva</a>
+          <a href="#contacto" data-i18n="navContact">Contacto</a>
+          <a href="#" data-legal="terms" data-i18n="legalTerms">Condiciones</a>
+          <a href="#" data-legal="privacy" data-i18n="legalPrivacy">Privacidad</a>
+        </div>
+        <div class="foot-news">
+          <h3 data-i18n="newsletterTitle">Nuevas rutas desde Ica</h3>
+          <p data-i18n="newsletterCopy">Registra tu interés en recorridos y próximas salidas.</p>
+          <form id="newsletter-form">
+            <label for="newsletter-email" class="sr-only" data-i18n="newsletterEmail">Tu correo electrónico</label>
+            <input id="newsletter-email" name="email" type="email" placeholder="Tu correo electrónico" autocomplete="email" maxlength="254" required data-i18n-placeholder="newsletterEmail">
+            <button type="submit" data-i18n-aria="newsletterSubmit" aria-label="Registrar mi interés"><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </form>
+          <label class="check-row"><input type="checkbox" id="newsletter-consent" form="newsletter-form" required><span data-i18n="newsletterConsent">Acepto registrar mi correo con esta finalidad.</span></label>
+          <p id="newsletter-feedback" class="newsletter-feedback" aria-live="polite" hidden></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-wordmark" aria-hidden="true"><span>B</span><span>u</span><span>g</span><span>a</span><span>n</span><span>v</span><span>i</span><span>l</span><span>l</span><span>a</span></div>
+    <div class="wrap">
+      <div class="foot-bottom">
+        <span>© <span id="year"></span> Buganvilla Tours · Ica, Perú</span>
+        <a href="#" data-legal="photography"><span data-i18n="photoCredits">Fotografía y créditos</span></a>
+        <a href="#top" class="back-top"><span data-i18n="backTop">Volver arriba</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <p data-i18n="footerDemo" class="footer-demo">Edición de demostración · Tarifas referenciales y pagos simulados.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="cursor-bubble" id="cursor-bubble" aria-hidden="true"><span data-i18n="cursorView">Ver</span></div>
+
+<aside id="compare-bar" class="compare-bar" aria-label="Comparación de recorridos" hidden><span><b id="compare-count">0</b> <span data-i18n="selected">seleccionados</span></span><button type="button" id="open-compare" class="btn btn-glow btn-sm"><span data-i18n="compareSelected">Comparar selección</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button><button type="button" id="clear-compare" class="text-button"><span data-i18n="clearCompare">Vaciar</span></button></aside>
+
+<dialog class="premium-dialog" id="detail-dialog" aria-labelledby="detail-title"><div class="dialog-head"><h2 id="detail-title"></h2><button type="button" class="dialog-close" data-close-dialog data-i18n-aria="close" aria-label="Cerrar"><svg class="ico" aria-hidden="true"><use href="#i-close"/></svg></button></div><div id="detail-content" class="dialog-content"></div></dialog>
+<dialog class="premium-dialog" id="compare-dialog" aria-labelledby="compare-title"><div class="dialog-head"><h2 id="compare-title"><span data-i18n="comparison">Comparar recorridos</span></h2><button type="button" class="dialog-close" data-close-dialog data-i18n-aria="close" aria-label="Cerrar"><svg class="ico" aria-hidden="true"><use href="#i-close"/></svg></button></div><div id="compare-content" class="dialog-content"></div></dialog>
+<dialog class="premium-dialog" id="plan-dialog" aria-labelledby="plan-title"><div class="dialog-head"><h2 id="plan-title"><span data-i18n="plan">Mi viaje</span></h2><button type="button" class="dialog-close" data-close-dialog data-i18n-aria="close" aria-label="Cerrar"><svg class="ico" aria-hidden="true"><use href="#i-close"/></svg></button></div><div id="plan-content" class="dialog-content"></div><div class="dialog-actions"><a class="btn btn-outline" id="plan-download" download aria-disabled="true"><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg><span data-i18n="downloadPlan">Descargar resumen</span></a><a class="btn btn-glow" id="plan-whatsapp" href="#" target="_blank" rel="noopener noreferrer"><span data-i18n="openWhatsApp">Continuar en WhatsApp</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></dialog>
+<dialog class="premium-dialog" id="contact-preview-dialog" aria-labelledby="contact-preview-title"><div class="dialog-head"><h2 id="contact-preview-title"><span data-i18n="contactSummary">Tu consulta</span></h2><button type="button" class="dialog-close" data-close-dialog data-i18n-aria="close" aria-label="Cerrar"><svg class="ico" aria-hidden="true"><use href="#i-close"/></svg></button></div><div id="contact-preview-content" class="dialog-content"></div><div class="dialog-actions"><a class="btn btn-glow" id="contact-send-WA" href="#" target="_blank" rel="noopener noreferrer" data-i18n="openWhatsApp">Continuar en WhatsApp</a><a class="btn btn-outline" id="contact-send-email" href="#" data-i18n="openEmail">Preparar correo</a></div></dialog>
+<dialog class="premium-dialog" id="legal-dialog" aria-labelledby="legal-title"><div class="dialog-head"><h2 id="legal-title"></h2><button type="button" class="dialog-close" data-close-dialog data-i18n-aria="close" aria-label="Cerrar"><svg class="ico" aria-hidden="true"><use href="#i-close"/></svg></button></div><div id="legal-content" class="dialog-content"></div></dialog>
+<noscript><p class="wrap noscript">Activa JavaScript para filtrar el catálogo y preparar tu viaje. También puedes llamarnos al +51 948 401 267.</p></noscript>
+</body>
+</html>

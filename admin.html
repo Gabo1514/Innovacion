@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel del operador | Buganvilla Tours</title>
+  <meta name="description" content="Gestión de reservas, salidas, capacidad y pagos de Buganvilla Tours." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="referrer" content="no-referrer" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=DM+Sans:opsz,wght@9..40,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+  <link rel="stylesheet" href="css/premium-bridge.css" />
+  <link rel="stylesheet" href="css/experiencia-paginas.css" />
+  <link rel="stylesheet" href="css/selector.css" />
+</head>
+<body>
+  <main class="admin">
+    <div class="container">
+      <section id="admin-login" class="admin-login-card panel glass" aria-labelledby="login-title">
+        <span class="eyebrow">Buganvilla / Operaciones</span>
+        <h1 id="login-title">Cada salida,<br />bajo control.</h1>
+        <p class="muted">Accede al panel para gestionar reservas, verificar pagos y organizar la flota.</p>
+        <form id="login-form">
+          <div class="field"><label for="admin-password">Contraseña de operador</label><input class="input" id="admin-password" name="password" type="password" autocomplete="current-password" required /></div>
+          <p id="login-error" class="form-error" role="alert" hidden></p>
+          <button class="btn btn-primary btn-block" id="login-submit" type="submit">Entrar al panel</button>
+        </form>
+        <p class="form-note">Acceso restringido al equipo de operaciones.</p>
+        <a href="index.html" class="text-link">Volver a la web</a>
+        <figure class="login-visual" aria-hidden="true"><img src="https://buganvillatours.com/wp-content/uploads/2025/06/Tour-Paseo-Premium-en-UTV-Huacachina2.jpg" alt="" /><figcaption>Cada salida, cada duna, cada viajero.</figcaption></figure>
+      </section>
+      <div id="admin-workspace" hidden>
+        <header class="admin-head">
+          <div><span class="eyebrow">Buganvilla / Operaciones</span><h1>Una operación bien organizada.</h1><p class="muted">Reservas, pasajeros y disponibilidad en un solo lugar.</p></div>
+          <div class="actions"><button class="btn btn-ghost btn-sm" id="btn-seed" type="button">Cargar datos demo</button><button class="btn btn-ghost btn-sm" id="btn-export" type="button">Exportar CSV</button><button class="btn btn-ghost btn-sm" id="admin-logout" type="button">Cerrar sesión</button></div>
+        </header>
+        <div class="admin-status"><p class="demo-banner">Entorno de demostración. Los pagos con tarjeta y los reembolsos son simulados; verifica el comprobante antes de confirmar Yape o Plin.</p><p id="sync-status" class="muted" role="status" aria-live="polite">Conectando con la operación...</p></div>
+        <section class="kpis" id="kpis" aria-label="Indicadores de las reservas filtradas"></section>
+        <div class="admin-grid">
+          <section class="panel glass reservations-panel" aria-labelledby="t-res">
+            <div class="panel-head"><div><span class="eyebrow">Control de reservas</span><h2 id="t-res">Agenda de experiencias</h2><span class="muted" id="res-count"></span></div><div class="view-switch" role="group" aria-label="Vista de reservas"><button type="button" class="btn btn-ghost btn-sm active" id="view-table" aria-pressed="true">Tabla</button><button type="button" class="btn btn-ghost btn-sm" id="view-calendar" aria-pressed="false">Calendario</button></div></div>
+            <div class="toolbar labels">
+              <div class="field search-field"><label for="q">Buscar reserva o cliente</label><input type="search" class="input" id="q" placeholder="Código, nombre, documento o correo" autocomplete="off" /></div>
+              <div class="field"><label for="f-status">Estado</label><select class="select" id="f-status"><option value="active">Reservas operativas</option><option value="">Todos los estados</option></select></div>
+              <div class="field"><label for="f-date">Fecha de salida</label><input type="date" class="input" id="f-date" /></div>
+              <div class="field"><label for="f-slot">Turno</label><select class="select" id="f-slot"><option value="">Todos los turnos</option></select></div>
+              <button type="button" class="btn btn-ghost btn-sm" id="filters-clear">Limpiar filtros</button>
+            </div>
+            <div id="table-view" class="table-wrap"><table><caption class="sr-only">Reservas coincidentes con los filtros seleccionados</caption><thead><tr><th scope="col">Reserva</th><th scope="col">Salida</th><th scope="col">Cliente</th><th scope="col">Pasajeros</th><th scope="col">Total</th><th scope="col">Pago</th><th scope="col">Estado</th><th scope="col">Gestión</th></tr></thead><tbody id="res-body"></tbody></table></div>
+            <div id="calendar-view" hidden>
+              <div class="calendar-nav"><button type="button" class="btn btn-ghost btn-sm" id="calendar-prev" aria-label="Ver semana anterior">Anterior</button><h3 id="calendar-range"></h3><div class="actions"><button type="button" class="btn btn-ghost btn-sm" id="calendar-today">Hoy</button><button type="button" class="btn btn-ghost btn-sm" id="calendar-next" aria-label="Ver semana siguiente">Siguiente</button></div></div>
+              <p class="form-note">La agenda respeta los filtros de búsqueda, estado y turno. Selecciona una reserva para revisar sus datos.</p><div class="calendar-grid" id="calendar-days"></div>
+            </div>
+          </section>
+          <aside class="admin-sidebar">
+            <section class="panel glass" aria-labelledby="t-occ"><div class="panel-head"><div><span class="eyebrow">Planificación diaria</span><h2 id="t-occ">Ocupación por turno</h2></div></div><div class="field"><label for="occ-date">Fecha de operación</label><input type="date" class="input" id="occ-date" /></div><div id="occupancy"></div></section>
+            <section class="panel glass" aria-labelledby="t-cap"><div class="panel-head"><h2 id="t-cap">Disponibilidad de flota</h2></div><p class="form-note">Define las unidades por turno. La capacidad considera las reservas y los bloqueos temporales de checkout.</p><form id="cap-form"></form><p class="form-note">Cerrar un turno impide nuevas reservas. Las reservas existentes se conservan y requieren atención del operador.</p><p class="form-error" id="capacity-error" role="alert" hidden></p></section>
+          </aside>
+        </div>
+        <div class="analytics-grid">
+          <section class="panel glass" aria-labelledby="revenue-title"><div class="panel-head"><div><span class="eyebrow">Últimos siete días</span><h2 id="revenue-title">Ingresos confirmados</h2></div><strong id="revenue-total"></strong></div><p class="form-note">Según la fecha de confirmación, de las reservas filtradas. Se excluyen cancelaciones y reembolsos.</p><div id="revenue-chart"></div></section>
+          <section class="panel glass" aria-labelledby="channel-title"><div class="panel-head"><div><span class="eyebrow">Procedencia</span><h2 id="channel-title">Pasajeros por canal</h2></div></div><p class="form-note">Distribución de pasajeros de las reservas filtradas.</p><div id="channel-metrics"></div></section>
+        </div>
+      </div>
+    </div>
+  </main>
+  <dialog id="res-details" class="admin-dialog" aria-labelledby="detail-title"><div class="details-head"><div><span class="eyebrow">Detalle de reserva</span><h2 id="detail-title"></h2></div><button type="button" class="btn btn-ghost btn-sm" id="detail-close">Cerrar</button></div><div id="details-content"></div></dialog>
+  <dialog id="operation-dialog" class="admin-dialog operation-dialog" aria-labelledby="operation-title"><form id="operation-form"><span class="eyebrow">Confirmación de operación</span><h2 id="operation-title"></h2><p id="operation-copy" class="operation-copy"></p><p id="operation-error" class="form-error" role="alert" hidden></p><div class="dialog-actions"><button type="button" class="btn btn-ghost" id="operation-back">Volver</button><button type="submit" class="btn btn-primary" id="operation-submit">Confirmar</button></div></form></dialog>
+  <script src="js/data.js"></script><script src="js/store.js"></script><script src="js/layout.js"></script><script src="js/admin.js"></script><script src="js/experiencia-paginas.js"></script><script src="js/selector.js"></script>
+</body>
+</html>
